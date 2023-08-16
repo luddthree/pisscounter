@@ -1,0 +1,190 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <link rel="icon" href="logo.jpg">
+    <meta charset="UTF-8">
+    <!-- <meta name="viewport" content="width=device-height, initial-scale=1.0"> -->
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    
+    <title>PissCounter Beta 1.4</title>
+    <link rel="stylesheet" href="/static/output.css">
+    <style>
+
+
+hr {
+			border-color: rgb(179, 179, 179);
+		}
+
+
+footer {
+  height: 50px;
+  bottom: 0;
+  width: 100%;
+}
+
+    </style>
+</head>
+<body onload="pools()" class="bg-gray-300">
+    <header>
+        <!-- Navigation bar -->
+        <nav
+          class="relative flex w-full items-center justify-between bg-white py-2 text-neutral-600 shadow-lg hover:text-neutral-700 focus:text-neutral-700 dark:bg-neutral-600 dark:text-neutral-200 md:flex-wrap md:justify-start"
+          data-te-navbar-ref>
+          <div class="flex w-full flex-wrap items-center justify-between px-3">
+            <div class="flex items-center">
+              <!-- Hamburger menu button -->
+              <button onclick="location.href = '/';"
+                class="border-0 text-xl "
+                type="button"
+                data-te-collapse-init
+                data-te-target="#navbarSupportedContentY"
+                aria-controls="navbarSupportedContentY"
+                aria-expanded="false"
+                aria-label="Toggle navigation">
+                <!-- Hamburger menu icon -->
+                
+                 
+                  <img src="/static/logo.jpg" width="40" height="40">
+                </span>
+              </button>
+            </div>
+            <button type="button" onclick="location.href = '/logout';" class="bg-red-500 hover:bg-red-800 text-white font-bold py-2 px-4 rounded right-2 absolute">Log out</button>
+
+<p class="right-28 absolute">|</p>
+            <div class="mb-4 lg:mb-0 lg:pr-2 font-bold" data-te-nav-item-ref>
+                <a
+                  class="block transition duration-150 ease-in-out right-32 top-4 absolute hover:text-neutral-700 focus:text-neutral-700 disabled:text-black/30 dark:hover:text-white dark:focus:text-white lg:p-2 [&.active]:text-black/90"
+                  href="/about"
+                  data-te-nav-link-ref
+                  data-te-ripple-init
+                  data-te-ripple-color="light"
+                  >About</a
+                >
+            </div>
+
+          </div>
+        </nav>
+              
+        
+      </header>
+
+    <br>
+    <div class="flex justify-center text-center">
+        <div class=""></div>
+        
+        
+        <div class="bg-gray-300 rounded-xl ">
+            
+            <h1 class="text-2xl font-bold">PissCounter</h1>
+            <hr>
+            <br>
+
+
+            <div class="">
+                
+                    <b>Daily pisses</b><br>
+                    <input class="rounded py-2 px-3" type="text" id="antall" placeholder="avg: 8 times"><br><br>
+                
+
+                   <b>Age</b><br>
+                    <input class="rounded py-2 px-3" type="text" id="age"><br><br>
+                
+
+                    <b>Born gender</b><br>
+                            <input type="radio" name="gender" value="male" onclick="malefunc()" class="mr-1">Male<br>
+                        
+                            <input type="radio" name="gender" value="female" onclick="femalefunc()" class="mr-1">Female <br><br>
+                    
+                            <hr><br>
+                <button type="button" onclick="calculate(), pools()" class="daddy bg-purple-500 hover:bg-purple-800 text-white font-bold py-2 px-4 rounded">Submit</button>
+
+            </div>
+            <br>
+            
+        </div>
+        
+    </div> 
+
+  
+
+<br>
+<div class="flex flex-col text-center" style="display: none;" id="bet">
+    <p id="result" class=""></p>
+    <br>
+    <div class="flex justify-center">
+        
+        <img src="/static/pool.jpg" id="pool-image" height="150" width="250" class="hidden">
+        <img src="/static/pool.jpg" id="pool-image2" height="150" width="250" class="hidden lg:block">
+        <img src="/static/pool.jpg" id="pool-image3" height="150" width="250" class="hidden xl:block">
+    </div>
+</div>
+
+
+
+<!-- <div class="fixed bottom-0 w-full">  -->
+
+</body>
+
+
+<br><br>
+<footer class="mb-auto  fixed bottom-0 w-full">
+    <div class="text-center">
+    <p>&copy; 2023 PissCounter. All rights reserved.</p>
+</div>
+  </footer>
+
+
+<script>
+  var male = false;
+  var female = false;
+  var pool = 0; 
+
+  function calculate() {
+    var ye = 365;
+    var antall = document.getElementById("antall").value;
+    var age = document.getElementById("age").value;
+    var year = age * ye;
+    var piss = parseFloat(0) + (parseFloat(antall) * 0.3)
+    var result = piss * year;
+
+    if (female == true) {
+      result = result - (result * 0.25);
+    }
+  
+    pool = result / 13200;
+
+    document.getElementById("result").innerHTML = "You have pissed " + result.toFixed(2) + " liters in your lifetime, this is equivalent to " + pool.toFixed(2) + " pools";
+
+    document.getElementById("bet").style.display = "block";
+}
+
+
+  function malefunc() {
+      male = true;
+      female = false;
+  }
+
+  function femalefunc() {
+      male = false;
+      female = true;
+  }
+
+  function pools() {
+      if (pool >= 1) {
+        document.getElementById("pool-image").style.display = "block";
+      }
+      if (pool >= 2) {
+        document.getElementById("pool-image2").style.display = "block";
+      }
+      if (pool >= 3) {
+        document.getElementById("pool-image3").style.display = "block";
+      }
+      if (pool <= 1) {
+        document.getElementById("pool-image").style.display = "none";
+        document.getElementById("pool-image2").style.display = "none";
+        document.getElementById("pool-image3").style.display = "none";
+      }
+  }
+</script>
+</html>

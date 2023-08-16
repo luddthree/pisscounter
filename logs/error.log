@@ -1,0 +1,986 @@
+[Mon May 08 17:05:21.327907 2023] [wsgi:error] [pid 305749:tid 139837204702976]  * Serving Flask app 'app'
+[Mon May 08 17:05:21.328011 2023] [wsgi:error] [pid 305749:tid 139837204702976]  * Debug mode: off
+[Mon May 08 17:05:21.330111 2023] [wsgi:error] [pid 305749:tid 139837204702976] Permission denied
+[Mon May 08 17:05:21.330187 2023] [wsgi:error] [pid 305749:tid 139837204702976] [remote 212.251.157.96:51051] mod_wsgi (pid=305749): SystemExit exception raised when doing exec of Python script file '/var/www/html/app.wsgi'.
+[Mon May 08 17:05:21.330221 2023] [wsgi:error] [pid 305749:tid 139837204702976] [remote 212.251.157.96:51051] mod_wsgi (pid=305749): SystemExit exception raised by WSGI script '/var/www/html/app.wsgi' ignored.
+[Mon May 08 17:05:21.332054 2023] [wsgi:error] [pid 305749:tid 139837204702976] [remote 212.251.157.96:51051] Traceback (most recent call last):
+[Mon May 08 17:05:21.332106 2023] [wsgi:error] [pid 305749:tid 139837204702976] [remote 212.251.157.96:51051]   File "/usr/local/lib/python3.9/dist-packages/werkzeug/serving.py", line 748, in __init__
+[Mon May 08 17:05:21.332114 2023] [wsgi:error] [pid 305749:tid 139837204702976] [remote 212.251.157.96:51051]     self.server_bind()
+[Mon May 08 17:05:21.332126 2023] [wsgi:error] [pid 305749:tid 139837204702976] [remote 212.251.157.96:51051]   File "/usr/lib/python3.9/http/server.py", line 138, in server_bind
+[Mon May 08 17:05:21.332130 2023] [wsgi:error] [pid 305749:tid 139837204702976] [remote 212.251.157.96:51051]     socketserver.TCPServer.server_bind(self)
+[Mon May 08 17:05:21.332138 2023] [wsgi:error] [pid 305749:tid 139837204702976] [remote 212.251.157.96:51051]   File "/usr/lib/python3.9/socketserver.py", line 466, in server_bind
+[Mon May 08 17:05:21.332145 2023] [wsgi:error] [pid 305749:tid 139837204702976] [remote 212.251.157.96:51051]     self.socket.bind(self.server_address)
+[Mon May 08 17:05:21.332168 2023] [wsgi:error] [pid 305749:tid 139837204702976] [remote 212.251.157.96:51051] PermissionError: [Errno 13] Permission denied
+[Mon May 08 17:05:21.332178 2023] [wsgi:error] [pid 305749:tid 139837204702976] [remote 212.251.157.96:51051] 
+[Mon May 08 17:05:21.332182 2023] [wsgi:error] [pid 305749:tid 139837204702976] [remote 212.251.157.96:51051] During handling of the above exception, another exception occurred:
+[Mon May 08 17:05:21.332188 2023] [wsgi:error] [pid 305749:tid 139837204702976] [remote 212.251.157.96:51051] 
+[Mon May 08 17:05:21.332198 2023] [wsgi:error] [pid 305749:tid 139837204702976] [remote 212.251.157.96:51051] Traceback (most recent call last):
+[Mon May 08 17:05:21.332225 2023] [wsgi:error] [pid 305749:tid 139837204702976] [remote 212.251.157.96:51051]   File "/var/www/html/app.wsgi", line 8, in <module>
+[Mon May 08 17:05:21.332229 2023] [wsgi:error] [pid 305749:tid 139837204702976] [remote 212.251.157.96:51051]     from app import app as application
+[Mon May 08 17:05:21.332241 2023] [wsgi:error] [pid 305749:tid 139837204702976] [remote 212.251.157.96:51051]   File "/var/www/html/app.py", line 81, in <module>
+[Mon May 08 17:05:21.332246 2023] [wsgi:error] [pid 305749:tid 139837204702976] [remote 212.251.157.96:51051]     app.run(host="0.0.0.0", port=80)
+[Mon May 08 17:05:21.332254 2023] [wsgi:error] [pid 305749:tid 139837204702976] [remote 212.251.157.96:51051]   File "/usr/local/lib/python3.9/dist-packages/flask/app.py", line 889, in run
+[Mon May 08 17:05:21.332258 2023] [wsgi:error] [pid 305749:tid 139837204702976] [remote 212.251.157.96:51051]     run_simple(t.cast(str, host), port, self, **options)
+[Mon May 08 17:05:21.332269 2023] [wsgi:error] [pid 305749:tid 139837204702976] [remote 212.251.157.96:51051]   File "/usr/local/lib/python3.9/dist-packages/werkzeug/serving.py", line 1075, in run_simple
+[Mon May 08 17:05:21.332274 2023] [wsgi:error] [pid 305749:tid 139837204702976] [remote 212.251.157.96:51051]     srv = make_server(
+[Mon May 08 17:05:21.332282 2023] [wsgi:error] [pid 305749:tid 139837204702976] [remote 212.251.157.96:51051]   File "/usr/local/lib/python3.9/dist-packages/werkzeug/serving.py", line 915, in make_server
+[Mon May 08 17:05:21.332300 2023] [wsgi:error] [pid 305749:tid 139837204702976] [remote 212.251.157.96:51051]     return ThreadedWSGIServer(
+[Mon May 08 17:05:21.332311 2023] [wsgi:error] [pid 305749:tid 139837204702976] [remote 212.251.157.96:51051]   File "/usr/local/lib/python3.9/dist-packages/werkzeug/serving.py", line 771, in __init__
+[Mon May 08 17:05:21.332316 2023] [wsgi:error] [pid 305749:tid 139837204702976] [remote 212.251.157.96:51051]     sys.exit(1)
+[Mon May 08 17:05:21.332328 2023] [wsgi:error] [pid 305749:tid 139837204702976] [remote 212.251.157.96:51051] SystemExit: 1
+[Mon May 08 17:08:08.282012 2023] [wsgi:error] [pid 305749:tid 139837196310272]  * Serving Flask app 'app'
+[Mon May 08 17:08:08.282092 2023] [wsgi:error] [pid 305749:tid 139837196310272]  * Debug mode: off
+[Mon May 08 17:08:08.282342 2023] [wsgi:error] [pid 305749:tid 139837196310272] Permission denied
+[Mon May 08 17:08:08.282393 2023] [wsgi:error] [pid 305749:tid 139837196310272] [remote 66.249.69.13:61485] mod_wsgi (pid=305749): SystemExit exception raised when doing exec of Python script file '/var/www/html/app.wsgi'.
+[Mon May 08 17:08:08.282427 2023] [wsgi:error] [pid 305749:tid 139837196310272] [remote 66.249.69.13:61485] mod_wsgi (pid=305749): SystemExit exception raised by WSGI script '/var/www/html/app.wsgi' ignored.
+[Mon May 08 17:08:08.282609 2023] [wsgi:error] [pid 305749:tid 139837196310272] [remote 66.249.69.13:61485] Traceback (most recent call last):
+[Mon May 08 17:08:08.282639 2023] [wsgi:error] [pid 305749:tid 139837196310272] [remote 66.249.69.13:61485]   File "/usr/local/lib/python3.9/dist-packages/werkzeug/serving.py", line 748, in __init__
+[Mon May 08 17:08:08.282645 2023] [wsgi:error] [pid 305749:tid 139837196310272] [remote 66.249.69.13:61485]     self.server_bind()
+[Mon May 08 17:08:08.282653 2023] [wsgi:error] [pid 305749:tid 139837196310272] [remote 66.249.69.13:61485]   File "/usr/lib/python3.9/http/server.py", line 138, in server_bind
+[Mon May 08 17:08:08.282657 2023] [wsgi:error] [pid 305749:tid 139837196310272] [remote 66.249.69.13:61485]     socketserver.TCPServer.server_bind(self)
+[Mon May 08 17:08:08.282669 2023] [wsgi:error] [pid 305749:tid 139837196310272] [remote 66.249.69.13:61485]   File "/usr/lib/python3.9/socketserver.py", line 466, in server_bind
+[Mon May 08 17:08:08.282674 2023] [wsgi:error] [pid 305749:tid 139837196310272] [remote 66.249.69.13:61485]     self.socket.bind(self.server_address)
+[Mon May 08 17:08:08.282692 2023] [wsgi:error] [pid 305749:tid 139837196310272] [remote 66.249.69.13:61485] PermissionError: [Errno 13] Permission denied
+[Mon May 08 17:08:08.282701 2023] [wsgi:error] [pid 305749:tid 139837196310272] [remote 66.249.69.13:61485] 
+[Mon May 08 17:08:08.282707 2023] [wsgi:error] [pid 305749:tid 139837196310272] [remote 66.249.69.13:61485] During handling of the above exception, another exception occurred:
+[Mon May 08 17:08:08.282711 2023] [wsgi:error] [pid 305749:tid 139837196310272] [remote 66.249.69.13:61485] 
+[Mon May 08 17:08:08.282721 2023] [wsgi:error] [pid 305749:tid 139837196310272] [remote 66.249.69.13:61485] Traceback (most recent call last):
+[Mon May 08 17:08:08.282745 2023] [wsgi:error] [pid 305749:tid 139837196310272] [remote 66.249.69.13:61485]   File "/var/www/html/app.wsgi", line 8, in <module>
+[Mon May 08 17:08:08.282751 2023] [wsgi:error] [pid 305749:tid 139837196310272] [remote 66.249.69.13:61485]     from app import app as application
+[Mon May 08 17:08:08.282762 2023] [wsgi:error] [pid 305749:tid 139837196310272] [remote 66.249.69.13:61485]   File "/var/www/html/app.py", line 81, in <module>
+[Mon May 08 17:08:08.282766 2023] [wsgi:error] [pid 305749:tid 139837196310272] [remote 66.249.69.13:61485]     app.run(host="0.0.0.0", port=80)
+[Mon May 08 17:08:08.282774 2023] [wsgi:error] [pid 305749:tid 139837196310272] [remote 66.249.69.13:61485]   File "/usr/local/lib/python3.9/dist-packages/flask/app.py", line 889, in run
+[Mon May 08 17:08:08.282780 2023] [wsgi:error] [pid 305749:tid 139837196310272] [remote 66.249.69.13:61485]     run_simple(t.cast(str, host), port, self, **options)
+[Mon May 08 17:08:08.282800 2023] [wsgi:error] [pid 305749:tid 139837196310272] [remote 66.249.69.13:61485]   File "/usr/local/lib/python3.9/dist-packages/werkzeug/serving.py", line 1075, in run_simple
+[Mon May 08 17:08:08.282805 2023] [wsgi:error] [pid 305749:tid 139837196310272] [remote 66.249.69.13:61485]     srv = make_server(
+[Mon May 08 17:08:08.282812 2023] [wsgi:error] [pid 305749:tid 139837196310272] [remote 66.249.69.13:61485]   File "/usr/local/lib/python3.9/dist-packages/werkzeug/serving.py", line 915, in make_server
+[Mon May 08 17:08:08.282818 2023] [wsgi:error] [pid 305749:tid 139837196310272] [remote 66.249.69.13:61485]     return ThreadedWSGIServer(
+[Mon May 08 17:08:08.282828 2023] [wsgi:error] [pid 305749:tid 139837196310272] [remote 66.249.69.13:61485]   File "/usr/local/lib/python3.9/dist-packages/werkzeug/serving.py", line 771, in __init__
+[Mon May 08 17:08:08.282832 2023] [wsgi:error] [pid 305749:tid 139837196310272] [remote 66.249.69.13:61485]     sys.exit(1)
+[Mon May 08 17:08:08.282844 2023] [wsgi:error] [pid 305749:tid 139837196310272] [remote 66.249.69.13:61485] SystemExit: 1
+[Mon May 08 17:14:38.375438 2023] [wsgi:error] [pid 305933:tid 139837204702976]  * Serving Flask app 'app'
+[Mon May 08 17:14:38.375535 2023] [wsgi:error] [pid 305933:tid 139837204702976]  * Debug mode: off
+[Mon May 08 17:14:38.377859 2023] [wsgi:error] [pid 305933:tid 139837204702976] Permission denied
+[Mon May 08 17:14:38.377948 2023] [wsgi:error] [pid 305933:tid 139837204702976] [remote 212.251.157.96:51337] mod_wsgi (pid=305933): SystemExit exception raised when doing exec of Python script file '/var/www/html/app.wsgi'.
+[Mon May 08 17:14:38.377990 2023] [wsgi:error] [pid 305933:tid 139837204702976] [remote 212.251.157.96:51337] mod_wsgi (pid=305933): SystemExit exception raised by WSGI script '/var/www/html/app.wsgi' ignored.
+[Mon May 08 17:14:38.379821 2023] [wsgi:error] [pid 305933:tid 139837204702976] [remote 212.251.157.96:51337] Traceback (most recent call last):
+[Mon May 08 17:14:38.379890 2023] [wsgi:error] [pid 305933:tid 139837204702976] [remote 212.251.157.96:51337]   File "/usr/local/lib/python3.9/dist-packages/werkzeug/serving.py", line 748, in __init__
+[Mon May 08 17:14:38.379897 2023] [wsgi:error] [pid 305933:tid 139837204702976] [remote 212.251.157.96:51337]     self.server_bind()
+[Mon May 08 17:14:38.379906 2023] [wsgi:error] [pid 305933:tid 139837204702976] [remote 212.251.157.96:51337]   File "/usr/lib/python3.9/http/server.py", line 138, in server_bind
+[Mon May 08 17:14:38.379911 2023] [wsgi:error] [pid 305933:tid 139837204702976] [remote 212.251.157.96:51337]     socketserver.TCPServer.server_bind(self)
+[Mon May 08 17:14:38.379923 2023] [wsgi:error] [pid 305933:tid 139837204702976] [remote 212.251.157.96:51337]   File "/usr/lib/python3.9/socketserver.py", line 466, in server_bind
+[Mon May 08 17:14:38.379928 2023] [wsgi:error] [pid 305933:tid 139837204702976] [remote 212.251.157.96:51337]     self.socket.bind(self.server_address)
+[Mon May 08 17:14:38.379950 2023] [wsgi:error] [pid 305933:tid 139837204702976] [remote 212.251.157.96:51337] PermissionError: [Errno 13] Permission denied
+[Mon May 08 17:14:38.379960 2023] [wsgi:error] [pid 305933:tid 139837204702976] [remote 212.251.157.96:51337] 
+[Mon May 08 17:14:38.379973 2023] [wsgi:error] [pid 305933:tid 139837204702976] [remote 212.251.157.96:51337] During handling of the above exception, another exception occurred:
+[Mon May 08 17:14:38.379977 2023] [wsgi:error] [pid 305933:tid 139837204702976] [remote 212.251.157.96:51337] 
+[Mon May 08 17:14:38.379987 2023] [wsgi:error] [pid 305933:tid 139837204702976] [remote 212.251.157.96:51337] Traceback (most recent call last):
+[Mon May 08 17:14:38.380014 2023] [wsgi:error] [pid 305933:tid 139837204702976] [remote 212.251.157.96:51337]   File "/var/www/html/app.wsgi", line 8, in <module>
+[Mon May 08 17:14:38.380021 2023] [wsgi:error] [pid 305933:tid 139837204702976] [remote 212.251.157.96:51337]     from app import app as application
+[Mon May 08 17:14:38.380032 2023] [wsgi:error] [pid 305933:tid 139837204702976] [remote 212.251.157.96:51337]   File "/var/www/html/app.py", line 81, in <module>
+[Mon May 08 17:14:38.380050 2023] [wsgi:error] [pid 305933:tid 139837204702976] [remote 212.251.157.96:51337]     app.run(host="0.0.0.0", port=80)
+[Mon May 08 17:14:38.380058 2023] [wsgi:error] [pid 305933:tid 139837204702976] [remote 212.251.157.96:51337]   File "/usr/local/lib/python3.9/dist-packages/flask/app.py", line 889, in run
+[Mon May 08 17:14:38.380064 2023] [wsgi:error] [pid 305933:tid 139837204702976] [remote 212.251.157.96:51337]     run_simple(t.cast(str, host), port, self, **options)
+[Mon May 08 17:14:38.380074 2023] [wsgi:error] [pid 305933:tid 139837204702976] [remote 212.251.157.96:51337]   File "/usr/local/lib/python3.9/dist-packages/werkzeug/serving.py", line 1075, in run_simple
+[Mon May 08 17:14:38.380079 2023] [wsgi:error] [pid 305933:tid 139837204702976] [remote 212.251.157.96:51337]     srv = make_server(
+[Mon May 08 17:14:38.380086 2023] [wsgi:error] [pid 305933:tid 139837204702976] [remote 212.251.157.96:51337]   File "/usr/local/lib/python3.9/dist-packages/werkzeug/serving.py", line 915, in make_server
+[Mon May 08 17:14:38.380093 2023] [wsgi:error] [pid 305933:tid 139837204702976] [remote 212.251.157.96:51337]     return ThreadedWSGIServer(
+[Mon May 08 17:14:38.380104 2023] [wsgi:error] [pid 305933:tid 139837204702976] [remote 212.251.157.96:51337]   File "/usr/local/lib/python3.9/dist-packages/werkzeug/serving.py", line 771, in __init__
+[Mon May 08 17:14:38.380108 2023] [wsgi:error] [pid 305933:tid 139837204702976] [remote 212.251.157.96:51337]     sys.exit(1)
+[Mon May 08 17:14:38.380121 2023] [wsgi:error] [pid 305933:tid 139837204702976] [remote 212.251.157.96:51337] SystemExit: 1
+[Mon May 08 17:21:02.222049 2023] [wsgi:error] [pid 306048:tid 139837213095680] [remote 212.251.157.96:51537] [2023-05-08 17:21:02,220] ERROR in app: Exception on /addrec [POST]
+[Mon May 08 17:21:02.222104 2023] [wsgi:error] [pid 306048:tid 139837213095680] [remote 212.251.157.96:51537] Traceback (most recent call last):
+[Mon May 08 17:21:02.222110 2023] [wsgi:error] [pid 306048:tid 139837213095680] [remote 212.251.157.96:51537]   File "/var/www/html/app.py", line 29, in addrec
+[Mon May 08 17:21:02.222114 2023] [wsgi:error] [pid 306048:tid 139837213095680] [remote 212.251.157.96:51537]     with sql.connect("database.db") as con:
+[Mon May 08 17:21:02.222120 2023] [wsgi:error] [pid 306048:tid 139837213095680] [remote 212.251.157.96:51537] sqlite3.OperationalError: unable to open database file
+[Mon May 08 17:21:02.222124 2023] [wsgi:error] [pid 306048:tid 139837213095680] [remote 212.251.157.96:51537] 
+[Mon May 08 17:21:02.222128 2023] [wsgi:error] [pid 306048:tid 139837213095680] [remote 212.251.157.96:51537] During handling of the above exception, another exception occurred:
+[Mon May 08 17:21:02.222132 2023] [wsgi:error] [pid 306048:tid 139837213095680] [remote 212.251.157.96:51537] 
+[Mon May 08 17:21:02.222138 2023] [wsgi:error] [pid 306048:tid 139837213095680] [remote 212.251.157.96:51537] Traceback (most recent call last):
+[Mon May 08 17:21:02.222142 2023] [wsgi:error] [pid 306048:tid 139837213095680] [remote 212.251.157.96:51537]   File "/var/www/html/app.py", line 35, in addrec
+[Mon May 08 17:21:02.222146 2023] [wsgi:error] [pid 306048:tid 139837213095680] [remote 212.251.157.96:51537]     con.rollback()
+[Mon May 08 17:21:02.222150 2023] [wsgi:error] [pid 306048:tid 139837213095680] [remote 212.251.157.96:51537] UnboundLocalError: local variable 'con' referenced before assignment
+[Mon May 08 17:21:02.222156 2023] [wsgi:error] [pid 306048:tid 139837213095680] [remote 212.251.157.96:51537] 
+[Mon May 08 17:21:02.222160 2023] [wsgi:error] [pid 306048:tid 139837213095680] [remote 212.251.157.96:51537] During handling of the above exception, another exception occurred:
+[Mon May 08 17:21:02.222164 2023] [wsgi:error] [pid 306048:tid 139837213095680] [remote 212.251.157.96:51537] 
+[Mon May 08 17:21:02.222168 2023] [wsgi:error] [pid 306048:tid 139837213095680] [remote 212.251.157.96:51537] Traceback (most recent call last):
+[Mon May 08 17:21:02.222193 2023] [wsgi:error] [pid 306048:tid 139837213095680] [remote 212.251.157.96:51537]   File "/usr/local/lib/python3.9/dist-packages/flask/app.py", line 2190, in wsgi_app
+[Mon May 08 17:21:02.222197 2023] [wsgi:error] [pid 306048:tid 139837213095680] [remote 212.251.157.96:51537]     response = self.full_dispatch_request()
+[Mon May 08 17:21:02.222201 2023] [wsgi:error] [pid 306048:tid 139837213095680] [remote 212.251.157.96:51537]   File "/usr/local/lib/python3.9/dist-packages/flask/app.py", line 1486, in full_dispatch_request
+[Mon May 08 17:21:02.222205 2023] [wsgi:error] [pid 306048:tid 139837213095680] [remote 212.251.157.96:51537]     rv = self.handle_user_exception(e)
+[Mon May 08 17:21:02.222211 2023] [wsgi:error] [pid 306048:tid 139837213095680] [remote 212.251.157.96:51537]   File "/usr/local/lib/python3.9/dist-packages/flask/app.py", line 1484, in full_dispatch_request
+[Mon May 08 17:21:02.222216 2023] [wsgi:error] [pid 306048:tid 139837213095680] [remote 212.251.157.96:51537]     rv = self.dispatch_request()
+[Mon May 08 17:21:02.222219 2023] [wsgi:error] [pid 306048:tid 139837213095680] [remote 212.251.157.96:51537]   File "/usr/local/lib/python3.9/dist-packages/flask/app.py", line 1469, in dispatch_request
+[Mon May 08 17:21:02.222223 2023] [wsgi:error] [pid 306048:tid 139837213095680] [remote 212.251.157.96:51537]     return self.ensure_sync(self.view_functions[rule.endpoint])(**view_args)
+[Mon May 08 17:21:02.222229 2023] [wsgi:error] [pid 306048:tid 139837213095680] [remote 212.251.157.96:51537]   File "/var/www/html/app.py", line 38, in addrec
+[Mon May 08 17:21:02.222234 2023] [wsgi:error] [pid 306048:tid 139837213095680] [remote 212.251.157.96:51537]     return render_template("result.html", msg=msg)
+[Mon May 08 17:21:02.222237 2023] [wsgi:error] [pid 306048:tid 139837213095680] [remote 212.251.157.96:51537] UnboundLocalError: local variable 'msg' referenced before assignment
+[Mon May 08 17:21:17.799922 2023] [wsgi:error] [pid 306048:tid 139837204702976] [remote 212.251.157.96:51555] [2023-05-08 17:21:17,799] ERROR in app: Exception on /login [POST]
+[Mon May 08 17:21:17.799965 2023] [wsgi:error] [pid 306048:tid 139837204702976] [remote 212.251.157.96:51555] Traceback (most recent call last):
+[Mon May 08 17:21:17.799971 2023] [wsgi:error] [pid 306048:tid 139837204702976] [remote 212.251.157.96:51555]   File "/var/www/html/app.py", line 62, in login
+[Mon May 08 17:21:17.799975 2023] [wsgi:error] [pid 306048:tid 139837204702976] [remote 212.251.157.96:51555]     with sql.connect("database.db") as con:
+[Mon May 08 17:21:17.799979 2023] [wsgi:error] [pid 306048:tid 139837204702976] [remote 212.251.157.96:51555] sqlite3.OperationalError: unable to open database file
+[Mon May 08 17:21:17.799985 2023] [wsgi:error] [pid 306048:tid 139837204702976] [remote 212.251.157.96:51555] 
+[Mon May 08 17:21:17.799990 2023] [wsgi:error] [pid 306048:tid 139837204702976] [remote 212.251.157.96:51555] During handling of the above exception, another exception occurred:
+[Mon May 08 17:21:17.799994 2023] [wsgi:error] [pid 306048:tid 139837204702976] [remote 212.251.157.96:51555] 
+[Mon May 08 17:21:17.799997 2023] [wsgi:error] [pid 306048:tid 139837204702976] [remote 212.251.157.96:51555] Traceback (most recent call last):
+[Mon May 08 17:21:17.800003 2023] [wsgi:error] [pid 306048:tid 139837204702976] [remote 212.251.157.96:51555]   File "/var/www/html/app.py", line 76, in login
+[Mon May 08 17:21:17.800008 2023] [wsgi:error] [pid 306048:tid 139837204702976] [remote 212.251.157.96:51555]     msg="eror in insert operration" + " " + msg
+[Mon May 08 17:21:17.800012 2023] [wsgi:error] [pid 306048:tid 139837204702976] [remote 212.251.157.96:51555] UnboundLocalError: local variable 'msg' referenced before assignment
+[Mon May 08 17:21:17.800016 2023] [wsgi:error] [pid 306048:tid 139837204702976] [remote 212.251.157.96:51555] 
+[Mon May 08 17:21:17.800021 2023] [wsgi:error] [pid 306048:tid 139837204702976] [remote 212.251.157.96:51555] During handling of the above exception, another exception occurred:
+[Mon May 08 17:21:17.800026 2023] [wsgi:error] [pid 306048:tid 139837204702976] [remote 212.251.157.96:51555] 
+[Mon May 08 17:21:17.800039 2023] [wsgi:error] [pid 306048:tid 139837204702976] [remote 212.251.157.96:51555] Traceback (most recent call last):
+[Mon May 08 17:21:17.800043 2023] [wsgi:error] [pid 306048:tid 139837204702976] [remote 212.251.157.96:51555]   File "/usr/local/lib/python3.9/dist-packages/flask/app.py", line 2190, in wsgi_app
+[Mon May 08 17:21:17.800049 2023] [wsgi:error] [pid 306048:tid 139837204702976] [remote 212.251.157.96:51555]     response = self.full_dispatch_request()
+[Mon May 08 17:21:17.800053 2023] [wsgi:error] [pid 306048:tid 139837204702976] [remote 212.251.157.96:51555]   File "/usr/local/lib/python3.9/dist-packages/flask/app.py", line 1486, in full_dispatch_request
+[Mon May 08 17:21:17.800058 2023] [wsgi:error] [pid 306048:tid 139837204702976] [remote 212.251.157.96:51555]     rv = self.handle_user_exception(e)
+[Mon May 08 17:21:17.800062 2023] [wsgi:error] [pid 306048:tid 139837204702976] [remote 212.251.157.96:51555]   File "/usr/local/lib/python3.9/dist-packages/flask/app.py", line 1484, in full_dispatch_request
+[Mon May 08 17:21:17.800068 2023] [wsgi:error] [pid 306048:tid 139837204702976] [remote 212.251.157.96:51555]     rv = self.dispatch_request()
+[Mon May 08 17:21:17.800072 2023] [wsgi:error] [pid 306048:tid 139837204702976] [remote 212.251.157.96:51555]   File "/usr/local/lib/python3.9/dist-packages/flask/app.py", line 1469, in dispatch_request
+[Mon May 08 17:21:17.800076 2023] [wsgi:error] [pid 306048:tid 139837204702976] [remote 212.251.157.96:51555]     return self.ensure_sync(self.view_functions[rule.endpoint])(**view_args)
+[Mon May 08 17:21:17.800080 2023] [wsgi:error] [pid 306048:tid 139837204702976] [remote 212.251.157.96:51555]   File "/var/www/html/app.py", line 78, in login
+[Mon May 08 17:21:17.800086 2023] [wsgi:error] [pid 306048:tid 139837204702976] [remote 212.251.157.96:51555]     return render_template("result.html", msg=msg)
+[Mon May 08 17:21:17.800090 2023] [wsgi:error] [pid 306048:tid 139837204702976] [remote 212.251.157.96:51555] UnboundLocalError: local variable 'msg' referenced before assignment
+[Mon May 08 17:30:32.969329 2023] [wsgi:error] [pid 306048:tid 139837204702976] [remote 212.251.157.96:51809] [2023-05-08 17:30:32,968] ERROR in app: Exception on /addrec [GET]
+[Mon May 08 17:30:32.969390 2023] [wsgi:error] [pid 306048:tid 139837204702976] [remote 212.251.157.96:51809] Traceback (most recent call last):
+[Mon May 08 17:30:32.969397 2023] [wsgi:error] [pid 306048:tid 139837204702976] [remote 212.251.157.96:51809]   File "/usr/local/lib/python3.9/dist-packages/flask/app.py", line 2190, in wsgi_app
+[Mon May 08 17:30:32.969404 2023] [wsgi:error] [pid 306048:tid 139837204702976] [remote 212.251.157.96:51809]     response = self.full_dispatch_request()
+[Mon May 08 17:30:32.969409 2023] [wsgi:error] [pid 306048:tid 139837204702976] [remote 212.251.157.96:51809]   File "/usr/local/lib/python3.9/dist-packages/flask/app.py", line 1487, in full_dispatch_request
+[Mon May 08 17:30:32.969414 2023] [wsgi:error] [pid 306048:tid 139837204702976] [remote 212.251.157.96:51809]     return self.finalize_request(rv)
+[Mon May 08 17:30:32.969419 2023] [wsgi:error] [pid 306048:tid 139837204702976] [remote 212.251.157.96:51809]   File "/usr/local/lib/python3.9/dist-packages/flask/app.py", line 1506, in finalize_request
+[Mon May 08 17:30:32.969424 2023] [wsgi:error] [pid 306048:tid 139837204702976] [remote 212.251.157.96:51809]     response = self.make_response(rv)
+[Mon May 08 17:30:32.969428 2023] [wsgi:error] [pid 306048:tid 139837204702976] [remote 212.251.157.96:51809]   File "/usr/local/lib/python3.9/dist-packages/flask/app.py", line 1801, in make_response
+[Mon May 08 17:30:32.969432 2023] [wsgi:error] [pid 306048:tid 139837204702976] [remote 212.251.157.96:51809]     raise TypeError(
+[Mon May 08 17:30:32.969439 2023] [wsgi:error] [pid 306048:tid 139837204702976] [remote 212.251.157.96:51809] TypeError: The view function for 'addrec' did not return a valid response. The function either returned None or ended without a return statement.
+[Mon May 08 17:31:34.389206 2023] [wsgi:error] [pid 306048:tid 139837204702976] [remote 212.251.157.96:51835] [2023-05-08 17:31:34,388] ERROR in app: Exception on /login [POST]
+[Mon May 08 17:31:34.389256 2023] [wsgi:error] [pid 306048:tid 139837204702976] [remote 212.251.157.96:51835] Traceback (most recent call last):
+[Mon May 08 17:31:34.389262 2023] [wsgi:error] [pid 306048:tid 139837204702976] [remote 212.251.157.96:51835]   File "/var/www/html/app.py", line 62, in login
+[Mon May 08 17:31:34.389268 2023] [wsgi:error] [pid 306048:tid 139837204702976] [remote 212.251.157.96:51835]     with sql.connect("database.db") as con:
+[Mon May 08 17:31:34.389273 2023] [wsgi:error] [pid 306048:tid 139837204702976] [remote 212.251.157.96:51835] sqlite3.OperationalError: unable to open database file
+[Mon May 08 17:31:34.389277 2023] [wsgi:error] [pid 306048:tid 139837204702976] [remote 212.251.157.96:51835] 
+[Mon May 08 17:31:34.389281 2023] [wsgi:error] [pid 306048:tid 139837204702976] [remote 212.251.157.96:51835] During handling of the above exception, another exception occurred:
+[Mon May 08 17:31:34.389286 2023] [wsgi:error] [pid 306048:tid 139837204702976] [remote 212.251.157.96:51835] 
+[Mon May 08 17:31:34.389291 2023] [wsgi:error] [pid 306048:tid 139837204702976] [remote 212.251.157.96:51835] Traceback (most recent call last):
+[Mon May 08 17:31:34.389295 2023] [wsgi:error] [pid 306048:tid 139837204702976] [remote 212.251.157.96:51835]   File "/var/www/html/app.py", line 76, in login
+[Mon May 08 17:31:34.389299 2023] [wsgi:error] [pid 306048:tid 139837204702976] [remote 212.251.157.96:51835]     msg="eror in insert operration" + " " + msg
+[Mon May 08 17:31:34.389304 2023] [wsgi:error] [pid 306048:tid 139837204702976] [remote 212.251.157.96:51835] UnboundLocalError: local variable 'msg' referenced before assignment
+[Mon May 08 17:31:34.389309 2023] [wsgi:error] [pid 306048:tid 139837204702976] [remote 212.251.157.96:51835] 
+[Mon May 08 17:31:34.389313 2023] [wsgi:error] [pid 306048:tid 139837204702976] [remote 212.251.157.96:51835] During handling of the above exception, another exception occurred:
+[Mon May 08 17:31:34.389317 2023] [wsgi:error] [pid 306048:tid 139837204702976] [remote 212.251.157.96:51835] 
+[Mon May 08 17:31:34.389323 2023] [wsgi:error] [pid 306048:tid 139837204702976] [remote 212.251.157.96:51835] Traceback (most recent call last):
+[Mon May 08 17:31:34.389328 2023] [wsgi:error] [pid 306048:tid 139837204702976] [remote 212.251.157.96:51835]   File "/usr/local/lib/python3.9/dist-packages/flask/app.py", line 2190, in wsgi_app
+[Mon May 08 17:31:34.389332 2023] [wsgi:error] [pid 306048:tid 139837204702976] [remote 212.251.157.96:51835]     response = self.full_dispatch_request()
+[Mon May 08 17:31:34.389336 2023] [wsgi:error] [pid 306048:tid 139837204702976] [remote 212.251.157.96:51835]   File "/usr/local/lib/python3.9/dist-packages/flask/app.py", line 1486, in full_dispatch_request
+[Mon May 08 17:31:34.389342 2023] [wsgi:error] [pid 306048:tid 139837204702976] [remote 212.251.157.96:51835]     rv = self.handle_user_exception(e)
+[Mon May 08 17:31:34.389346 2023] [wsgi:error] [pid 306048:tid 139837204702976] [remote 212.251.157.96:51835]   File "/usr/local/lib/python3.9/dist-packages/flask/app.py", line 1484, in full_dispatch_request
+[Mon May 08 17:31:34.389350 2023] [wsgi:error] [pid 306048:tid 139837204702976] [remote 212.251.157.96:51835]     rv = self.dispatch_request()
+[Mon May 08 17:31:34.389354 2023] [wsgi:error] [pid 306048:tid 139837204702976] [remote 212.251.157.96:51835]   File "/usr/local/lib/python3.9/dist-packages/flask/app.py", line 1469, in dispatch_request
+[Mon May 08 17:31:34.389359 2023] [wsgi:error] [pid 306048:tid 139837204702976] [remote 212.251.157.96:51835]     return self.ensure_sync(self.view_functions[rule.endpoint])(**view_args)
+[Mon May 08 17:31:34.389364 2023] [wsgi:error] [pid 306048:tid 139837204702976] [remote 212.251.157.96:51835]   File "/var/www/html/app.py", line 78, in login
+[Mon May 08 17:31:34.389368 2023] [wsgi:error] [pid 306048:tid 139837204702976] [remote 212.251.157.96:51835]     return render_template("result.html", msg=msg)
+[Mon May 08 17:31:34.389387 2023] [wsgi:error] [pid 306048:tid 139837204702976] [remote 212.251.157.96:51835] UnboundLocalError: local variable 'msg' referenced before assignment
+[Mon May 08 17:32:13.533422 2023] [wsgi:error] [pid 306048:tid 139837204702976] [remote 212.251.157.96:51841] [2023-05-08 17:32:13,533] ERROR in app: Exception on /list [GET]
+[Mon May 08 17:32:13.533484 2023] [wsgi:error] [pid 306048:tid 139837204702976] [remote 212.251.157.96:51841] Traceback (most recent call last):
+[Mon May 08 17:32:13.533490 2023] [wsgi:error] [pid 306048:tid 139837204702976] [remote 212.251.157.96:51841]   File "/usr/local/lib/python3.9/dist-packages/flask/app.py", line 2190, in wsgi_app
+[Mon May 08 17:32:13.533495 2023] [wsgi:error] [pid 306048:tid 139837204702976] [remote 212.251.157.96:51841]     response = self.full_dispatch_request()
+[Mon May 08 17:32:13.533499 2023] [wsgi:error] [pid 306048:tid 139837204702976] [remote 212.251.157.96:51841]   File "/usr/local/lib/python3.9/dist-packages/flask/app.py", line 1486, in full_dispatch_request
+[Mon May 08 17:32:13.533506 2023] [wsgi:error] [pid 306048:tid 139837204702976] [remote 212.251.157.96:51841]     rv = self.handle_user_exception(e)
+[Mon May 08 17:32:13.533510 2023] [wsgi:error] [pid 306048:tid 139837204702976] [remote 212.251.157.96:51841]   File "/usr/local/lib/python3.9/dist-packages/flask/app.py", line 1484, in full_dispatch_request
+[Mon May 08 17:32:13.533514 2023] [wsgi:error] [pid 306048:tid 139837204702976] [remote 212.251.157.96:51841]     rv = self.dispatch_request()
+[Mon May 08 17:32:13.533518 2023] [wsgi:error] [pid 306048:tid 139837204702976] [remote 212.251.157.96:51841]   File "/usr/local/lib/python3.9/dist-packages/flask/app.py", line 1469, in dispatch_request
+[Mon May 08 17:32:13.533524 2023] [wsgi:error] [pid 306048:tid 139837204702976] [remote 212.251.157.96:51841]     return self.ensure_sync(self.view_functions[rule.endpoint])(**view_args)
+[Mon May 08 17:32:13.533529 2023] [wsgi:error] [pid 306048:tid 139837204702976] [remote 212.251.157.96:51841]   File "/var/www/html/app.py", line 44, in list
+[Mon May 08 17:32:13.533532 2023] [wsgi:error] [pid 306048:tid 139837204702976] [remote 212.251.157.96:51841]     con = sql.connect("database.db")
+[Mon May 08 17:32:13.533537 2023] [wsgi:error] [pid 306048:tid 139837204702976] [remote 212.251.157.96:51841] sqlite3.OperationalError: unable to open database file
+[Mon May 08 17:37:42.520094 2023] [wsgi:error] [pid 306048:tid 139837204702976] [remote 212.251.157.96:52092] [2023-05-08 17:37:42,519] ERROR in app: Exception on /login [POST]
+[Mon May 08 17:37:42.520140 2023] [wsgi:error] [pid 306048:tid 139837204702976] [remote 212.251.157.96:52092] Traceback (most recent call last):
+[Mon May 08 17:37:42.520146 2023] [wsgi:error] [pid 306048:tid 139837204702976] [remote 212.251.157.96:52092]   File "/var/www/html/app.py", line 62, in login
+[Mon May 08 17:37:42.520152 2023] [wsgi:error] [pid 306048:tid 139837204702976] [remote 212.251.157.96:52092]     with sql.connect("database.db") as con:
+[Mon May 08 17:37:42.520157 2023] [wsgi:error] [pid 306048:tid 139837204702976] [remote 212.251.157.96:52092] sqlite3.OperationalError: unable to open database file
+[Mon May 08 17:37:42.520162 2023] [wsgi:error] [pid 306048:tid 139837204702976] [remote 212.251.157.96:52092] 
+[Mon May 08 17:37:42.520166 2023] [wsgi:error] [pid 306048:tid 139837204702976] [remote 212.251.157.96:52092] During handling of the above exception, another exception occurred:
+[Mon May 08 17:37:42.520172 2023] [wsgi:error] [pid 306048:tid 139837204702976] [remote 212.251.157.96:52092] 
+[Mon May 08 17:37:42.520176 2023] [wsgi:error] [pid 306048:tid 139837204702976] [remote 212.251.157.96:52092] Traceback (most recent call last):
+[Mon May 08 17:37:42.520180 2023] [wsgi:error] [pid 306048:tid 139837204702976] [remote 212.251.157.96:52092]   File "/var/www/html/app.py", line 76, in login
+[Mon May 08 17:37:42.520183 2023] [wsgi:error] [pid 306048:tid 139837204702976] [remote 212.251.157.96:52092]     msg="eror in insert operration" + " " + msg
+[Mon May 08 17:37:42.520201 2023] [wsgi:error] [pid 306048:tid 139837204702976] [remote 212.251.157.96:52092] UnboundLocalError: local variable 'msg' referenced before assignment
+[Mon May 08 17:37:42.520206 2023] [wsgi:error] [pid 306048:tid 139837204702976] [remote 212.251.157.96:52092] 
+[Mon May 08 17:37:42.520210 2023] [wsgi:error] [pid 306048:tid 139837204702976] [remote 212.251.157.96:52092] During handling of the above exception, another exception occurred:
+[Mon May 08 17:37:42.520214 2023] [wsgi:error] [pid 306048:tid 139837204702976] [remote 212.251.157.96:52092] 
+[Mon May 08 17:37:42.520219 2023] [wsgi:error] [pid 306048:tid 139837204702976] [remote 212.251.157.96:52092] Traceback (most recent call last):
+[Mon May 08 17:37:42.520224 2023] [wsgi:error] [pid 306048:tid 139837204702976] [remote 212.251.157.96:52092]   File "/usr/local/lib/python3.9/dist-packages/flask/app.py", line 2190, in wsgi_app
+[Mon May 08 17:37:42.520228 2023] [wsgi:error] [pid 306048:tid 139837204702976] [remote 212.251.157.96:52092]     response = self.full_dispatch_request()
+[Mon May 08 17:37:42.520232 2023] [wsgi:error] [pid 306048:tid 139837204702976] [remote 212.251.157.96:52092]   File "/usr/local/lib/python3.9/dist-packages/flask/app.py", line 1486, in full_dispatch_request
+[Mon May 08 17:37:42.520238 2023] [wsgi:error] [pid 306048:tid 139837204702976] [remote 212.251.157.96:52092]     rv = self.handle_user_exception(e)
+[Mon May 08 17:37:42.520243 2023] [wsgi:error] [pid 306048:tid 139837204702976] [remote 212.251.157.96:52092]   File "/usr/local/lib/python3.9/dist-packages/flask/app.py", line 1484, in full_dispatch_request
+[Mon May 08 17:37:42.520247 2023] [wsgi:error] [pid 306048:tid 139837204702976] [remote 212.251.157.96:52092]     rv = self.dispatch_request()
+[Mon May 08 17:37:42.520251 2023] [wsgi:error] [pid 306048:tid 139837204702976] [remote 212.251.157.96:52092]   File "/usr/local/lib/python3.9/dist-packages/flask/app.py", line 1469, in dispatch_request
+[Mon May 08 17:37:42.520257 2023] [wsgi:error] [pid 306048:tid 139837204702976] [remote 212.251.157.96:52092]     return self.ensure_sync(self.view_functions[rule.endpoint])(**view_args)
+[Mon May 08 17:37:42.520261 2023] [wsgi:error] [pid 306048:tid 139837204702976] [remote 212.251.157.96:52092]   File "/var/www/html/app.py", line 78, in login
+[Mon May 08 17:37:42.520265 2023] [wsgi:error] [pid 306048:tid 139837204702976] [remote 212.251.157.96:52092]     return render_template("result.html", msg=msg)
+[Mon May 08 17:37:42.520269 2023] [wsgi:error] [pid 306048:tid 139837204702976] [remote 212.251.157.96:52092] UnboundLocalError: local variable 'msg' referenced before assignment
+[Mon May 08 18:36:52.031267 2023] [core:error] [pid 306049:tid 139836677678848] [client 167.99.144.56:33370] AH10244: invalid URI path (/cgi-bin/.%%%%32%%65/.%%%%32%%65/.%%%%32%%65/.%%%%32%%65/.%%%%32%%65/bin/sh)
+[Tue May 09 07:51:14.147537 2023] [wsgi:error] [pid 310279:tid 139837213095680] [remote 193.215.182.66:3161] [2023-05-09 07:51:14,143] ERROR in app: Exception on /addrec [POST]
+[Tue May 09 07:51:14.147674 2023] [wsgi:error] [pid 310279:tid 139837213095680] [remote 193.215.182.66:3161] Traceback (most recent call last):
+[Tue May 09 07:51:14.147681 2023] [wsgi:error] [pid 310279:tid 139837213095680] [remote 193.215.182.66:3161]   File "/var/www/html/app.py", line 29, in addrec
+[Tue May 09 07:51:14.147688 2023] [wsgi:error] [pid 310279:tid 139837213095680] [remote 193.215.182.66:3161]     with sql.connect("database.db") as con:
+[Tue May 09 07:51:14.147692 2023] [wsgi:error] [pid 310279:tid 139837213095680] [remote 193.215.182.66:3161] sqlite3.OperationalError: unable to open database file
+[Tue May 09 07:51:14.147696 2023] [wsgi:error] [pid 310279:tid 139837213095680] [remote 193.215.182.66:3161] 
+[Tue May 09 07:51:14.147700 2023] [wsgi:error] [pid 310279:tid 139837213095680] [remote 193.215.182.66:3161] During handling of the above exception, another exception occurred:
+[Tue May 09 07:51:14.147706 2023] [wsgi:error] [pid 310279:tid 139837213095680] [remote 193.215.182.66:3161] 
+[Tue May 09 07:51:14.147725 2023] [wsgi:error] [pid 310279:tid 139837213095680] [remote 193.215.182.66:3161] Traceback (most recent call last):
+[Tue May 09 07:51:14.147729 2023] [wsgi:error] [pid 310279:tid 139837213095680] [remote 193.215.182.66:3161]   File "/var/www/html/app.py", line 35, in addrec
+[Tue May 09 07:51:14.147733 2023] [wsgi:error] [pid 310279:tid 139837213095680] [remote 193.215.182.66:3161]     con.rollback()
+[Tue May 09 07:51:14.147739 2023] [wsgi:error] [pid 310279:tid 139837213095680] [remote 193.215.182.66:3161] UnboundLocalError: local variable 'con' referenced before assignment
+[Tue May 09 07:51:14.147743 2023] [wsgi:error] [pid 310279:tid 139837213095680] [remote 193.215.182.66:3161] 
+[Tue May 09 07:51:14.147747 2023] [wsgi:error] [pid 310279:tid 139837213095680] [remote 193.215.182.66:3161] During handling of the above exception, another exception occurred:
+[Tue May 09 07:51:14.147751 2023] [wsgi:error] [pid 310279:tid 139837213095680] [remote 193.215.182.66:3161] 
+[Tue May 09 07:51:14.147756 2023] [wsgi:error] [pid 310279:tid 139837213095680] [remote 193.215.182.66:3161] Traceback (most recent call last):
+[Tue May 09 07:51:14.147761 2023] [wsgi:error] [pid 310279:tid 139837213095680] [remote 193.215.182.66:3161]   File "/usr/local/lib/python3.9/dist-packages/flask/app.py", line 2190, in wsgi_app
+[Tue May 09 07:51:14.147765 2023] [wsgi:error] [pid 310279:tid 139837213095680] [remote 193.215.182.66:3161]     response = self.full_dispatch_request()
+[Tue May 09 07:51:14.147791 2023] [wsgi:error] [pid 310279:tid 139837213095680] [remote 193.215.182.66:3161]   File "/usr/local/lib/python3.9/dist-packages/flask/app.py", line 1486, in full_dispatch_request
+[Tue May 09 07:51:14.147798 2023] [wsgi:error] [pid 310279:tid 139837213095680] [remote 193.215.182.66:3161]     rv = self.handle_user_exception(e)
+[Tue May 09 07:51:14.147802 2023] [wsgi:error] [pid 310279:tid 139837213095680] [remote 193.215.182.66:3161]   File "/usr/local/lib/python3.9/dist-packages/flask/app.py", line 1484, in full_dispatch_request
+[Tue May 09 07:51:14.147805 2023] [wsgi:error] [pid 310279:tid 139837213095680] [remote 193.215.182.66:3161]     rv = self.dispatch_request()
+[Tue May 09 07:51:14.147811 2023] [wsgi:error] [pid 310279:tid 139837213095680] [remote 193.215.182.66:3161]   File "/usr/local/lib/python3.9/dist-packages/flask/app.py", line 1469, in dispatch_request
+[Tue May 09 07:51:14.147816 2023] [wsgi:error] [pid 310279:tid 139837213095680] [remote 193.215.182.66:3161]     return self.ensure_sync(self.view_functions[rule.endpoint])(**view_args)
+[Tue May 09 07:51:14.147819 2023] [wsgi:error] [pid 310279:tid 139837213095680] [remote 193.215.182.66:3161]   File "/var/www/html/app.py", line 38, in addrec
+[Tue May 09 07:51:14.147823 2023] [wsgi:error] [pid 310279:tid 139837213095680] [remote 193.215.182.66:3161]     return render_template("result.html", msg=msg)
+[Tue May 09 07:51:14.147828 2023] [wsgi:error] [pid 310279:tid 139837213095680] [remote 193.215.182.66:3161] UnboundLocalError: local variable 'msg' referenced before assignment
+[Tue May 09 07:51:28.673111 2023] [wsgi:error] [pid 310279:tid 139837196310272] [remote 193.215.182.66:1572] [2023-05-09 07:51:28,671] ERROR in app: Exception on /login [POST]
+[Tue May 09 07:51:28.673153 2023] [wsgi:error] [pid 310279:tid 139837196310272] [remote 193.215.182.66:1572] Traceback (most recent call last):
+[Tue May 09 07:51:28.673159 2023] [wsgi:error] [pid 310279:tid 139837196310272] [remote 193.215.182.66:1572]   File "/var/www/html/app.py", line 62, in login
+[Tue May 09 07:51:28.673163 2023] [wsgi:error] [pid 310279:tid 139837196310272] [remote 193.215.182.66:1572]     with sql.connect("database.db") as con:
+[Tue May 09 07:51:28.673167 2023] [wsgi:error] [pid 310279:tid 139837196310272] [remote 193.215.182.66:1572] sqlite3.OperationalError: unable to open database file
+[Tue May 09 07:51:28.673173 2023] [wsgi:error] [pid 310279:tid 139837196310272] [remote 193.215.182.66:1572] 
+[Tue May 09 07:51:28.673178 2023] [wsgi:error] [pid 310279:tid 139837196310272] [remote 193.215.182.66:1572] During handling of the above exception, another exception occurred:
+[Tue May 09 07:51:28.673192 2023] [wsgi:error] [pid 310279:tid 139837196310272] [remote 193.215.182.66:1572] 
+[Tue May 09 07:51:28.673196 2023] [wsgi:error] [pid 310279:tid 139837196310272] [remote 193.215.182.66:1572] Traceback (most recent call last):
+[Tue May 09 07:51:28.673201 2023] [wsgi:error] [pid 310279:tid 139837196310272] [remote 193.215.182.66:1572]   File "/var/www/html/app.py", line 76, in login
+[Tue May 09 07:51:28.673206 2023] [wsgi:error] [pid 310279:tid 139837196310272] [remote 193.215.182.66:1572]     msg="eror in insert operration" + " " + msg
+[Tue May 09 07:51:28.673210 2023] [wsgi:error] [pid 310279:tid 139837196310272] [remote 193.215.182.66:1572] UnboundLocalError: local variable 'msg' referenced before assignment
+[Tue May 09 07:51:28.673213 2023] [wsgi:error] [pid 310279:tid 139837196310272] [remote 193.215.182.66:1572] 
+[Tue May 09 07:51:28.673219 2023] [wsgi:error] [pid 310279:tid 139837196310272] [remote 193.215.182.66:1572] During handling of the above exception, another exception occurred:
+[Tue May 09 07:51:28.673223 2023] [wsgi:error] [pid 310279:tid 139837196310272] [remote 193.215.182.66:1572] 
+[Tue May 09 07:51:28.673227 2023] [wsgi:error] [pid 310279:tid 139837196310272] [remote 193.215.182.66:1572] Traceback (most recent call last):
+[Tue May 09 07:51:28.673231 2023] [wsgi:error] [pid 310279:tid 139837196310272] [remote 193.215.182.66:1572]   File "/usr/local/lib/python3.9/dist-packages/flask/app.py", line 2190, in wsgi_app
+[Tue May 09 07:51:28.673237 2023] [wsgi:error] [pid 310279:tid 139837196310272] [remote 193.215.182.66:1572]     response = self.full_dispatch_request()
+[Tue May 09 07:51:28.673242 2023] [wsgi:error] [pid 310279:tid 139837196310272] [remote 193.215.182.66:1572]   File "/usr/local/lib/python3.9/dist-packages/flask/app.py", line 1486, in full_dispatch_request
+[Tue May 09 07:51:28.673246 2023] [wsgi:error] [pid 310279:tid 139837196310272] [remote 193.215.182.66:1572]     rv = self.handle_user_exception(e)
+[Tue May 09 07:51:28.673250 2023] [wsgi:error] [pid 310279:tid 139837196310272] [remote 193.215.182.66:1572]   File "/usr/local/lib/python3.9/dist-packages/flask/app.py", line 1484, in full_dispatch_request
+[Tue May 09 07:51:28.673256 2023] [wsgi:error] [pid 310279:tid 139837196310272] [remote 193.215.182.66:1572]     rv = self.dispatch_request()
+[Tue May 09 07:51:28.673260 2023] [wsgi:error] [pid 310279:tid 139837196310272] [remote 193.215.182.66:1572]   File "/usr/local/lib/python3.9/dist-packages/flask/app.py", line 1469, in dispatch_request
+[Tue May 09 07:51:28.673264 2023] [wsgi:error] [pid 310279:tid 139837196310272] [remote 193.215.182.66:1572]     return self.ensure_sync(self.view_functions[rule.endpoint])(**view_args)
+[Tue May 09 07:51:28.673268 2023] [wsgi:error] [pid 310279:tid 139837196310272] [remote 193.215.182.66:1572]   File "/var/www/html/app.py", line 78, in login
+[Tue May 09 07:51:28.673274 2023] [wsgi:error] [pid 310279:tid 139837196310272] [remote 193.215.182.66:1572]     return render_template("result.html", msg=msg)
+[Tue May 09 07:51:28.673278 2023] [wsgi:error] [pid 310279:tid 139837196310272] [remote 193.215.182.66:1572] UnboundLocalError: local variable 'msg' referenced before assignment
+[Tue May 09 13:22:08.018488 2023] [wsgi:error] [pid 310281:tid 139837221488384] [client 36.33.131.216:54640] mod_wsgi (pid=310281): Request data read error when proxying data to daemon process: Partial results are valid but processing is incomplete.
+[Tue May 09 15:05:28.305226 2023] [wsgi:error] [pid 310281:tid 139836904150784] [client 120.85.114.109:17403] mod_wsgi (pid=310281): Request data read error when proxying data to daemon process: Partial results are valid but processing is incomplete.
+[Tue May 09 16:03:00.906103 2023] [wsgi:error] [pid 310281:tid 139836946114304] [client 120.86.254.230:2324] mod_wsgi (pid=310281): Request data read error when proxying data to daemon process: Partial results are valid but processing is incomplete.
+[Thu May 11 10:10:21.156426 2023] [wsgi:error] [pid 334451:tid 139837204702976] [remote 193.215.182.66:20594] [2023-05-11 10:10:21,152] ERROR in app: Exception on /addrec [POST]
+[Thu May 11 10:10:21.156589 2023] [wsgi:error] [pid 334451:tid 139837204702976] [remote 193.215.182.66:20594] Traceback (most recent call last):
+[Thu May 11 10:10:21.156596 2023] [wsgi:error] [pid 334451:tid 139837204702976] [remote 193.215.182.66:20594]   File "/var/www/html/app.py", line 29, in addrec
+[Thu May 11 10:10:21.156600 2023] [wsgi:error] [pid 334451:tid 139837204702976] [remote 193.215.182.66:20594]     with sql.connect("database.db") as con:
+[Thu May 11 10:10:21.156604 2023] [wsgi:error] [pid 334451:tid 139837204702976] [remote 193.215.182.66:20594] sqlite3.OperationalError: unable to open database file
+[Thu May 11 10:10:21.156609 2023] [wsgi:error] [pid 334451:tid 139837204702976] [remote 193.215.182.66:20594] 
+[Thu May 11 10:10:21.156614 2023] [wsgi:error] [pid 334451:tid 139837204702976] [remote 193.215.182.66:20594] During handling of the above exception, another exception occurred:
+[Thu May 11 10:10:21.156618 2023] [wsgi:error] [pid 334451:tid 139837204702976] [remote 193.215.182.66:20594] 
+[Thu May 11 10:10:21.156621 2023] [wsgi:error] [pid 334451:tid 139837204702976] [remote 193.215.182.66:20594] Traceback (most recent call last):
+[Thu May 11 10:10:21.156627 2023] [wsgi:error] [pid 334451:tid 139837204702976] [remote 193.215.182.66:20594]   File "/var/www/html/app.py", line 35, in addrec
+[Thu May 11 10:10:21.156632 2023] [wsgi:error] [pid 334451:tid 139837204702976] [remote 193.215.182.66:20594]     con.rollback()
+[Thu May 11 10:10:21.156636 2023] [wsgi:error] [pid 334451:tid 139837204702976] [remote 193.215.182.66:20594] UnboundLocalError: local variable 'con' referenced before assignment
+[Thu May 11 10:10:21.156639 2023] [wsgi:error] [pid 334451:tid 139837204702976] [remote 193.215.182.66:20594] 
+[Thu May 11 10:10:21.156645 2023] [wsgi:error] [pid 334451:tid 139837204702976] [remote 193.215.182.66:20594] During handling of the above exception, another exception occurred:
+[Thu May 11 10:10:21.156650 2023] [wsgi:error] [pid 334451:tid 139837204702976] [remote 193.215.182.66:20594] 
+[Thu May 11 10:10:21.156654 2023] [wsgi:error] [pid 334451:tid 139837204702976] [remote 193.215.182.66:20594] Traceback (most recent call last):
+[Thu May 11 10:10:21.156657 2023] [wsgi:error] [pid 334451:tid 139837204702976] [remote 193.215.182.66:20594]   File "/usr/local/lib/python3.9/dist-packages/flask/app.py", line 2190, in wsgi_app
+[Thu May 11 10:10:21.156663 2023] [wsgi:error] [pid 334451:tid 139837204702976] [remote 193.215.182.66:20594]     response = self.full_dispatch_request()
+[Thu May 11 10:10:21.156689 2023] [wsgi:error] [pid 334451:tid 139837204702976] [remote 193.215.182.66:20594]   File "/usr/local/lib/python3.9/dist-packages/flask/app.py", line 1486, in full_dispatch_request
+[Thu May 11 10:10:21.156694 2023] [wsgi:error] [pid 334451:tid 139837204702976] [remote 193.215.182.66:20594]     rv = self.handle_user_exception(e)
+[Thu May 11 10:10:21.156698 2023] [wsgi:error] [pid 334451:tid 139837204702976] [remote 193.215.182.66:20594]   File "/usr/local/lib/python3.9/dist-packages/flask/app.py", line 1484, in full_dispatch_request
+[Thu May 11 10:10:21.156703 2023] [wsgi:error] [pid 334451:tid 139837204702976] [remote 193.215.182.66:20594]     rv = self.dispatch_request()
+[Thu May 11 10:10:21.156708 2023] [wsgi:error] [pid 334451:tid 139837204702976] [remote 193.215.182.66:20594]   File "/usr/local/lib/python3.9/dist-packages/flask/app.py", line 1469, in dispatch_request
+[Thu May 11 10:10:21.156712 2023] [wsgi:error] [pid 334451:tid 139837204702976] [remote 193.215.182.66:20594]     return self.ensure_sync(self.view_functions[rule.endpoint])(**view_args)
+[Thu May 11 10:10:21.156716 2023] [wsgi:error] [pid 334451:tid 139837204702976] [remote 193.215.182.66:20594]   File "/var/www/html/app.py", line 38, in addrec
+[Thu May 11 10:10:21.156721 2023] [wsgi:error] [pid 334451:tid 139837204702976] [remote 193.215.182.66:20594]     return render_template("result.html", msg=msg)
+[Thu May 11 10:10:21.156744 2023] [wsgi:error] [pid 334451:tid 139837204702976] [remote 193.215.182.66:20594] UnboundLocalError: local variable 'msg' referenced before assignment
+[Thu May 11 11:48:16.523255 2023] [wsgi:error] [pid 334451:tid 139837204702976] [remote 82.147.56.14:52903] [2023-05-11 11:48:16,522] ERROR in app: Exception on /addrec [POST]
+[Thu May 11 11:48:16.523303 2023] [wsgi:error] [pid 334451:tid 139837204702976] [remote 82.147.56.14:52903] Traceback (most recent call last):
+[Thu May 11 11:48:16.523309 2023] [wsgi:error] [pid 334451:tid 139837204702976] [remote 82.147.56.14:52903]   File "/var/www/html/app.py", line 29, in addrec
+[Thu May 11 11:48:16.523313 2023] [wsgi:error] [pid 334451:tid 139837204702976] [remote 82.147.56.14:52903]     with sql.connect("database.db") as con:
+[Thu May 11 11:48:16.523318 2023] [wsgi:error] [pid 334451:tid 139837204702976] [remote 82.147.56.14:52903] sqlite3.OperationalError: unable to open database file
+[Thu May 11 11:48:16.523323 2023] [wsgi:error] [pid 334451:tid 139837204702976] [remote 82.147.56.14:52903] 
+[Thu May 11 11:48:16.523327 2023] [wsgi:error] [pid 334451:tid 139837204702976] [remote 82.147.56.14:52903] During handling of the above exception, another exception occurred:
+[Thu May 11 11:48:16.523331 2023] [wsgi:error] [pid 334451:tid 139837204702976] [remote 82.147.56.14:52903] 
+[Thu May 11 11:48:16.523337 2023] [wsgi:error] [pid 334451:tid 139837204702976] [remote 82.147.56.14:52903] Traceback (most recent call last):
+[Thu May 11 11:48:16.523342 2023] [wsgi:error] [pid 334451:tid 139837204702976] [remote 82.147.56.14:52903]   File "/var/www/html/app.py", line 35, in addrec
+[Thu May 11 11:48:16.523346 2023] [wsgi:error] [pid 334451:tid 139837204702976] [remote 82.147.56.14:52903]     con.rollback()
+[Thu May 11 11:48:16.523350 2023] [wsgi:error] [pid 334451:tid 139837204702976] [remote 82.147.56.14:52903] UnboundLocalError: local variable 'con' referenced before assignment
+[Thu May 11 11:48:16.523355 2023] [wsgi:error] [pid 334451:tid 139837204702976] [remote 82.147.56.14:52903] 
+[Thu May 11 11:48:16.523360 2023] [wsgi:error] [pid 334451:tid 139837204702976] [remote 82.147.56.14:52903] During handling of the above exception, another exception occurred:
+[Thu May 11 11:48:16.523364 2023] [wsgi:error] [pid 334451:tid 139837204702976] [remote 82.147.56.14:52903] 
+[Thu May 11 11:48:16.523368 2023] [wsgi:error] [pid 334451:tid 139837204702976] [remote 82.147.56.14:52903] Traceback (most recent call last):
+[Thu May 11 11:48:16.523381 2023] [wsgi:error] [pid 334451:tid 139837204702976] [remote 82.147.56.14:52903]   File "/usr/local/lib/python3.9/dist-packages/flask/app.py", line 2190, in wsgi_app
+[Thu May 11 11:48:16.523386 2023] [wsgi:error] [pid 334451:tid 139837204702976] [remote 82.147.56.14:52903]     response = self.full_dispatch_request()
+[Thu May 11 11:48:16.523393 2023] [wsgi:error] [pid 334451:tid 139837204702976] [remote 82.147.56.14:52903]   File "/usr/local/lib/python3.9/dist-packages/flask/app.py", line 1486, in full_dispatch_request
+[Thu May 11 11:48:16.523398 2023] [wsgi:error] [pid 334451:tid 139837204702976] [remote 82.147.56.14:52903]     rv = self.handle_user_exception(e)
+[Thu May 11 11:48:16.523404 2023] [wsgi:error] [pid 334451:tid 139837204702976] [remote 82.147.56.14:52903]   File "/usr/local/lib/python3.9/dist-packages/flask/app.py", line 1484, in full_dispatch_request
+[Thu May 11 11:48:16.523408 2023] [wsgi:error] [pid 334451:tid 139837204702976] [remote 82.147.56.14:52903]     rv = self.dispatch_request()
+[Thu May 11 11:48:16.523412 2023] [wsgi:error] [pid 334451:tid 139837204702976] [remote 82.147.56.14:52903]   File "/usr/local/lib/python3.9/dist-packages/flask/app.py", line 1469, in dispatch_request
+[Thu May 11 11:48:16.523416 2023] [wsgi:error] [pid 334451:tid 139837204702976] [remote 82.147.56.14:52903]     return self.ensure_sync(self.view_functions[rule.endpoint])(**view_args)
+[Thu May 11 11:48:16.523422 2023] [wsgi:error] [pid 334451:tid 139837204702976] [remote 82.147.56.14:52903]   File "/var/www/html/app.py", line 38, in addrec
+[Thu May 11 11:48:16.523440 2023] [wsgi:error] [pid 334451:tid 139837204702976] [remote 82.147.56.14:52903]     return render_template("result.html", msg=msg)
+[Thu May 11 11:48:16.523445 2023] [wsgi:error] [pid 334451:tid 139837204702976] [remote 82.147.56.14:52903] UnboundLocalError: local variable 'msg' referenced before assignment
+[Thu May 11 15:01:04.568036 2023] [wsgi:error] [pid 334451:tid 139837196310272] [remote 66.175.234.123:59794] [2023-05-11 15:01:04,566] ERROR in app: Exception on /login [GET]
+[Thu May 11 15:01:04.568085 2023] [wsgi:error] [pid 334451:tid 139837196310272] [remote 66.175.234.123:59794] Traceback (most recent call last):
+[Thu May 11 15:01:04.568092 2023] [wsgi:error] [pid 334451:tid 139837196310272] [remote 66.175.234.123:59794]   File "/usr/local/lib/python3.9/dist-packages/flask/app.py", line 2190, in wsgi_app
+[Thu May 11 15:01:04.568098 2023] [wsgi:error] [pid 334451:tid 139837196310272] [remote 66.175.234.123:59794]     response = self.full_dispatch_request()
+[Thu May 11 15:01:04.568102 2023] [wsgi:error] [pid 334451:tid 139837196310272] [remote 66.175.234.123:59794]   File "/usr/local/lib/python3.9/dist-packages/flask/app.py", line 1487, in full_dispatch_request
+[Thu May 11 15:01:04.568106 2023] [wsgi:error] [pid 334451:tid 139837196310272] [remote 66.175.234.123:59794]     return self.finalize_request(rv)
+[Thu May 11 15:01:04.568111 2023] [wsgi:error] [pid 334451:tid 139837196310272] [remote 66.175.234.123:59794]   File "/usr/local/lib/python3.9/dist-packages/flask/app.py", line 1506, in finalize_request
+[Thu May 11 15:01:04.568116 2023] [wsgi:error] [pid 334451:tid 139837196310272] [remote 66.175.234.123:59794]     response = self.make_response(rv)
+[Thu May 11 15:01:04.568120 2023] [wsgi:error] [pid 334451:tid 139837196310272] [remote 66.175.234.123:59794]   File "/usr/local/lib/python3.9/dist-packages/flask/app.py", line 1801, in make_response
+[Thu May 11 15:01:04.568124 2023] [wsgi:error] [pid 334451:tid 139837196310272] [remote 66.175.234.123:59794]     raise TypeError(
+[Thu May 11 15:01:04.568130 2023] [wsgi:error] [pid 334451:tid 139837196310272] [remote 66.175.234.123:59794] TypeError: The view function for 'login' did not return a valid response. The function either returned None or ended without a return statement.
+[Thu May 11 18:32:48.236873 2023] [authz_core:error] [pid 334453:tid 139836929328896] [client 35.216.237.60:60726] AH01630: client denied by server configuration: /var/www/html/app.wsgi
+[Fri May 12 04:41:34.017298 2023] [wsgi:error] [pid 351647:tid 139836996404992] [client 42.235.148.140:60285] mod_wsgi (pid=351647): Request data read error when proxying data to daemon process: Partial results are valid but processing is incomplete.
+[Sun May 14 04:03:03.282510 2023] [core:error] [pid 376518:tid 139837071939328] [client 45.156.129.12:50102] AH10244: invalid URI path (/icons/.%%32%65/.%%32%65/apache2/icons/non-existant-image.png)
+[Sun May 14 04:03:03.379777 2023] [core:error] [pid 376518:tid 139837088724736] [client 45.156.129.12:50158] AH10244: invalid URI path (/icons/.%%32%65/.%%32%65/apache2/icons/sphere1.png)
+[Sun May 14 04:03:03.455064 2023] [core:error] [pid 376519:tid 139837213095680] [client 45.156.129.12:50212] AH10244: invalid URI path (/icons/.%2e/%2e%2e/apache2/icons/sphere1.png)
+[Mon May 15 05:28:37.706215 2023] [core:error] [pid 392174:tid 139836920936192] [client 152.89.196.144:33390] AH10244: invalid URI path (/cgi-bin/.%2e/.%2e/.%2e/.%2e/bin/sh)
+[Wed May 17 20:15:59.140949 2023] [core:error] [pid 416729:tid 139837213095680] [client 176.97.210.100:60856] AH10244: invalid URI path (/cgi-bin/.%%%%32%%65/.%%%%32%%65/.%%%%32%%65/.%%%%32%%65/.%%%%32%%65/bin/sh)
+[Fri May 19 07:43:14.925624 2023] [wsgi:error] [pid 439501:tid 139837196310272] [client 27.207.66.144:43436] mod_wsgi (pid=439501): Request data read error when proxying data to daemon process: Partial results are valid but processing is incomplete.
+[Mon May 22 06:08:19.252227 2023] [authz_core:error] [pid 474141:tid 139837004797696] [client 139.144.150.26:39264] AH01630: client denied by server configuration: /var/www/html/app.wsgi
+[Mon May 22 06:16:27.113358 2023] [core:error] [pid 474140:tid 139836862220032] [client 152.89.196.144:49756] AH10244: invalid URI path (/cgi-bin/.%2e/.%2e/.%2e/.%2e/bin/sh)
+[Mon May 22 22:23:19.816791 2023] [authz_core:error] [pid 474140:tid 139836467959552] [client 35.216.229.26:51654] AH01630: client denied by server configuration: /var/www/html/app.wsgi
+[Tue May 23 20:48:41.397775 2023] [core:error] [pid 484182:tid 139836795111168] [client 83.97.73.89:54502] AH10244: invalid URI path (/cgi-bin/.%2e/.%2e/.%2e/.%2e/bin/sh)
+[Wed May 24 02:00:51.067557 2023] [core:error] [pid 494784:tid 139837179524864] [client 193.32.162.190:55300] AH10244: invalid URI path (/../../mnt/mtd/Config/Account1)
+[Wed May 24 03:14:18.351988 2023] [core:error] [pid 494784:tid 139836920936192] [client 193.32.162.190:35784] AH10244: invalid URI path (/../../mnt/mtd/Config/Account2)
+[Wed May 24 09:40:09.275674 2023] [wsgi:error] [pid 494785:tid 139837063546624] [client 36.107.236.41:7976] mod_wsgi (pid=494785): Request data read error when proxying data to daemon process: The timeout specified has expired.
+[Thu May 25 08:49:34.412133 2023] [core:error] [pid 506309:tid 139837171132160] [client 83.97.73.89:49100] AH10244: invalid URI path (/cgi-bin/.%2e/.%2e/.%2e/.%2e/bin/sh)
+[Thu May 25 13:15:46.328165 2023] [core:error] [pid 506309:tid 139837171132160] [client 45.128.232.139:55384] AH10244: invalid URI path (/cgi-bin/.%%%%32%%65/.%%%%32%%65/.%%%%32%%65/.%%%%32%%65/.%%%%32%%65/bin/sh)
+[Thu May 25 14:15:23.791264 2023] [authz_core:error] [pid 506310:tid 139836476352256] [client 104.140.148.74:58138] AH01630: client denied by server configuration: /var/www/html/app.wsgi
+[Thu May 25 18:40:28.468075 2023] [wsgi:error] [pid 506309:tid 139837179524864] [client 59.93.21.231:49387] mod_wsgi (pid=506309): Request data read error when proxying data to daemon process: The timeout specified has expired.
+[Fri May 26 04:13:02.154509 2023] [core:error] [pid 521408:tid 139836501497600] [client 83.97.73.89:56050] AH10244: invalid URI path (/cgi-bin/.%2e/.%2e/.%2e/.%2e/bin/sh)
+[Fri May 26 20:30:55.467076 2023] [authz_core:error] [pid 521409:tid 139836954507008] [client 144.126.198.24:47646] AH01630: client denied by server configuration: /var/www/html/app.wsgi
+[Sat May 27 00:26:17.831401 2023] [authz_core:error] [pid 534541:tid 139837213095680] [client 104.140.148.62:60586] AH01630: client denied by server configuration: /var/www/html/app.wsgi
+[Sun May 28 18:33:35.918694 2023] [core:error] [pid 549640:tid 139837055153920] [client 83.97.73.89:43214] AH10244: invalid URI path (/cgi-bin/.%2e/.%2e/.%2e/.%2e/bin/sh)
+[Sun May 28 19:52:09.408434 2023] [wsgi:error] [pid 549639:tid 139837213095680] [remote 79.160.142.171:15105] [2023-05-28 19:52:09,403] ERROR in app: Exception on /addrec [POST]
+[Sun May 28 19:52:09.408536 2023] [wsgi:error] [pid 549639:tid 139837213095680] [remote 79.160.142.171:15105] Traceback (most recent call last):
+[Sun May 28 19:52:09.408542 2023] [wsgi:error] [pid 549639:tid 139837213095680] [remote 79.160.142.171:15105]   File "/var/www/html/app.py", line 29, in addrec
+[Sun May 28 19:52:09.408546 2023] [wsgi:error] [pid 549639:tid 139837213095680] [remote 79.160.142.171:15105]     with sql.connect("database.db") as con:
+[Sun May 28 19:52:09.408550 2023] [wsgi:error] [pid 549639:tid 139837213095680] [remote 79.160.142.171:15105] sqlite3.OperationalError: unable to open database file
+[Sun May 28 19:52:09.408556 2023] [wsgi:error] [pid 549639:tid 139837213095680] [remote 79.160.142.171:15105] 
+[Sun May 28 19:52:09.408561 2023] [wsgi:error] [pid 549639:tid 139837213095680] [remote 79.160.142.171:15105] During handling of the above exception, another exception occurred:
+[Sun May 28 19:52:09.408565 2023] [wsgi:error] [pid 549639:tid 139837213095680] [remote 79.160.142.171:15105] 
+[Sun May 28 19:52:09.408568 2023] [wsgi:error] [pid 549639:tid 139837213095680] [remote 79.160.142.171:15105] Traceback (most recent call last):
+[Sun May 28 19:52:09.408574 2023] [wsgi:error] [pid 549639:tid 139837213095680] [remote 79.160.142.171:15105]   File "/var/www/html/app.py", line 35, in addrec
+[Sun May 28 19:52:09.408653 2023] [wsgi:error] [pid 549639:tid 139837213095680] [remote 79.160.142.171:15105]     con.rollback()
+[Sun May 28 19:52:09.408657 2023] [wsgi:error] [pid 549639:tid 139837213095680] [remote 79.160.142.171:15105] UnboundLocalError: local variable 'con' referenced before assignment
+[Sun May 28 19:52:09.408661 2023] [wsgi:error] [pid 549639:tid 139837213095680] [remote 79.160.142.171:15105] 
+[Sun May 28 19:52:09.408667 2023] [wsgi:error] [pid 549639:tid 139837213095680] [remote 79.160.142.171:15105] During handling of the above exception, another exception occurred:
+[Sun May 28 19:52:09.408671 2023] [wsgi:error] [pid 549639:tid 139837213095680] [remote 79.160.142.171:15105] 
+[Sun May 28 19:52:09.408675 2023] [wsgi:error] [pid 549639:tid 139837213095680] [remote 79.160.142.171:15105] Traceback (most recent call last):
+[Sun May 28 19:52:09.408679 2023] [wsgi:error] [pid 549639:tid 139837213095680] [remote 79.160.142.171:15105]   File "/usr/local/lib/python3.9/dist-packages/flask/app.py", line 2190, in wsgi_app
+[Sun May 28 19:52:09.408693 2023] [wsgi:error] [pid 549639:tid 139837213095680] [remote 79.160.142.171:15105]     response = self.full_dispatch_request()
+[Sun May 28 19:52:09.408698 2023] [wsgi:error] [pid 549639:tid 139837213095680] [remote 79.160.142.171:15105]   File "/usr/local/lib/python3.9/dist-packages/flask/app.py", line 1486, in full_dispatch_request
+[Sun May 28 19:52:09.408702 2023] [wsgi:error] [pid 549639:tid 139837213095680] [remote 79.160.142.171:15105]     rv = self.handle_user_exception(e)
+[Sun May 28 19:52:09.408706 2023] [wsgi:error] [pid 549639:tid 139837213095680] [remote 79.160.142.171:15105]   File "/usr/local/lib/python3.9/dist-packages/flask/app.py", line 1484, in full_dispatch_request
+[Sun May 28 19:52:09.408712 2023] [wsgi:error] [pid 549639:tid 139837213095680] [remote 79.160.142.171:15105]     rv = self.dispatch_request()
+[Sun May 28 19:52:09.408716 2023] [wsgi:error] [pid 549639:tid 139837213095680] [remote 79.160.142.171:15105]   File "/usr/local/lib/python3.9/dist-packages/flask/app.py", line 1469, in dispatch_request
+[Sun May 28 19:52:09.408720 2023] [wsgi:error] [pid 549639:tid 139837213095680] [remote 79.160.142.171:15105]     return self.ensure_sync(self.view_functions[rule.endpoint])(**view_args)
+[Sun May 28 19:52:09.408724 2023] [wsgi:error] [pid 549639:tid 139837213095680] [remote 79.160.142.171:15105]   File "/var/www/html/app.py", line 38, in addrec
+[Sun May 28 19:52:09.408729 2023] [wsgi:error] [pid 549639:tid 139837213095680] [remote 79.160.142.171:15105]     return render_template("result.html", msg=msg)
+[Sun May 28 19:52:09.408734 2023] [wsgi:error] [pid 549639:tid 139837213095680] [remote 79.160.142.171:15105] UnboundLocalError: local variable 'msg' referenced before assignment
+[Tue May 30 10:55:48.217279 2023] [core:error] [pid 572162:tid 139836392457984] [client 45.156.129.7:44366] AH10244: invalid URI path (/icons/.%%32%65/.%%32%65/apache2/icons/non-existant-image.png)
+[Tue May 30 10:55:48.266528 2023] [core:error] [pid 572162:tid 139836501497600] [client 45.156.129.7:44376] AH10244: invalid URI path (/icons/.%2e/%2e%2e/apache2/icons/sphere1.png)
+[Tue May 30 10:55:48.312132 2023] [core:error] [pid 572163:tid 139837046761216] [client 45.156.129.7:44380] AH10244: invalid URI path (/icons/.%%32%65/.%%32%65/apache2/icons/sphere1.png)
+[Wed May 31 07:10:16.739346 2023] [core:error] [pid 589762:tid 139837055153920] [client 83.97.73.89:56608] AH10244: invalid URI path (/cgi-bin/.%2e/.%2e/.%2e/.%2e/bin/sh)
+[Wed May 31 22:51:15.945859 2023] [authz_core:error] [pid 589762:tid 139837196310272] [client 5.8.10.202:34532] AH01630: client denied by server configuration: /var/www/html/app.wsgi
+[Thu Jun 01 03:54:18.213735 2023] [core:error] [pid 602300:tid 139837204702976] [client 83.97.73.89:58032] AH10244: invalid URI path (/cgi-bin/.%2e/.%2e/.%2e/.%2e/bin/sh)
+[Fri Jun 02 06:51:57.472704 2023] [core:error] [pid 615528:tid 139837063546624] [client 83.97.73.89:44354] AH10244: invalid URI path (/cgi-bin/.%2e/.%2e/.%2e/.%2e/bin/sh)
+[Sat Jun 03 15:41:19.688602 2023] [core:error] [pid 627839:tid 139836929328896] [client 83.97.73.89:52496] AH10244: invalid URI path (/cgi-bin/.%2e/.%2e/.%2e/.%2e/bin/sh)
+[Sun Jun 04 12:56:59.080601 2023] [core:error] [pid 638170:tid 139837063546624] [client 83.97.73.89:36644] AH10244: invalid URI path (/cgi-bin/.%2e/.%2e/.%2e/.%2e/bin/sh)
+[Mon Jun 05 00:01:07.004146 2023] [wsgi:error] [pid 649255:tid 139837179524864] [client 103.84.240.138:47562] mod_wsgi (pid=649255): Request data read error when proxying data to daemon process: The timeout specified has expired.
+[Tue Jun 06 05:31:21.853960 2023] [core:error] [pid 660766:tid 139837071939328] [client 83.97.73.89:46668] AH10244: invalid URI path (/cgi-bin/.%2e/.%2e/.%2e/.%2e/bin/sh)
+[Wed Jun 07 11:08:57.894199 2023] [core:error] [pid 669158:tid 139837046761216] [client 83.97.73.89:42028] AH10244: invalid URI path (/cgi-bin/.%2e/.%2e/.%2e/.%2e/bin/sh)
+[Wed Jun 07 20:35:35.744535 2023] [authz_core:error] [pid 669158:tid 139837046761216] [client 35.216.229.26:53034] AH01630: client denied by server configuration: /var/www/html/app.wsgi
+[Thu Jun 08 13:12:44.597176 2023] [core:error] [pid 680063:tid 139836660893440] [client 83.97.73.89:37898] AH10244: invalid URI path (/cgi-bin/.%2e/.%2e/.%2e/.%2e/bin/sh)
+[Fri Jun 09 23:04:33.638055 2023] [wsgi:error] [pid 693809:tid 139837171132160] [client 59.89.234.253:59499] mod_wsgi (pid=693809): Request data read error when proxying data to daemon process: The timeout specified has expired.
+[Fri Jun 09 23:05:24.057382 2023] [core:error] [pid 693808:tid 139837204702976] [client 83.97.73.89:36222] AH10244: invalid URI path (/cgi-bin/.%2e/.%2e/.%2e/.%2e/bin/sh)
+[Sun Jun 11 04:20:02.961097 2023] [core:error] [pid 713407:tid 139836946114304] [client 83.97.73.89:33468] AH10244: invalid URI path (/cgi-bin/.%2e/.%2e/.%2e/.%2e/bin/sh)
+[Mon Jun 12 02:48:42.287843 2023] [wsgi:error] [pid 726197:tid 139836929328896] [client 121.226.191.22:34198] mod_wsgi (pid=726197): Request data read error when proxying data to daemon process: The timeout specified has expired.
+[Mon Jun 12 10:13:00.441045 2023] [core:error] [pid 726197:tid 139837196310272] [client 83.97.73.89:57640] AH10244: invalid URI path (/cgi-bin/.%2e/.%2e/.%2e/.%2e/bin/sh)
+[Tue Jun 13 07:16:48.719115 2023] [core:error] [pid 737317:tid 139836165953280] [client 193.32.162.190:55660] AH10244: invalid URI path (/../../mnt/mtd/Config/Account1)
+[Tue Jun 13 08:06:55.654083 2023] [core:error] [pid 737316:tid 139837221488384] [client 193.32.162.190:43726] AH10244: invalid URI path (/../../mnt/mtd/Config/Account2)
+[Tue Jun 13 17:25:20.268122 2023] [core:error] [pid 737316:tid 139836795111168] [client 83.97.73.89:42068] AH10244: invalid URI path (/cgi-bin/.%2e/.%2e/.%2e/.%2e/bin/sh)
+[Wed Jun 14 04:29:05.938304 2023] [core:error] [pid 750225:tid 139837213095680] [client 45.156.129.2:40122] AH10244: invalid URI path (/icons/.%%32%65/.%%32%65/apache2/icons/non-existant-image.png)
+[Wed Jun 14 04:29:06.006543 2023] [core:error] [pid 750225:tid 139837187917568] [client 45.156.129.2:40124] AH10244: invalid URI path (/icons/.%%32%65/.%%32%65/apache2/icons/sphere1.png)
+[Wed Jun 14 04:29:06.059229 2023] [core:error] [pid 750224:tid 139837038368512] [client 45.156.129.2:40134] AH10244: invalid URI path (/icons/.%2e/%2e%2e/apache2/icons/sphere1.png)
+[Wed Jun 14 21:15:43.258156 2023] [core:error] [pid 750225:tid 139836971226880] [client 185.65.135.140:58422] AH10244: invalid URI path (/cgi-bin/.%2e/%2e%2e/%2e%2e/%2e%2e/%2e%2e/%2e%2e/%2e%2e/%2e%2e/%2e%2e/%2e%2e/bin/sh)
+[Wed Jun 14 21:15:44.363038 2023] [core:error] [pid 750224:tid 139837071939328] [client 185.65.135.140:59510] AH10244: invalid URI path (/cgi-bin/%%32%65%%32%65/%%32%65%%32%65/%%32%65%%32%65/%%32%65%%32%65/%%32%65%%32%65/%%32%65%%32%65/%%32%65%%32%65/bin/sh)
+[Thu Jun 15 03:02:14.878590 2023] [core:error] [pid 760924:tid 139837179524864] [client 83.97.73.89:52754] AH10244: invalid URI path (/cgi-bin/.%2e/.%2e/.%2e/.%2e/bin/sh)
+[Thu Jun 15 21:41:44.988880 2023] [core:error] [pid 760925:tid 139836979619584] [client 193.32.162.190:52398] AH10244: invalid URI path (/../../mnt/mtd/Config/Account1)
+[Thu Jun 15 22:37:31.070461 2023] [core:error] [pid 760924:tid 139837088724736] [client 193.32.162.190:35524] AH10244: invalid URI path (/../../mnt/mtd/Config/Account2)
+[Fri Jun 16 07:22:30.276166 2023] [core:error] [pid 774359:tid 139837063546624] [client 83.97.73.89:56644] AH10244: invalid URI path (/cgi-bin/.%2e/.%2e/.%2e/.%2e/bin/sh)
+[Fri Jun 16 09:15:13.227925 2023] [wsgi:error] [pid 774360:tid 139836904150784] [client 120.86.254.200:12821] mod_wsgi (pid=774360): Request data read error when proxying data to daemon process: The timeout specified has expired.
+[Sat Jun 17 11:26:05.823063 2023] [core:error] [pid 785438:tid 139836677678848] [client 83.97.73.89:51914] AH10244: invalid URI path (/cgi-bin/.%2e/.%2e/.%2e/.%2e/bin/sh)
+[Sat Jun 17 11:50:02.339171 2023] [core:error] [pid 785438:tid 139836635715328] [client 193.32.162.190:48320] AH10244: invalid URI path (/../../mnt/mtd/Config/Account1)
+[Sat Jun 17 13:10:31.418090 2023] [core:error] [pid 785438:tid 139837038368512] [client 193.32.162.190:43534] AH10244: invalid URI path (/../../mnt/mtd/Config/Account2)
+[Sat Jun 17 21:29:33.552584 2023] [wsgi:error] [pid 785436:tid 139837196310272] [remote 158.248.0.61:22726] [2023-06-17 21:29:33,546] ERROR in app: Exception on /login [POST]
+[Sat Jun 17 21:29:33.552642 2023] [wsgi:error] [pid 785436:tid 139837196310272] [remote 158.248.0.61:22726] Traceback (most recent call last):
+[Sat Jun 17 21:29:33.552647 2023] [wsgi:error] [pid 785436:tid 139837196310272] [remote 158.248.0.61:22726]   File "/var/www/html/app.py", line 62, in login
+[Sat Jun 17 21:29:33.552651 2023] [wsgi:error] [pid 785436:tid 139837196310272] [remote 158.248.0.61:22726]     with sql.connect("database.db") as con:
+[Sat Jun 17 21:29:33.552655 2023] [wsgi:error] [pid 785436:tid 139837196310272] [remote 158.248.0.61:22726] sqlite3.OperationalError: unable to open database file
+[Sat Jun 17 21:29:33.552659 2023] [wsgi:error] [pid 785436:tid 139837196310272] [remote 158.248.0.61:22726] 
+[Sat Jun 17 21:29:33.552663 2023] [wsgi:error] [pid 785436:tid 139837196310272] [remote 158.248.0.61:22726] During handling of the above exception, another exception occurred:
+[Sat Jun 17 21:29:33.552667 2023] [wsgi:error] [pid 785436:tid 139837196310272] [remote 158.248.0.61:22726] 
+[Sat Jun 17 21:29:33.552670 2023] [wsgi:error] [pid 785436:tid 139837196310272] [remote 158.248.0.61:22726] Traceback (most recent call last):
+[Sat Jun 17 21:29:33.552674 2023] [wsgi:error] [pid 785436:tid 139837196310272] [remote 158.248.0.61:22726]   File "/var/www/html/app.py", line 76, in login
+[Sat Jun 17 21:29:33.552678 2023] [wsgi:error] [pid 785436:tid 139837196310272] [remote 158.248.0.61:22726]     msg="eror in insert operration" + " " + msg
+[Sat Jun 17 21:29:33.552682 2023] [wsgi:error] [pid 785436:tid 139837196310272] [remote 158.248.0.61:22726] UnboundLocalError: local variable 'msg' referenced before assignment
+[Sat Jun 17 21:29:33.552686 2023] [wsgi:error] [pid 785436:tid 139837196310272] [remote 158.248.0.61:22726] 
+[Sat Jun 17 21:29:33.552689 2023] [wsgi:error] [pid 785436:tid 139837196310272] [remote 158.248.0.61:22726] During handling of the above exception, another exception occurred:
+[Sat Jun 17 21:29:33.552693 2023] [wsgi:error] [pid 785436:tid 139837196310272] [remote 158.248.0.61:22726] 
+[Sat Jun 17 21:29:33.552696 2023] [wsgi:error] [pid 785436:tid 139837196310272] [remote 158.248.0.61:22726] Traceback (most recent call last):
+[Sat Jun 17 21:29:33.552700 2023] [wsgi:error] [pid 785436:tid 139837196310272] [remote 158.248.0.61:22726]   File "/usr/local/lib/python3.9/dist-packages/flask/app.py", line 2190, in wsgi_app
+[Sat Jun 17 21:29:33.552704 2023] [wsgi:error] [pid 785436:tid 139837196310272] [remote 158.248.0.61:22726]     response = self.full_dispatch_request()
+[Sat Jun 17 21:29:33.552708 2023] [wsgi:error] [pid 785436:tid 139837196310272] [remote 158.248.0.61:22726]   File "/usr/local/lib/python3.9/dist-packages/flask/app.py", line 1486, in full_dispatch_request
+[Sat Jun 17 21:29:33.552743 2023] [wsgi:error] [pid 785436:tid 139837196310272] [remote 158.248.0.61:22726]     rv = self.handle_user_exception(e)
+[Sat Jun 17 21:29:33.552747 2023] [wsgi:error] [pid 785436:tid 139837196310272] [remote 158.248.0.61:22726]   File "/usr/local/lib/python3.9/dist-packages/flask/app.py", line 1484, in full_dispatch_request
+[Sat Jun 17 21:29:33.552751 2023] [wsgi:error] [pid 785436:tid 139837196310272] [remote 158.248.0.61:22726]     rv = self.dispatch_request()
+[Sat Jun 17 21:29:33.552754 2023] [wsgi:error] [pid 785436:tid 139837196310272] [remote 158.248.0.61:22726]   File "/usr/local/lib/python3.9/dist-packages/flask/app.py", line 1469, in dispatch_request
+[Sat Jun 17 21:29:33.552758 2023] [wsgi:error] [pid 785436:tid 139837196310272] [remote 158.248.0.61:22726]     return self.ensure_sync(self.view_functions[rule.endpoint])(**view_args)
+[Sat Jun 17 21:29:33.552762 2023] [wsgi:error] [pid 785436:tid 139837196310272] [remote 158.248.0.61:22726]   File "/var/www/html/app.py", line 78, in login
+[Sat Jun 17 21:29:33.552766 2023] [wsgi:error] [pid 785436:tid 139837196310272] [remote 158.248.0.61:22726]     return render_template("result.html", msg=msg)
+[Sat Jun 17 21:29:33.552769 2023] [wsgi:error] [pid 785436:tid 139837196310272] [remote 158.248.0.61:22726] UnboundLocalError: local variable 'msg' referenced before assignment
+[Sun Jun 18 06:43:52.027313 2023] [core:error] [pid 795311:tid 139837088724736] [client 83.97.73.89:36558] AH10244: invalid URI path (/cgi-bin/.%2e/.%2e/.%2e/.%2e/bin/sh)
+[Mon Jun 19 11:51:09.249743 2023] [core:error] [pid 807857:tid 139837204702976] [client 83.97.73.89:50420] AH10244: invalid URI path (/cgi-bin/.%2e/.%2e/.%2e/.%2e/bin/sh)
+[Tue Jun 20 16:41:29.831547 2023] [core:error] [pid 821767:tid 139836543461120] [client 83.97.73.89:45326] AH10244: invalid URI path (/cgi-bin/.%2e/.%2e/.%2e/.%2e/bin/sh)
+[Wed Jun 21 03:34:18.776452 2023] [core:error] [pid 833701:tid 139836769933056] [client 193.32.162.190:54258] AH10244: invalid URI path (/../../mnt/mtd/Config/Account1)
+[Wed Jun 21 04:25:51.852798 2023] [core:error] [pid 833701:tid 139837204702976] [client 193.32.162.190:49990] AH10244: invalid URI path (/../../mnt/mtd/Config/Account2)
+[Wed Jun 21 11:45:57.336071 2023] [wsgi:error] [pid 833701:tid 139837171132160] [client 101.0.42.193:36464] mod_wsgi (pid=833701): Request data read error when proxying data to daemon process: The timeout specified has expired.
+[Wed Jun 21 19:19:27.849628 2023] [authz_core:error] [pid 833700:tid 139836635715328] [client 35.216.229.26:50360] AH01630: client denied by server configuration: /var/www/html/app.wsgi
+[Wed Jun 21 21:36:27.170525 2023] [core:error] [pid 833701:tid 139836694398720] [client 83.97.73.89:47818] AH10244: invalid URI path (/cgi-bin/.%2e/.%2e/.%2e/.%2e/bin/sh)
+[Thu Jun 22 08:51:58.961976 2023] [wsgi:error] [pid 845326:tid 139836929328896] [client 125.94.203.175:50827] mod_wsgi (pid=845326): Request data read error when proxying data to daemon process: The timeout specified has expired.
+[Fri Jun 23 00:09:22.227368 2023] [wsgi:error] [pid 857246:tid 139837213095680] [client 113.69.129.185:55481] mod_wsgi (pid=857246): Request data read error when proxying data to daemon process: Partial results are valid but processing is incomplete.
+[Fri Jun 23 02:01:15.792187 2023] [core:error] [pid 857246:tid 139836820289280] [client 83.97.73.89:39032] AH10244: invalid URI path (/cgi-bin/.%2e/.%2e/.%2e/.%2e/bin/sh)
+[Sat Jun 24 07:11:00.040099 2023] [core:error] [pid 868831:tid 139836778325760] [client 83.97.73.89:50952] AH10244: invalid URI path (/cgi-bin/.%2e/.%2e/.%2e/.%2e/bin/sh)
+[Mon Jun 26 00:47:55.884737 2023] [core:error] [pid 894904:tid 139837204702976] [client 83.97.73.89:58486] AH10244: invalid URI path (/cgi-bin/.%2e/.%2e/.%2e/.%2e/bin/sh)
+[Tue Jun 27 03:48:23.119027 2023] [core:error] [pid 903597:tid 139836988012288] [client 193.32.162.190:36258] AH10244: invalid URI path (/../../mnt/mtd/Config/Account1)
+[Tue Jun 27 04:15:06.676403 2023] [core:error] [pid 903597:tid 139837213095680] [client 83.97.73.89:52302] AH10244: invalid URI path (/cgi-bin/.%2e/.%2e/.%2e/.%2e/bin/sh)
+[Tue Jun 27 05:14:58.393384 2023] [core:error] [pid 903597:tid 139837187917568] [client 193.32.162.190:49746] AH10244: invalid URI path (/../../mnt/mtd/Config/Account2)
+[Tue Jun 27 06:02:02.035600 2023] [core:error] [pid 903598:tid 139836946048768] [client 185.180.143.140:53316] AH10244: invalid URI path (/icons/.%%32%65/.%%32%65/apache2/icons/non-existant-image.png)
+[Tue Jun 27 06:02:02.437201 2023] [core:error] [pid 903597:tid 139837013190400] [client 185.180.143.140:53322] AH10244: invalid URI path (/icons/.%%32%65/.%%32%65/apache2/icons/sphere1.png)
+[Tue Jun 27 06:02:02.669523 2023] [core:error] [pid 903597:tid 139837187917568] [client 185.180.143.140:53336] AH10244: invalid URI path (/icons/.%2e/%2e%2e/apache2/icons/sphere1.png)
+[Wed Jun 28 05:14:37.866303 2023] [core:error] [pid 919616:tid 139837080332032] [client 83.97.73.89:40364] AH10244: invalid URI path (/cgi-bin/.%2e/.%2e/.%2e/.%2e/bin/sh)
+[Wed Jun 28 06:20:16.034115 2023] [authz_core:error] [pid 919617:tid 139836954441472] [client 139.144.150.8:40402] AH01630: client denied by server configuration: /var/www/html/app.wsgi
+[Thu Jun 29 05:10:27.422573 2023] [core:error] [pid 933444:tid 139836660893440] [client 83.97.73.89:57644] AH10244: invalid URI path (/cgi-bin/.%2e/.%2e/.%2e/.%2e/bin/sh)
+[Thu Jun 29 07:35:34.849541 2023] [wsgi:error] [pid 933444:tid 139836912543488] [client 27.43.206.111:16371] mod_wsgi (pid=933444): Request data read error when proxying data to daemon process: Partial results are valid but processing is incomplete.
+[Thu Jun 29 20:50:01.981857 2023] [wsgi:error] [pid 933442:tid 139837213095680] [remote 212.251.157.96:54811] [2023-06-29 20:50:01,980] ERROR in app: Exception on /login [POST]
+[Thu Jun 29 20:50:01.981898 2023] [wsgi:error] [pid 933442:tid 139837213095680] [remote 212.251.157.96:54811] Traceback (most recent call last):
+[Thu Jun 29 20:50:01.981903 2023] [wsgi:error] [pid 933442:tid 139837213095680] [remote 212.251.157.96:54811]   File "/var/www/html/app.py", line 62, in login
+[Thu Jun 29 20:50:01.981907 2023] [wsgi:error] [pid 933442:tid 139837213095680] [remote 212.251.157.96:54811]     with sql.connect("database.db") as con:
+[Thu Jun 29 20:50:01.981911 2023] [wsgi:error] [pid 933442:tid 139837213095680] [remote 212.251.157.96:54811] sqlite3.OperationalError: unable to open database file
+[Thu Jun 29 20:50:01.981916 2023] [wsgi:error] [pid 933442:tid 139837213095680] [remote 212.251.157.96:54811] 
+[Thu Jun 29 20:50:01.981920 2023] [wsgi:error] [pid 933442:tid 139837213095680] [remote 212.251.157.96:54811] During handling of the above exception, another exception occurred:
+[Thu Jun 29 20:50:01.981924 2023] [wsgi:error] [pid 933442:tid 139837213095680] [remote 212.251.157.96:54811] 
+[Thu Jun 29 20:50:01.981929 2023] [wsgi:error] [pid 933442:tid 139837213095680] [remote 212.251.157.96:54811] Traceback (most recent call last):
+[Thu Jun 29 20:50:01.981935 2023] [wsgi:error] [pid 933442:tid 139837213095680] [remote 212.251.157.96:54811]   File "/var/www/html/app.py", line 76, in login
+[Thu Jun 29 20:50:01.981939 2023] [wsgi:error] [pid 933442:tid 139837213095680] [remote 212.251.157.96:54811]     msg="eror in insert operration" + " " + msg
+[Thu Jun 29 20:50:01.981943 2023] [wsgi:error] [pid 933442:tid 139837213095680] [remote 212.251.157.96:54811] UnboundLocalError: local variable 'msg' referenced before assignment
+[Thu Jun 29 20:50:01.981947 2023] [wsgi:error] [pid 933442:tid 139837213095680] [remote 212.251.157.96:54811] 
+[Thu Jun 29 20:50:01.981951 2023] [wsgi:error] [pid 933442:tid 139837213095680] [remote 212.251.157.96:54811] During handling of the above exception, another exception occurred:
+[Thu Jun 29 20:50:01.981954 2023] [wsgi:error] [pid 933442:tid 139837213095680] [remote 212.251.157.96:54811] 
+[Thu Jun 29 20:50:01.981958 2023] [wsgi:error] [pid 933442:tid 139837213095680] [remote 212.251.157.96:54811] Traceback (most recent call last):
+[Thu Jun 29 20:50:01.981962 2023] [wsgi:error] [pid 933442:tid 139837213095680] [remote 212.251.157.96:54811]   File "/usr/local/lib/python3.9/dist-packages/flask/app.py", line 2190, in wsgi_app
+[Thu Jun 29 20:50:01.981979 2023] [wsgi:error] [pid 933442:tid 139837213095680] [remote 212.251.157.96:54811]     response = self.full_dispatch_request()
+[Thu Jun 29 20:50:01.981984 2023] [wsgi:error] [pid 933442:tid 139837213095680] [remote 212.251.157.96:54811]   File "/usr/local/lib/python3.9/dist-packages/flask/app.py", line 1486, in full_dispatch_request
+[Thu Jun 29 20:50:01.981988 2023] [wsgi:error] [pid 933442:tid 139837213095680] [remote 212.251.157.96:54811]     rv = self.handle_user_exception(e)
+[Thu Jun 29 20:50:01.981992 2023] [wsgi:error] [pid 933442:tid 139837213095680] [remote 212.251.157.96:54811]   File "/usr/local/lib/python3.9/dist-packages/flask/app.py", line 1484, in full_dispatch_request
+[Thu Jun 29 20:50:01.981996 2023] [wsgi:error] [pid 933442:tid 139837213095680] [remote 212.251.157.96:54811]     rv = self.dispatch_request()
+[Thu Jun 29 20:50:01.982000 2023] [wsgi:error] [pid 933442:tid 139837213095680] [remote 212.251.157.96:54811]   File "/usr/local/lib/python3.9/dist-packages/flask/app.py", line 1469, in dispatch_request
+[Thu Jun 29 20:50:01.982004 2023] [wsgi:error] [pid 933442:tid 139837213095680] [remote 212.251.157.96:54811]     return self.ensure_sync(self.view_functions[rule.endpoint])(**view_args)
+[Thu Jun 29 20:50:01.982007 2023] [wsgi:error] [pid 933442:tid 139837213095680] [remote 212.251.157.96:54811]   File "/var/www/html/app.py", line 78, in login
+[Thu Jun 29 20:50:01.982011 2023] [wsgi:error] [pid 933442:tid 139837213095680] [remote 212.251.157.96:54811]     return render_template("result.html", msg=msg)
+[Thu Jun 29 20:50:01.982015 2023] [wsgi:error] [pid 933442:tid 139837213095680] [remote 212.251.157.96:54811] UnboundLocalError: local variable 'msg' referenced before assignment
+[Thu Jun 29 20:50:11.293503 2023] [wsgi:error] [pid 933442:tid 139837213095680] [remote 212.251.157.96:54825] [2023-06-29 20:50:11,293] ERROR in app: Exception on /addrec [POST]
+[Thu Jun 29 20:50:11.293537 2023] [wsgi:error] [pid 933442:tid 139837213095680] [remote 212.251.157.96:54825] Traceback (most recent call last):
+[Thu Jun 29 20:50:11.293542 2023] [wsgi:error] [pid 933442:tid 139837213095680] [remote 212.251.157.96:54825]   File "/var/www/html/app.py", line 29, in addrec
+[Thu Jun 29 20:50:11.293546 2023] [wsgi:error] [pid 933442:tid 139837213095680] [remote 212.251.157.96:54825]     with sql.connect("database.db") as con:
+[Thu Jun 29 20:50:11.293550 2023] [wsgi:error] [pid 933442:tid 139837213095680] [remote 212.251.157.96:54825] sqlite3.OperationalError: unable to open database file
+[Thu Jun 29 20:50:11.293554 2023] [wsgi:error] [pid 933442:tid 139837213095680] [remote 212.251.157.96:54825] 
+[Thu Jun 29 20:50:11.293558 2023] [wsgi:error] [pid 933442:tid 139837213095680] [remote 212.251.157.96:54825] During handling of the above exception, another exception occurred:
+[Thu Jun 29 20:50:11.293562 2023] [wsgi:error] [pid 933442:tid 139837213095680] [remote 212.251.157.96:54825] 
+[Thu Jun 29 20:50:11.293566 2023] [wsgi:error] [pid 933442:tid 139837213095680] [remote 212.251.157.96:54825] Traceback (most recent call last):
+[Thu Jun 29 20:50:11.293570 2023] [wsgi:error] [pid 933442:tid 139837213095680] [remote 212.251.157.96:54825]   File "/var/www/html/app.py", line 35, in addrec
+[Thu Jun 29 20:50:11.293574 2023] [wsgi:error] [pid 933442:tid 139837213095680] [remote 212.251.157.96:54825]     con.rollback()
+[Thu Jun 29 20:50:11.293578 2023] [wsgi:error] [pid 933442:tid 139837213095680] [remote 212.251.157.96:54825] UnboundLocalError: local variable 'con' referenced before assignment
+[Thu Jun 29 20:50:11.293582 2023] [wsgi:error] [pid 933442:tid 139837213095680] [remote 212.251.157.96:54825] 
+[Thu Jun 29 20:50:11.293585 2023] [wsgi:error] [pid 933442:tid 139837213095680] [remote 212.251.157.96:54825] During handling of the above exception, another exception occurred:
+[Thu Jun 29 20:50:11.293589 2023] [wsgi:error] [pid 933442:tid 139837213095680] [remote 212.251.157.96:54825] 
+[Thu Jun 29 20:50:11.293593 2023] [wsgi:error] [pid 933442:tid 139837213095680] [remote 212.251.157.96:54825] Traceback (most recent call last):
+[Thu Jun 29 20:50:11.293607 2023] [wsgi:error] [pid 933442:tid 139837213095680] [remote 212.251.157.96:54825]   File "/usr/local/lib/python3.9/dist-packages/flask/app.py", line 2190, in wsgi_app
+[Thu Jun 29 20:50:11.293612 2023] [wsgi:error] [pid 933442:tid 139837213095680] [remote 212.251.157.96:54825]     response = self.full_dispatch_request()
+[Thu Jun 29 20:50:11.293616 2023] [wsgi:error] [pid 933442:tid 139837213095680] [remote 212.251.157.96:54825]   File "/usr/local/lib/python3.9/dist-packages/flask/app.py", line 1486, in full_dispatch_request
+[Thu Jun 29 20:50:11.293620 2023] [wsgi:error] [pid 933442:tid 139837213095680] [remote 212.251.157.96:54825]     rv = self.handle_user_exception(e)
+[Thu Jun 29 20:50:11.293624 2023] [wsgi:error] [pid 933442:tid 139837213095680] [remote 212.251.157.96:54825]   File "/usr/local/lib/python3.9/dist-packages/flask/app.py", line 1484, in full_dispatch_request
+[Thu Jun 29 20:50:11.293627 2023] [wsgi:error] [pid 933442:tid 139837213095680] [remote 212.251.157.96:54825]     rv = self.dispatch_request()
+[Thu Jun 29 20:50:11.293631 2023] [wsgi:error] [pid 933442:tid 139837213095680] [remote 212.251.157.96:54825]   File "/usr/local/lib/python3.9/dist-packages/flask/app.py", line 1469, in dispatch_request
+[Thu Jun 29 20:50:11.293635 2023] [wsgi:error] [pid 933442:tid 139837213095680] [remote 212.251.157.96:54825]     return self.ensure_sync(self.view_functions[rule.endpoint])(**view_args)
+[Thu Jun 29 20:50:11.293639 2023] [wsgi:error] [pid 933442:tid 139837213095680] [remote 212.251.157.96:54825]   File "/var/www/html/app.py", line 38, in addrec
+[Thu Jun 29 20:50:11.293643 2023] [wsgi:error] [pid 933442:tid 139837213095680] [remote 212.251.157.96:54825]     return render_template("result.html", msg=msg)
+[Thu Jun 29 20:50:11.293653 2023] [wsgi:error] [pid 933442:tid 139837213095680] [remote 212.251.157.96:54825] UnboundLocalError: local variable 'msg' referenced before assignment
+[Fri Jun 30 05:16:01.425293 2023] [core:error] [pid 948671:tid 139837187917568] [client 83.97.73.89:42164] AH10244: invalid URI path (/cgi-bin/.%2e/.%2e/.%2e/.%2e/bin/sh)
+[Fri Jun 30 07:17:25.613770 2023] [core:error] [pid 948671:tid 139836400850688] [client 193.32.162.190:36516] AH10244: invalid URI path (/../../mnt/mtd/Config/Account1)
+[Fri Jun 30 08:18:23.625645 2023] [core:error] [pid 948671:tid 139837204702976] [client 193.32.162.190:58930] AH10244: invalid URI path (/../../mnt/mtd/Config/Account2)
+[Fri Jun 30 08:41:24.385096 2023] [wsgi:error] [pid 948669:tid 139837196310272] [remote 92.204.128.155:33272] [2023-06-30 08:41:24,383] ERROR in app: Exception on /login [GET]
+[Fri Jun 30 08:41:24.385172 2023] [wsgi:error] [pid 948669:tid 139837196310272] [remote 92.204.128.155:33272] Traceback (most recent call last):
+[Fri Jun 30 08:41:24.385177 2023] [wsgi:error] [pid 948669:tid 139837196310272] [remote 92.204.128.155:33272]   File "/usr/local/lib/python3.9/dist-packages/flask/app.py", line 2190, in wsgi_app
+[Fri Jun 30 08:41:24.385191 2023] [wsgi:error] [pid 948669:tid 139837196310272] [remote 92.204.128.155:33272]     response = self.full_dispatch_request()
+[Fri Jun 30 08:41:24.385195 2023] [wsgi:error] [pid 948669:tid 139837196310272] [remote 92.204.128.155:33272]   File "/usr/local/lib/python3.9/dist-packages/flask/app.py", line 1487, in full_dispatch_request
+[Fri Jun 30 08:41:24.385199 2023] [wsgi:error] [pid 948669:tid 139837196310272] [remote 92.204.128.155:33272]     return self.finalize_request(rv)
+[Fri Jun 30 08:41:24.385203 2023] [wsgi:error] [pid 948669:tid 139837196310272] [remote 92.204.128.155:33272]   File "/usr/local/lib/python3.9/dist-packages/flask/app.py", line 1506, in finalize_request
+[Fri Jun 30 08:41:24.385207 2023] [wsgi:error] [pid 948669:tid 139837196310272] [remote 92.204.128.155:33272]     response = self.make_response(rv)
+[Fri Jun 30 08:41:24.385211 2023] [wsgi:error] [pid 948669:tid 139837196310272] [remote 92.204.128.155:33272]   File "/usr/local/lib/python3.9/dist-packages/flask/app.py", line 1801, in make_response
+[Fri Jun 30 08:41:24.385230 2023] [wsgi:error] [pid 948669:tid 139837196310272] [remote 92.204.128.155:33272]     raise TypeError(
+[Fri Jun 30 08:41:24.385234 2023] [wsgi:error] [pid 948669:tid 139837196310272] [remote 92.204.128.155:33272] TypeError: The view function for 'login' did not return a valid response. The function either returned None or ended without a return statement.
+[Sat Jul 01 07:52:36.800340 2023] [core:error] [pid 961784:tid 139837213095680] [client 83.97.73.89:38918] AH10244: invalid URI path (/cgi-bin/.%2e/.%2e/.%2e/.%2e/bin/sh)
+[Mon Jul 03 01:49:08.878704 2023] [core:error] [pid 983214:tid 139836929328896] [client 83.97.73.89:37242] AH10244: invalid URI path (/cgi-bin/.%2e/.%2e/.%2e/.%2e/bin/sh)
+[Tue Jul 04 04:04:06.743970 2023] [core:error] [pid 995870:tid 139837221488384] [client 193.32.162.190:34718] AH10244: invalid URI path (/../../mnt/mtd/Config/Account1)
+[Tue Jul 04 05:06:47.300159 2023] [core:error] [pid 995870:tid 139836912543488] [client 193.32.162.190:55338] AH10244: invalid URI path (/../../mnt/mtd/Config/Account2)
+[Tue Jul 04 05:46:27.855566 2023] [core:error] [pid 995870:tid 139837179524864] [client 83.97.73.89:59142] AH10244: invalid URI path (/cgi-bin/.%2e/.%2e/.%2e/.%2e/bin/sh)
+[Wed Jul 05 06:49:58.377915 2023] [core:error] [pid 1008390:tid 139836786718464] [client 83.97.73.89:44526] AH10244: invalid URI path (/cgi-bin/.%2e/.%2e/.%2e/.%2e/bin/sh)
+[Wed Jul 05 09:50:16.020707 2023] [authz_core:error] [pid 1008389:tid 139837071939328] [client 35.216.225.253:51558] AH01630: client denied by server configuration: /var/www/html/app.wsgi
+[Fri Jul 07 07:54:02.121767 2023] [core:error] [pid 1031773:tid 139837055153920] [client 213.109.202.66:35000] AH10244: invalid URI path (/cgi-bin/.%2e/.%2e/.%2e/.%2e/bin/sh)
+[Sat Jul 08 09:06:19.589947 2023] [authz_core:error] [pid 1044914:tid 139837080332032] [client 167.172.20.95:52678] AH01630: client denied by server configuration: /var/www/html/app.wsgi
+[Sat Jul 08 10:58:54.207396 2023] [wsgi:error] [pid 1044914:tid 139837221488384] [client 117.255.19.0:45767] mod_wsgi (pid=1044914): Request data read error when proxying data to daemon process: The timeout specified has expired.
+[Sun Jul 09 00:32:52.472131 2023] [core:error] [pid 1057682:tid 139837179524864] [client 213.109.202.66:51560] AH10244: invalid URI path (/cgi-bin/.%2e/.%2e/.%2e/.%2e/bin/sh)
+[Sun Jul 09 02:19:56.447572 2023] [core:error] [pid 1057682:tid 139836216309504] [client 185.180.143.81:37342] AH10244: invalid URI path (/icons/.%%32%65/.%%32%65/apache2/icons/non-existant-image.png)
+[Sun Jul 09 02:19:56.580746 2023] [core:error] [pid 1057682:tid 139837204702976] [client 185.180.143.81:37354] AH10244: invalid URI path (/icons/.%2e/%2e%2e/apache2/icons/sphere1.png)
+[Sun Jul 09 02:19:56.720887 2023] [core:error] [pid 1057682:tid 139837179524864] [client 185.180.143.81:37362] AH10244: invalid URI path (/icons/.%%32%65/.%%32%65/apache2/icons/sphere1.png)
+[Mon Jul 10 16:30:42.077986 2023] [core:error] [pid 1065775:tid 139837213095680] [client 213.109.202.66:60398] AH10244: invalid URI path (/cgi-bin/.%2e/.%2e/.%2e/.%2e/bin/sh)
+[Tue Jul 11 01:45:09.265652 2023] [core:error] [pid 1075811:tid 139837055153920] [client 193.32.162.190:38910] AH10244: invalid URI path (/../../mnt/mtd/Config/Account1)
+[Tue Jul 11 02:50:47.722905 2023] [core:error] [pid 1075811:tid 139836417636096] [client 193.32.162.190:52258] AH10244: invalid URI path (/../../mnt/mtd/Config/Account2)
+[Wed Jul 12 01:20:34.558013 2023] [core:error] [pid 1086697:tid 139837046761216] [client 213.109.202.66:37354] AH10244: invalid URI path (/cgi-bin/.%2e/.%2e/.%2e/.%2e/bin/sh)
+[Thu Jul 13 03:04:29.197253 2023] [core:error] [pid 1094908:tid 139837038368512] [client 213.109.202.66:47012] AH10244: invalid URI path (/cgi-bin/.%2e/.%2e/.%2e/.%2e/bin/sh)
+[Thu Jul 13 03:19:01.693642 2023] [wsgi:error] [pid 1094908:tid 139836937721600] [client 202.3.72.71:65042] mod_wsgi (pid=1094908): Request data read error when proxying data to daemon process: The timeout specified has expired.
+[Fri Jul 14 06:14:10.640748 2023] [core:error] [pid 1109648:tid 139837171132160] [client 213.109.202.66:50534] AH10244: invalid URI path (/cgi-bin/.%2e/.%2e/.%2e/.%2e/bin/sh)
+[Sat Jul 15 18:43:55.228300 2023] [core:error] [pid 1118690:tid 139836971226880] [client 213.109.202.66:60676] AH10244: invalid URI path (/cgi-bin/.%2e/.%2e/.%2e/.%2e/bin/sh)
+[Sun Jul 16 22:13:27.194302 2023] [core:error] [pid 1127109:tid 139836526675712] [client 213.109.202.66:37692] AH10244: invalid URI path (/cgi-bin/.%2e/.%2e/.%2e/.%2e/bin/sh)
+[Tue Jul 18 02:33:07.767992 2023] [core:error] [pid 1148282:tid 139837196310272] [client 213.109.202.66:45642] AH10244: invalid URI path (/cgi-bin/.%2e/.%2e/.%2e/.%2e/bin/sh)
+[Tue Jul 18 07:45:39.397606 2023] [core:error] [pid 1148283:tid 139836904150784] [client 193.32.162.190:39700] AH10244: invalid URI path (/../../mnt/mtd/Config/Account1)
+[Tue Jul 18 09:13:08.121274 2023] [core:error] [pid 1148283:tid 139835989804800] [client 193.32.162.190:33954] AH10244: invalid URI path (/../../mnt/mtd/Config/Account2)
+[Wed Jul 19 06:37:00.909321 2023] [core:error] [pid 1156872:tid 139837088724736] [client 213.109.202.66:41480] AH10244: invalid URI path (/cgi-bin/.%2e/.%2e/.%2e/.%2e/bin/sh)
+[Thu Jul 20 08:11:36.705391 2023] [core:error] [pid 1167251:tid 139837171132160] [client 213.109.202.66:43244] AH10244: invalid URI path (/cgi-bin/.%2e/.%2e/.%2e/.%2e/bin/sh)
+[Thu Jul 20 09:10:51.202100 2023] [authz_core:error] [pid 1167251:tid 139836937721600] [client 35.216.237.60:60100] AH01630: client denied by server configuration: /var/www/html/app.wsgi
+[Thu Jul 20 18:25:50.896573 2023] [wsgi:error] [pid 1167251:tid 139837080332032] [client 113.242.229.6:8722] mod_wsgi (pid=1167251): Request data read error when proxying data to daemon process: The timeout specified has expired.
+[Fri Jul 21 09:19:43.699523 2023] [core:error] [pid 1176627:tid 139836904150784] [client 213.109.202.66:42022] AH10244: invalid URI path (/cgi-bin/.%2e/.%2e/.%2e/.%2e/bin/sh)
+[Sat Jul 22 05:31:03.938471 2023] [core:error] [pid 1186474:tid 139837063546624] [client 213.109.202.66:56070] AH10244: invalid URI path (/cgi-bin/.%2e/.%2e/.%2e/.%2e/bin/sh)
+[Sun Jul 23 12:14:27.219382 2023] [core:error] [pid 1197411:tid 139837179524864] [client 213.109.202.66:56948] AH10244: invalid URI path (/cgi-bin/.%2e/.%2e/.%2e/.%2e/bin/sh)
+[Tue Jul 25 02:14:10.396462 2023] [core:error] [pid 1220780:tid 139837080332032] [client 213.109.202.66:44572] AH10244: invalid URI path (/cgi-bin/.%2e/.%2e/.%2e/.%2e/bin/sh)
+[Wed Jul 26 01:54:58.091902 2023] [wsgi:error] [pid 1231177:tid 139836920936192] [client 117.195.92.23:51180] mod_wsgi (pid=1231177): Request data read error when proxying data to daemon process: The timeout specified has expired.
+[Wed Jul 26 09:30:25.342833 2023] [wsgi:error] [pid 1231177:tid 139836551853824] [client 117.210.182.141:56421] mod_wsgi (pid=1231177): Request data read error when proxying data to daemon process: The timeout specified has expired.
+[Wed Jul 26 14:46:37.669635 2023] [core:error] [pid 1231177:tid 139837088724736] [client 213.109.202.66:58108] AH10244: invalid URI path (/cgi-bin/.%2e/.%2e/.%2e/.%2e/bin/sh)
+[Fri Jul 28 07:57:05.418835 2023] [core:error] [pid 1250138:tid 139836904150784] [client 213.109.202.66:55448] AH10244: invalid URI path (/cgi-bin/.%2e/.%2e/.%2e/.%2e/bin/sh)
+[Sat Jul 29 12:25:06.974367 2023] [core:error] [pid 1259037:tid 139836325349120] [client 83.97.73.87:48046] AH10244: invalid URI path (/cgi-bin/.%2e/.%2e/.%2e/.%2e/bin/sh)
+[Sun Jul 30 09:00:14.365158 2023] [wsgi:error] [pid 1264874:tid 139837204702976] [remote 52.71.81.123:52654] [2023-07-30 09:00:14,362] ERROR in app: Exception on /login [GET]
+[Sun Jul 30 09:00:14.365234 2023] [wsgi:error] [pid 1264874:tid 139837204702976] [remote 52.71.81.123:52654] Traceback (most recent call last):
+[Sun Jul 30 09:00:14.365243 2023] [wsgi:error] [pid 1264874:tid 139837204702976] [remote 52.71.81.123:52654]   File "/usr/local/lib/python3.9/dist-packages/flask/app.py", line 2190, in wsgi_app
+[Sun Jul 30 09:00:14.365249 2023] [wsgi:error] [pid 1264874:tid 139837204702976] [remote 52.71.81.123:52654]     response = self.full_dispatch_request()
+[Sun Jul 30 09:00:14.368169 2023] [wsgi:error] [pid 1264874:tid 139837204702976] [remote 52.71.81.123:52654]   File "/usr/local/lib/python3.9/dist-packages/flask/app.py", line 1487, in full_dispatch_request
+[Sun Jul 30 09:00:14.368194 2023] [wsgi:error] [pid 1264874:tid 139837204702976] [remote 52.71.81.123:52654]     return self.finalize_request(rv)
+[Sun Jul 30 09:00:14.368199 2023] [wsgi:error] [pid 1264874:tid 139837204702976] [remote 52.71.81.123:52654]   File "/usr/local/lib/python3.9/dist-packages/flask/app.py", line 1506, in finalize_request
+[Sun Jul 30 09:00:14.368204 2023] [wsgi:error] [pid 1264874:tid 139837204702976] [remote 52.71.81.123:52654]     response = self.make_response(rv)
+[Sun Jul 30 09:00:14.368208 2023] [wsgi:error] [pid 1264874:tid 139837204702976] [remote 52.71.81.123:52654]   File "/usr/local/lib/python3.9/dist-packages/flask/app.py", line 1801, in make_response
+[Sun Jul 30 09:00:14.368213 2023] [wsgi:error] [pid 1264874:tid 139837204702976] [remote 52.71.81.123:52654]     raise TypeError(
+[Sun Jul 30 09:00:14.368218 2023] [wsgi:error] [pid 1264874:tid 139837204702976] [remote 52.71.81.123:52654] TypeError: The view function for 'login' did not return a valid response. The function either returned None or ended without a return statement.
+[Sun Jul 30 09:56:04.851115 2023] [wsgi:error] [pid 1264874:tid 139837196310272] [remote 3.111.0.58:44938] [2023-07-30 09:56:04,850] ERROR in app: Exception on /login [GET]
+[Sun Jul 30 09:56:04.851176 2023] [wsgi:error] [pid 1264874:tid 139837196310272] [remote 3.111.0.58:44938] Traceback (most recent call last):
+[Sun Jul 30 09:56:04.851182 2023] [wsgi:error] [pid 1264874:tid 139837196310272] [remote 3.111.0.58:44938]   File "/usr/local/lib/python3.9/dist-packages/flask/app.py", line 2190, in wsgi_app
+[Sun Jul 30 09:56:04.851187 2023] [wsgi:error] [pid 1264874:tid 139837196310272] [remote 3.111.0.58:44938]     response = self.full_dispatch_request()
+[Sun Jul 30 09:56:04.851192 2023] [wsgi:error] [pid 1264874:tid 139837196310272] [remote 3.111.0.58:44938]   File "/usr/local/lib/python3.9/dist-packages/flask/app.py", line 1487, in full_dispatch_request
+[Sun Jul 30 09:56:04.851196 2023] [wsgi:error] [pid 1264874:tid 139837196310272] [remote 3.111.0.58:44938]     return self.finalize_request(rv)
+[Sun Jul 30 09:56:04.851201 2023] [wsgi:error] [pid 1264874:tid 139837196310272] [remote 3.111.0.58:44938]   File "/usr/local/lib/python3.9/dist-packages/flask/app.py", line 1506, in finalize_request
+[Sun Jul 30 09:56:04.851205 2023] [wsgi:error] [pid 1264874:tid 139837196310272] [remote 3.111.0.58:44938]     response = self.make_response(rv)
+[Sun Jul 30 09:56:04.851210 2023] [wsgi:error] [pid 1264874:tid 139837196310272] [remote 3.111.0.58:44938]   File "/usr/local/lib/python3.9/dist-packages/flask/app.py", line 1801, in make_response
+[Sun Jul 30 09:56:04.851215 2023] [wsgi:error] [pid 1264874:tid 139837196310272] [remote 3.111.0.58:44938]     raise TypeError(
+[Sun Jul 30 09:56:04.851220 2023] [wsgi:error] [pid 1264874:tid 139837196310272] [remote 3.111.0.58:44938] TypeError: The view function for 'login' did not return a valid response. The function either returned None or ended without a return statement.
+[Mon Jul 31 03:19:32.217287 2023] [core:error] [pid 1271561:tid 139836946114304] [client 83.97.73.87:53518] AH10244: invalid URI path (/cgi-bin/.%2e/.%2e/.%2e/.%2e/bin/sh)
+[Mon Jul 31 16:27:26.621622 2023] [wsgi:error] [pid 1271560:tid 139837213095680] [remote 8.219.192.252:34758] [2023-07-31 16:27:26,616] ERROR in app: Exception on /login [GET]
+[Mon Jul 31 16:27:26.621775 2023] [wsgi:error] [pid 1271560:tid 139837213095680] [remote 8.219.192.252:34758] Traceback (most recent call last):
+[Mon Jul 31 16:27:26.621872 2023] [wsgi:error] [pid 1271560:tid 139837213095680] [remote 8.219.192.252:34758]   File "/usr/local/lib/python3.9/dist-packages/flask/app.py", line 2190, in wsgi_app
+[Mon Jul 31 16:27:26.621897 2023] [wsgi:error] [pid 1271560:tid 139837213095680] [remote 8.219.192.252:34758]     response = self.full_dispatch_request()
+[Mon Jul 31 16:27:26.621920 2023] [wsgi:error] [pid 1271560:tid 139837213095680] [remote 8.219.192.252:34758]   File "/usr/local/lib/python3.9/dist-packages/flask/app.py", line 1487, in full_dispatch_request
+[Mon Jul 31 16:27:26.624954 2023] [wsgi:error] [pid 1271560:tid 139837213095680] [remote 8.219.192.252:34758]     return self.finalize_request(rv)
+[Mon Jul 31 16:27:26.624981 2023] [wsgi:error] [pid 1271560:tid 139837213095680] [remote 8.219.192.252:34758]   File "/usr/local/lib/python3.9/dist-packages/flask/app.py", line 1506, in finalize_request
+[Mon Jul 31 16:27:26.624986 2023] [wsgi:error] [pid 1271560:tid 139837213095680] [remote 8.219.192.252:34758]     response = self.make_response(rv)
+[Mon Jul 31 16:27:26.624990 2023] [wsgi:error] [pid 1271560:tid 139837213095680] [remote 8.219.192.252:34758]   File "/usr/local/lib/python3.9/dist-packages/flask/app.py", line 1801, in make_response
+[Mon Jul 31 16:27:26.624995 2023] [wsgi:error] [pid 1271560:tid 139837213095680] [remote 8.219.192.252:34758]     raise TypeError(
+[Mon Jul 31 16:27:26.625063 2023] [wsgi:error] [pid 1271560:tid 139837213095680] [remote 8.219.192.252:34758] TypeError: The view function for 'login' did not return a valid response. The function either returned None or ended without a return statement.
+[Tue Aug 01 00:24:40.820110 2023] [wsgi:error] [pid 1279478:tid 139837213095680] [remote 159.100.13.152:50060] [2023-08-01 00:24:40,818] ERROR in app: Exception on /login [GET]
+[Tue Aug 01 00:24:40.820172 2023] [wsgi:error] [pid 1279478:tid 139837213095680] [remote 159.100.13.152:50060] Traceback (most recent call last):
+[Tue Aug 01 00:24:40.820190 2023] [wsgi:error] [pid 1279478:tid 139837213095680] [remote 159.100.13.152:50060]   File "/usr/local/lib/python3.9/dist-packages/flask/app.py", line 2190, in wsgi_app
+[Tue Aug 01 00:24:40.820195 2023] [wsgi:error] [pid 1279478:tid 139837213095680] [remote 159.100.13.152:50060]     response = self.full_dispatch_request()
+[Tue Aug 01 00:24:40.820199 2023] [wsgi:error] [pid 1279478:tid 139837213095680] [remote 159.100.13.152:50060]   File "/usr/local/lib/python3.9/dist-packages/flask/app.py", line 1487, in full_dispatch_request
+[Tue Aug 01 00:24:40.820204 2023] [wsgi:error] [pid 1279478:tid 139837213095680] [remote 159.100.13.152:50060]     return self.finalize_request(rv)
+[Tue Aug 01 00:24:40.820208 2023] [wsgi:error] [pid 1279478:tid 139837213095680] [remote 159.100.13.152:50060]   File "/usr/local/lib/python3.9/dist-packages/flask/app.py", line 1506, in finalize_request
+[Tue Aug 01 00:24:40.820213 2023] [wsgi:error] [pid 1279478:tid 139837213095680] [remote 159.100.13.152:50060]     response = self.make_response(rv)
+[Tue Aug 01 00:24:40.820217 2023] [wsgi:error] [pid 1279478:tid 139837213095680] [remote 159.100.13.152:50060]   File "/usr/local/lib/python3.9/dist-packages/flask/app.py", line 1801, in make_response
+[Tue Aug 01 00:24:40.820222 2023] [wsgi:error] [pid 1279478:tid 139837213095680] [remote 159.100.13.152:50060]     raise TypeError(
+[Tue Aug 01 00:24:40.820226 2023] [wsgi:error] [pid 1279478:tid 139837213095680] [remote 159.100.13.152:50060] TypeError: The view function for 'login' did not return a valid response. The function either returned None or ended without a return statement.
+[Wed Aug 02 12:00:58.886472 2023] [wsgi:error] [pid 1285628:tid 139837196310272] [remote 77.106.152.250:56719] [2023-08-02 12:00:58,884] ERROR in app: Exception on /login [POST]
+[Wed Aug 02 12:00:58.886573 2023] [wsgi:error] [pid 1285628:tid 139837196310272] [remote 77.106.152.250:56719] Traceback (most recent call last):
+[Wed Aug 02 12:00:58.886578 2023] [wsgi:error] [pid 1285628:tid 139837196310272] [remote 77.106.152.250:56719]   File "/var/www/html/app.py", line 62, in login
+[Wed Aug 02 12:00:58.886583 2023] [wsgi:error] [pid 1285628:tid 139837196310272] [remote 77.106.152.250:56719]     with sql.connect("database.db") as con:
+[Wed Aug 02 12:00:58.886587 2023] [wsgi:error] [pid 1285628:tid 139837196310272] [remote 77.106.152.250:56719] sqlite3.OperationalError: unable to open database file
+[Wed Aug 02 12:00:58.886592 2023] [wsgi:error] [pid 1285628:tid 139837196310272] [remote 77.106.152.250:56719] 
+[Wed Aug 02 12:00:58.886606 2023] [wsgi:error] [pid 1285628:tid 139837196310272] [remote 77.106.152.250:56719] During handling of the above exception, another exception occurred:
+[Wed Aug 02 12:00:58.886611 2023] [wsgi:error] [pid 1285628:tid 139837196310272] [remote 77.106.152.250:56719] 
+[Wed Aug 02 12:00:58.886615 2023] [wsgi:error] [pid 1285628:tid 139837196310272] [remote 77.106.152.250:56719] Traceback (most recent call last):
+[Wed Aug 02 12:00:58.886619 2023] [wsgi:error] [pid 1285628:tid 139837196310272] [remote 77.106.152.250:56719]   File "/var/www/html/app.py", line 76, in login
+[Wed Aug 02 12:00:58.886623 2023] [wsgi:error] [pid 1285628:tid 139837196310272] [remote 77.106.152.250:56719]     msg="eror in insert operration" + " " + msg
+[Wed Aug 02 12:00:58.886628 2023] [wsgi:error] [pid 1285628:tid 139837196310272] [remote 77.106.152.250:56719] UnboundLocalError: local variable 'msg' referenced before assignment
+[Wed Aug 02 12:00:58.886632 2023] [wsgi:error] [pid 1285628:tid 139837196310272] [remote 77.106.152.250:56719] 
+[Wed Aug 02 12:00:58.886636 2023] [wsgi:error] [pid 1285628:tid 139837196310272] [remote 77.106.152.250:56719] During handling of the above exception, another exception occurred:
+[Wed Aug 02 12:00:58.886640 2023] [wsgi:error] [pid 1285628:tid 139837196310272] [remote 77.106.152.250:56719] 
+[Wed Aug 02 12:00:58.886644 2023] [wsgi:error] [pid 1285628:tid 139837196310272] [remote 77.106.152.250:56719] Traceback (most recent call last):
+[Wed Aug 02 12:00:58.886649 2023] [wsgi:error] [pid 1285628:tid 139837196310272] [remote 77.106.152.250:56719]   File "/usr/local/lib/python3.9/dist-packages/flask/app.py", line 2190, in wsgi_app
+[Wed Aug 02 12:00:58.886653 2023] [wsgi:error] [pid 1285628:tid 139837196310272] [remote 77.106.152.250:56719]     response = self.full_dispatch_request()
+[Wed Aug 02 12:00:58.886658 2023] [wsgi:error] [pid 1285628:tid 139837196310272] [remote 77.106.152.250:56719]   File "/usr/local/lib/python3.9/dist-packages/flask/app.py", line 1486, in full_dispatch_request
+[Wed Aug 02 12:00:58.886662 2023] [wsgi:error] [pid 1285628:tid 139837196310272] [remote 77.106.152.250:56719]     rv = self.handle_user_exception(e)
+[Wed Aug 02 12:00:58.886667 2023] [wsgi:error] [pid 1285628:tid 139837196310272] [remote 77.106.152.250:56719]   File "/usr/local/lib/python3.9/dist-packages/flask/app.py", line 1484, in full_dispatch_request
+[Wed Aug 02 12:00:58.886671 2023] [wsgi:error] [pid 1285628:tid 139837196310272] [remote 77.106.152.250:56719]     rv = self.dispatch_request()
+[Wed Aug 02 12:00:58.886675 2023] [wsgi:error] [pid 1285628:tid 139837196310272] [remote 77.106.152.250:56719]   File "/usr/local/lib/python3.9/dist-packages/flask/app.py", line 1469, in dispatch_request
+[Wed Aug 02 12:00:58.886679 2023] [wsgi:error] [pid 1285628:tid 139837196310272] [remote 77.106.152.250:56719]     return self.ensure_sync(self.view_functions[rule.endpoint])(**view_args)
+[Wed Aug 02 12:00:58.886684 2023] [wsgi:error] [pid 1285628:tid 139837196310272] [remote 77.106.152.250:56719]   File "/var/www/html/app.py", line 78, in login
+[Wed Aug 02 12:00:58.886688 2023] [wsgi:error] [pid 1285628:tid 139837196310272] [remote 77.106.152.250:56719]     return render_template("result.html", msg=msg)
+[Wed Aug 02 12:00:58.886692 2023] [wsgi:error] [pid 1285628:tid 139837196310272] [remote 77.106.152.250:56719] UnboundLocalError: local variable 'msg' referenced before assignment
+[Wed Aug 02 12:05:49.356225 2023] [wsgi:error] [pid 1285628:tid 139837196310272] [remote 77.106.152.250:1384] [2023-08-02 12:05:49,355] ERROR in app: Exception on /login [POST]
+[Wed Aug 02 12:05:49.356277 2023] [wsgi:error] [pid 1285628:tid 139837196310272] [remote 77.106.152.250:1384] Traceback (most recent call last):
+[Wed Aug 02 12:05:49.356283 2023] [wsgi:error] [pid 1285628:tid 139837196310272] [remote 77.106.152.250:1384]   File "/var/www/html/app.py", line 62, in login
+[Wed Aug 02 12:05:49.356288 2023] [wsgi:error] [pid 1285628:tid 139837196310272] [remote 77.106.152.250:1384]     with sql.connect("database.db") as con:
+[Wed Aug 02 12:05:49.356308 2023] [wsgi:error] [pid 1285628:tid 139837196310272] [remote 77.106.152.250:1384] sqlite3.OperationalError: unable to open database file
+[Wed Aug 02 12:05:49.356313 2023] [wsgi:error] [pid 1285628:tid 139837196310272] [remote 77.106.152.250:1384] 
+[Wed Aug 02 12:05:49.356317 2023] [wsgi:error] [pid 1285628:tid 139837196310272] [remote 77.106.152.250:1384] During handling of the above exception, another exception occurred:
+[Wed Aug 02 12:05:49.356321 2023] [wsgi:error] [pid 1285628:tid 139837196310272] [remote 77.106.152.250:1384] 
+[Wed Aug 02 12:05:49.356325 2023] [wsgi:error] [pid 1285628:tid 139837196310272] [remote 77.106.152.250:1384] Traceback (most recent call last):
+[Wed Aug 02 12:05:49.356330 2023] [wsgi:error] [pid 1285628:tid 139837196310272] [remote 77.106.152.250:1384]   File "/var/www/html/app.py", line 76, in login
+[Wed Aug 02 12:05:49.356336 2023] [wsgi:error] [pid 1285628:tid 139837196310272] [remote 77.106.152.250:1384]     msg="eror in insert operration" + " " + msg
+[Wed Aug 02 12:05:49.356341 2023] [wsgi:error] [pid 1285628:tid 139837196310272] [remote 77.106.152.250:1384] UnboundLocalError: local variable 'msg' referenced before assignment
+[Wed Aug 02 12:05:49.356345 2023] [wsgi:error] [pid 1285628:tid 139837196310272] [remote 77.106.152.250:1384] 
+[Wed Aug 02 12:05:49.356349 2023] [wsgi:error] [pid 1285628:tid 139837196310272] [remote 77.106.152.250:1384] During handling of the above exception, another exception occurred:
+[Wed Aug 02 12:05:49.356353 2023] [wsgi:error] [pid 1285628:tid 139837196310272] [remote 77.106.152.250:1384] 
+[Wed Aug 02 12:05:49.356357 2023] [wsgi:error] [pid 1285628:tid 139837196310272] [remote 77.106.152.250:1384] Traceback (most recent call last):
+[Wed Aug 02 12:05:49.356362 2023] [wsgi:error] [pid 1285628:tid 139837196310272] [remote 77.106.152.250:1384]   File "/usr/local/lib/python3.9/dist-packages/flask/app.py", line 2190, in wsgi_app
+[Wed Aug 02 12:05:49.356366 2023] [wsgi:error] [pid 1285628:tid 139837196310272] [remote 77.106.152.250:1384]     response = self.full_dispatch_request()
+[Wed Aug 02 12:05:49.356372 2023] [wsgi:error] [pid 1285628:tid 139837196310272] [remote 77.106.152.250:1384]   File "/usr/local/lib/python3.9/dist-packages/flask/app.py", line 1486, in full_dispatch_request
+[Wed Aug 02 12:05:49.356376 2023] [wsgi:error] [pid 1285628:tid 139837196310272] [remote 77.106.152.250:1384]     rv = self.handle_user_exception(e)
+[Wed Aug 02 12:05:49.356380 2023] [wsgi:error] [pid 1285628:tid 139837196310272] [remote 77.106.152.250:1384]   File "/usr/local/lib/python3.9/dist-packages/flask/app.py", line 1484, in full_dispatch_request
+[Wed Aug 02 12:05:49.356384 2023] [wsgi:error] [pid 1285628:tid 139837196310272] [remote 77.106.152.250:1384]     rv = self.dispatch_request()
+[Wed Aug 02 12:05:49.356389 2023] [wsgi:error] [pid 1285628:tid 139837196310272] [remote 77.106.152.250:1384]   File "/usr/local/lib/python3.9/dist-packages/flask/app.py", line 1469, in dispatch_request
+[Wed Aug 02 12:05:49.356393 2023] [wsgi:error] [pid 1285628:tid 139837196310272] [remote 77.106.152.250:1384]     return self.ensure_sync(self.view_functions[rule.endpoint])(**view_args)
+[Wed Aug 02 12:05:49.356397 2023] [wsgi:error] [pid 1285628:tid 139837196310272] [remote 77.106.152.250:1384]   File "/var/www/html/app.py", line 78, in login
+[Wed Aug 02 12:05:49.356402 2023] [wsgi:error] [pid 1285628:tid 139837196310272] [remote 77.106.152.250:1384]     return render_template("result.html", msg=msg)
+[Wed Aug 02 12:05:49.356406 2023] [wsgi:error] [pid 1285628:tid 139837196310272] [remote 77.106.152.250:1384] UnboundLocalError: local variable 'msg' referenced before assignment
+[Wed Aug 02 12:06:16.872063 2023] [wsgi:error] [pid 1285628:tid 139837196310272] [remote 77.106.152.250:37666] [2023-08-02 12:06:16,871] ERROR in app: Exception on /addrec [POST]
+[Wed Aug 02 12:06:16.872110 2023] [wsgi:error] [pid 1285628:tid 139837196310272] [remote 77.106.152.250:37666] Traceback (most recent call last):
+[Wed Aug 02 12:06:16.872116 2023] [wsgi:error] [pid 1285628:tid 139837196310272] [remote 77.106.152.250:37666]   File "/var/www/html/app.py", line 29, in addrec
+[Wed Aug 02 12:06:16.872140 2023] [wsgi:error] [pid 1285628:tid 139837196310272] [remote 77.106.152.250:37666]     with sql.connect("database.db") as con:
+[Wed Aug 02 12:06:16.872146 2023] [wsgi:error] [pid 1285628:tid 139837196310272] [remote 77.106.152.250:37666] sqlite3.OperationalError: unable to open database file
+[Wed Aug 02 12:06:16.872150 2023] [wsgi:error] [pid 1285628:tid 139837196310272] [remote 77.106.152.250:37666] 
+[Wed Aug 02 12:06:16.872155 2023] [wsgi:error] [pid 1285628:tid 139837196310272] [remote 77.106.152.250:37666] During handling of the above exception, another exception occurred:
+[Wed Aug 02 12:06:16.872159 2023] [wsgi:error] [pid 1285628:tid 139837196310272] [remote 77.106.152.250:37666] 
+[Wed Aug 02 12:06:16.872163 2023] [wsgi:error] [pid 1285628:tid 139837196310272] [remote 77.106.152.250:37666] Traceback (most recent call last):
+[Wed Aug 02 12:06:16.872167 2023] [wsgi:error] [pid 1285628:tid 139837196310272] [remote 77.106.152.250:37666]   File "/var/www/html/app.py", line 35, in addrec
+[Wed Aug 02 12:06:16.872171 2023] [wsgi:error] [pid 1285628:tid 139837196310272] [remote 77.106.152.250:37666]     con.rollback()
+[Wed Aug 02 12:06:16.872175 2023] [wsgi:error] [pid 1285628:tid 139837196310272] [remote 77.106.152.250:37666] UnboundLocalError: local variable 'con' referenced before assignment
+[Wed Aug 02 12:06:16.872180 2023] [wsgi:error] [pid 1285628:tid 139837196310272] [remote 77.106.152.250:37666] 
+[Wed Aug 02 12:06:16.872184 2023] [wsgi:error] [pid 1285628:tid 139837196310272] [remote 77.106.152.250:37666] During handling of the above exception, another exception occurred:
+[Wed Aug 02 12:06:16.872188 2023] [wsgi:error] [pid 1285628:tid 139837196310272] [remote 77.106.152.250:37666] 
+[Wed Aug 02 12:06:16.872192 2023] [wsgi:error] [pid 1285628:tid 139837196310272] [remote 77.106.152.250:37666] Traceback (most recent call last):
+[Wed Aug 02 12:06:16.872197 2023] [wsgi:error] [pid 1285628:tid 139837196310272] [remote 77.106.152.250:37666]   File "/usr/local/lib/python3.9/dist-packages/flask/app.py", line 2190, in wsgi_app
+[Wed Aug 02 12:06:16.872201 2023] [wsgi:error] [pid 1285628:tid 139837196310272] [remote 77.106.152.250:37666]     response = self.full_dispatch_request()
+[Wed Aug 02 12:06:16.872206 2023] [wsgi:error] [pid 1285628:tid 139837196310272] [remote 77.106.152.250:37666]   File "/usr/local/lib/python3.9/dist-packages/flask/app.py", line 1486, in full_dispatch_request
+[Wed Aug 02 12:06:16.872210 2023] [wsgi:error] [pid 1285628:tid 139837196310272] [remote 77.106.152.250:37666]     rv = self.handle_user_exception(e)
+[Wed Aug 02 12:06:16.872215 2023] [wsgi:error] [pid 1285628:tid 139837196310272] [remote 77.106.152.250:37666]   File "/usr/local/lib/python3.9/dist-packages/flask/app.py", line 1484, in full_dispatch_request
+[Wed Aug 02 12:06:16.872219 2023] [wsgi:error] [pid 1285628:tid 139837196310272] [remote 77.106.152.250:37666]     rv = self.dispatch_request()
+[Wed Aug 02 12:06:16.872223 2023] [wsgi:error] [pid 1285628:tid 139837196310272] [remote 77.106.152.250:37666]   File "/usr/local/lib/python3.9/dist-packages/flask/app.py", line 1469, in dispatch_request
+[Wed Aug 02 12:06:16.872227 2023] [wsgi:error] [pid 1285628:tid 139837196310272] [remote 77.106.152.250:37666]     return self.ensure_sync(self.view_functions[rule.endpoint])(**view_args)
+[Wed Aug 02 12:06:16.872232 2023] [wsgi:error] [pid 1285628:tid 139837196310272] [remote 77.106.152.250:37666]   File "/var/www/html/app.py", line 38, in addrec
+[Wed Aug 02 12:06:16.872236 2023] [wsgi:error] [pid 1285628:tid 139837196310272] [remote 77.106.152.250:37666]     return render_template("result.html", msg=msg)
+[Wed Aug 02 12:06:16.872240 2023] [wsgi:error] [pid 1285628:tid 139837196310272] [remote 77.106.152.250:37666] UnboundLocalError: local variable 'msg' referenced before assignment
+[Wed Aug 02 23:36:52.144903 2023] [wsgi:error] [pid 1285628:tid 139837213095680] [remote 8.210.183.67:52826] [2023-08-02 23:36:52,142] ERROR in app: Exception on /login [GET]
+[Wed Aug 02 23:36:52.145028 2023] [wsgi:error] [pid 1285628:tid 139837213095680] [remote 8.210.183.67:52826] Traceback (most recent call last):
+[Wed Aug 02 23:36:52.145034 2023] [wsgi:error] [pid 1285628:tid 139837213095680] [remote 8.210.183.67:52826]   File "/usr/local/lib/python3.9/dist-packages/flask/app.py", line 2190, in wsgi_app
+[Wed Aug 02 23:36:52.145040 2023] [wsgi:error] [pid 1285628:tid 139837213095680] [remote 8.210.183.67:52826]     response = self.full_dispatch_request()
+[Wed Aug 02 23:36:52.145045 2023] [wsgi:error] [pid 1285628:tid 139837213095680] [remote 8.210.183.67:52826]   File "/usr/local/lib/python3.9/dist-packages/flask/app.py", line 1487, in full_dispatch_request
+[Wed Aug 02 23:36:52.145049 2023] [wsgi:error] [pid 1285628:tid 139837213095680] [remote 8.210.183.67:52826]     return self.finalize_request(rv)
+[Wed Aug 02 23:36:52.145053 2023] [wsgi:error] [pid 1285628:tid 139837213095680] [remote 8.210.183.67:52826]   File "/usr/local/lib/python3.9/dist-packages/flask/app.py", line 1506, in finalize_request
+[Wed Aug 02 23:36:52.145058 2023] [wsgi:error] [pid 1285628:tid 139837213095680] [remote 8.210.183.67:52826]     response = self.make_response(rv)
+[Wed Aug 02 23:36:52.145062 2023] [wsgi:error] [pid 1285628:tid 139837213095680] [remote 8.210.183.67:52826]   File "/usr/local/lib/python3.9/dist-packages/flask/app.py", line 1801, in make_response
+[Wed Aug 02 23:36:52.145067 2023] [wsgi:error] [pid 1285628:tid 139837213095680] [remote 8.210.183.67:52826]     raise TypeError(
+[Wed Aug 02 23:36:52.145072 2023] [wsgi:error] [pid 1285628:tid 139837213095680] [remote 8.210.183.67:52826] TypeError: The view function for 'login' did not return a valid response. The function either returned None or ended without a return statement.
+[Fri Aug 04 16:19:54.400511 2023] [authz_core:error] [pid 1301627:tid 139837204702976] [client 139.144.150.23:58222] AH01630: client denied by server configuration: /var/www/html/app.wsgi
+[Sat Aug 05 03:15:16.556046 2023] [wsgi:error] [pid 1314215:tid 139837204702976] [client 1.246.223.82:4824] mod_wsgi (pid=1314215): Request data read error when proxying data to daemon process: The timeout specified has expired.
+[Wed Aug 09 18:14:25.363829 2023] [core:error] [pid 1358933:tid 139836669286144] [client 185.180.143.11:58438] AH10244: invalid URI path (/icons/.%%32%65/.%%32%65/apache2/icons/non-existant-image.png)
+[Wed Aug 09 18:14:25.394066 2023] [core:error] [pid 1358933:tid 139837080332032] [client 185.180.143.11:58444] AH10244: invalid URI path (/icons/.%2e/%2e%2e/apache2/icons/sphere1.png)
+[Wed Aug 09 18:14:25.433060 2023] [core:error] [pid 1358934:tid 139837063546624] [client 185.180.143.11:58446] AH10244: invalid URI path (/icons/.%%32%65/.%%32%65/apache2/icons/sphere1.png)
+[Thu Aug 10 09:12:39.753290 2023] [wsgi:error] [pid 1370440:tid 139837213095680] [remote 43.158.217.16:55814] [2023-08-10 09:12:39,751] ERROR in app: Exception on /login [GET]
+[Thu Aug 10 09:12:39.753384 2023] [wsgi:error] [pid 1370440:tid 139837213095680] [remote 43.158.217.16:55814] Traceback (most recent call last):
+[Thu Aug 10 09:12:39.753390 2023] [wsgi:error] [pid 1370440:tid 139837213095680] [remote 43.158.217.16:55814]   File "/usr/local/lib/python3.9/dist-packages/flask/app.py", line 2190, in wsgi_app
+[Thu Aug 10 09:12:39.753395 2023] [wsgi:error] [pid 1370440:tid 139837213095680] [remote 43.158.217.16:55814]     response = self.full_dispatch_request()
+[Thu Aug 10 09:12:39.753399 2023] [wsgi:error] [pid 1370440:tid 139837213095680] [remote 43.158.217.16:55814]   File "/usr/local/lib/python3.9/dist-packages/flask/app.py", line 1487, in full_dispatch_request
+[Thu Aug 10 09:12:39.753404 2023] [wsgi:error] [pid 1370440:tid 139837213095680] [remote 43.158.217.16:55814]     return self.finalize_request(rv)
+[Thu Aug 10 09:12:39.753408 2023] [wsgi:error] [pid 1370440:tid 139837213095680] [remote 43.158.217.16:55814]   File "/usr/local/lib/python3.9/dist-packages/flask/app.py", line 1506, in finalize_request
+[Thu Aug 10 09:12:39.753412 2023] [wsgi:error] [pid 1370440:tid 139837213095680] [remote 43.158.217.16:55814]     response = self.make_response(rv)
+[Thu Aug 10 09:12:39.753427 2023] [wsgi:error] [pid 1370440:tid 139837213095680] [remote 43.158.217.16:55814]   File "/usr/local/lib/python3.9/dist-packages/flask/app.py", line 1801, in make_response
+[Thu Aug 10 09:12:39.753432 2023] [wsgi:error] [pid 1370440:tid 139837213095680] [remote 43.158.217.16:55814]     raise TypeError(
+[Thu Aug 10 09:12:39.753436 2023] [wsgi:error] [pid 1370440:tid 139837213095680] [remote 43.158.217.16:55814] TypeError: The view function for 'login' did not return a valid response. The function either returned None or ended without a return statement.
+[Thu Aug 10 13:23:14.421468 2023] [wsgi:error] [pid 1370441:tid 139836509890304] [client 27.43.204.49:3137] mod_wsgi (pid=1370441): Request data read error when proxying data to daemon process: Partial results are valid but processing is incomplete.
+[Mon Aug 14 10:43:39.569885 2023] [wsgi:error] [pid 1418406:tid 139837213095680] [remote 87.248.15.11:60948] [2023-08-14 10:43:39,565] ERROR in app: Exception on /login [POST]
+[Mon Aug 14 10:43:39.569995 2023] [wsgi:error] [pid 1418406:tid 139837213095680] [remote 87.248.15.11:60948] Traceback (most recent call last):
+[Mon Aug 14 10:43:39.570001 2023] [wsgi:error] [pid 1418406:tid 139837213095680] [remote 87.248.15.11:60948]   File "/var/www/html/app.py", line 62, in login
+[Mon Aug 14 10:43:39.570005 2023] [wsgi:error] [pid 1418406:tid 139837213095680] [remote 87.248.15.11:60948]     with sql.connect("database.db") as con:
+[Mon Aug 14 10:43:39.570012 2023] [wsgi:error] [pid 1418406:tid 139837213095680] [remote 87.248.15.11:60948] sqlite3.OperationalError: unable to open database file
+[Mon Aug 14 10:43:39.570017 2023] [wsgi:error] [pid 1418406:tid 139837213095680] [remote 87.248.15.11:60948] 
+[Mon Aug 14 10:43:39.570021 2023] [wsgi:error] [pid 1418406:tid 139837213095680] [remote 87.248.15.11:60948] During handling of the above exception, another exception occurred:
+[Mon Aug 14 10:43:39.570025 2023] [wsgi:error] [pid 1418406:tid 139837213095680] [remote 87.248.15.11:60948] 
+[Mon Aug 14 10:43:39.570029 2023] [wsgi:error] [pid 1418406:tid 139837213095680] [remote 87.248.15.11:60948] Traceback (most recent call last):
+[Mon Aug 14 10:43:39.570033 2023] [wsgi:error] [pid 1418406:tid 139837213095680] [remote 87.248.15.11:60948]   File "/var/www/html/app.py", line 76, in login
+[Mon Aug 14 10:43:39.570038 2023] [wsgi:error] [pid 1418406:tid 139837213095680] [remote 87.248.15.11:60948]     msg="eror in insert operration" + " " + msg
+[Mon Aug 14 10:43:39.570043 2023] [wsgi:error] [pid 1418406:tid 139837213095680] [remote 87.248.15.11:60948] UnboundLocalError: local variable 'msg' referenced before assignment
+[Mon Aug 14 10:43:39.570049 2023] [wsgi:error] [pid 1418406:tid 139837213095680] [remote 87.248.15.11:60948] 
+[Mon Aug 14 10:43:39.570053 2023] [wsgi:error] [pid 1418406:tid 139837213095680] [remote 87.248.15.11:60948] During handling of the above exception, another exception occurred:
+[Mon Aug 14 10:43:39.570057 2023] [wsgi:error] [pid 1418406:tid 139837213095680] [remote 87.248.15.11:60948] 
+[Mon Aug 14 10:43:39.570068 2023] [wsgi:error] [pid 1418406:tid 139837213095680] [remote 87.248.15.11:60948] Traceback (most recent call last):
+[Mon Aug 14 10:43:39.570073 2023] [wsgi:error] [pid 1418406:tid 139837213095680] [remote 87.248.15.11:60948]   File "/usr/local/lib/python3.9/dist-packages/flask/app.py", line 2190, in wsgi_app
+[Mon Aug 14 10:43:39.570077 2023] [wsgi:error] [pid 1418406:tid 139837213095680] [remote 87.248.15.11:60948]     response = self.full_dispatch_request()
+[Mon Aug 14 10:43:39.570082 2023] [wsgi:error] [pid 1418406:tid 139837213095680] [remote 87.248.15.11:60948]   File "/usr/local/lib/python3.9/dist-packages/flask/app.py", line 1486, in full_dispatch_request
+[Mon Aug 14 10:43:39.570087 2023] [wsgi:error] [pid 1418406:tid 139837213095680] [remote 87.248.15.11:60948]     rv = self.handle_user_exception(e)
+[Mon Aug 14 10:43:39.570091 2023] [wsgi:error] [pid 1418406:tid 139837213095680] [remote 87.248.15.11:60948]   File "/usr/local/lib/python3.9/dist-packages/flask/app.py", line 1484, in full_dispatch_request
+[Mon Aug 14 10:43:39.570110 2023] [wsgi:error] [pid 1418406:tid 139837213095680] [remote 87.248.15.11:60948]     rv = self.dispatch_request()
+[Mon Aug 14 10:43:39.570114 2023] [wsgi:error] [pid 1418406:tid 139837213095680] [remote 87.248.15.11:60948]   File "/usr/local/lib/python3.9/dist-packages/flask/app.py", line 1469, in dispatch_request
+[Mon Aug 14 10:43:39.570119 2023] [wsgi:error] [pid 1418406:tid 139837213095680] [remote 87.248.15.11:60948]     return self.ensure_sync(self.view_functions[rule.endpoint])(**view_args)
+[Mon Aug 14 10:43:39.570123 2023] [wsgi:error] [pid 1418406:tid 139837213095680] [remote 87.248.15.11:60948]   File "/var/www/html/app.py", line 78, in login
+[Mon Aug 14 10:43:39.570127 2023] [wsgi:error] [pid 1418406:tid 139837213095680] [remote 87.248.15.11:60948]     return render_template("result.html", msg=msg)
+[Mon Aug 14 10:43:39.570131 2023] [wsgi:error] [pid 1418406:tid 139837213095680] [remote 87.248.15.11:60948] UnboundLocalError: local variable 'msg' referenced before assignment
+[Mon Aug 14 12:01:31.459808 2023] [authz_core:error] [pid 3510:tid 139988704401152] [client 134.122.63.192:52904] AH01630: client denied by server configuration: /var/www/html/app.wsgi
+[Mon Aug 14 12:01:31.559232 2023] [authz_core:error] [pid 3511:tid 139989098661632] [client 164.90.222.93:46130] AH01630: client denied by server configuration: /var/www/html/app.wsgi
+[Mon Aug 14 12:06:39.765810 2023] [wsgi:error] [pid 3943:tid 140641130698496] [remote 87.248.15.11:49750] [2023-08-14 12:06:39,762] ERROR in app: Exception on /login [POST]
+[Mon Aug 14 12:06:39.765881 2023] [wsgi:error] [pid 3943:tid 140641130698496] [remote 87.248.15.11:49750] Traceback (most recent call last):
+[Mon Aug 14 12:06:39.765886 2023] [wsgi:error] [pid 3943:tid 140641130698496] [remote 87.248.15.11:49750]   File "/var/www/html/app.py", line 62, in login
+[Mon Aug 14 12:06:39.765891 2023] [wsgi:error] [pid 3943:tid 140641130698496] [remote 87.248.15.11:49750]     with sql.connect("database.db") as con:
+[Mon Aug 14 12:06:39.765895 2023] [wsgi:error] [pid 3943:tid 140641130698496] [remote 87.248.15.11:49750] sqlite3.OperationalError: unable to open database file
+[Mon Aug 14 12:06:39.765900 2023] [wsgi:error] [pid 3943:tid 140641130698496] [remote 87.248.15.11:49750] 
+[Mon Aug 14 12:06:39.765904 2023] [wsgi:error] [pid 3943:tid 140641130698496] [remote 87.248.15.11:49750] During handling of the above exception, another exception occurred:
+[Mon Aug 14 12:06:39.765909 2023] [wsgi:error] [pid 3943:tid 140641130698496] [remote 87.248.15.11:49750] 
+[Mon Aug 14 12:06:39.765913 2023] [wsgi:error] [pid 3943:tid 140641130698496] [remote 87.248.15.11:49750] Traceback (most recent call last):
+[Mon Aug 14 12:06:39.765917 2023] [wsgi:error] [pid 3943:tid 140641130698496] [remote 87.248.15.11:49750]   File "/var/www/html/app.py", line 76, in login
+[Mon Aug 14 12:06:39.765921 2023] [wsgi:error] [pid 3943:tid 140641130698496] [remote 87.248.15.11:49750]     msg="eror in insert operration" + " " + msg
+[Mon Aug 14 12:06:39.765926 2023] [wsgi:error] [pid 3943:tid 140641130698496] [remote 87.248.15.11:49750] UnboundLocalError: local variable 'msg' referenced before assignment
+[Mon Aug 14 12:06:39.765930 2023] [wsgi:error] [pid 3943:tid 140641130698496] [remote 87.248.15.11:49750] 
+[Mon Aug 14 12:06:39.765934 2023] [wsgi:error] [pid 3943:tid 140641130698496] [remote 87.248.15.11:49750] During handling of the above exception, another exception occurred:
+[Mon Aug 14 12:06:39.765938 2023] [wsgi:error] [pid 3943:tid 140641130698496] [remote 87.248.15.11:49750] 
+[Mon Aug 14 12:06:39.765942 2023] [wsgi:error] [pid 3943:tid 140641130698496] [remote 87.248.15.11:49750] Traceback (most recent call last):
+[Mon Aug 14 12:06:39.765947 2023] [wsgi:error] [pid 3943:tid 140641130698496] [remote 87.248.15.11:49750]   File "/usr/local/lib/python3.9/dist-packages/flask/app.py", line 2190, in wsgi_app
+[Mon Aug 14 12:06:39.765951 2023] [wsgi:error] [pid 3943:tid 140641130698496] [remote 87.248.15.11:49750]     response = self.full_dispatch_request()
+[Mon Aug 14 12:06:39.765978 2023] [wsgi:error] [pid 3943:tid 140641130698496] [remote 87.248.15.11:49750]   File "/usr/local/lib/python3.9/dist-packages/flask/app.py", line 1486, in full_dispatch_request
+[Mon Aug 14 12:06:39.765983 2023] [wsgi:error] [pid 3943:tid 140641130698496] [remote 87.248.15.11:49750]     rv = self.handle_user_exception(e)
+[Mon Aug 14 12:06:39.765987 2023] [wsgi:error] [pid 3943:tid 140641130698496] [remote 87.248.15.11:49750]   File "/usr/local/lib/python3.9/dist-packages/flask/app.py", line 1484, in full_dispatch_request
+[Mon Aug 14 12:06:39.765992 2023] [wsgi:error] [pid 3943:tid 140641130698496] [remote 87.248.15.11:49750]     rv = self.dispatch_request()
+[Mon Aug 14 12:06:39.765996 2023] [wsgi:error] [pid 3943:tid 140641130698496] [remote 87.248.15.11:49750]   File "/usr/local/lib/python3.9/dist-packages/flask/app.py", line 1469, in dispatch_request
+[Mon Aug 14 12:06:39.766000 2023] [wsgi:error] [pid 3943:tid 140641130698496] [remote 87.248.15.11:49750]     return self.ensure_sync(self.view_functions[rule.endpoint])(**view_args)
+[Mon Aug 14 12:06:39.766005 2023] [wsgi:error] [pid 3943:tid 140641130698496] [remote 87.248.15.11:49750]   File "/var/www/html/app.py", line 78, in login
+[Mon Aug 14 12:06:39.766009 2023] [wsgi:error] [pid 3943:tid 140641130698496] [remote 87.248.15.11:49750]     return render_template("result.html", msg=msg)
+[Mon Aug 14 12:06:39.766013 2023] [wsgi:error] [pid 3943:tid 140641130698496] [remote 87.248.15.11:49750] UnboundLocalError: local variable 'msg' referenced before assignment
+[Mon Aug 14 12:07:27.122574 2023] [wsgi:error] [pid 3943:tid 140641130698496] [remote 87.248.15.11:49782] [2023-08-14 12:07:27,122] ERROR in app: Exception on /login [POST]
+[Mon Aug 14 12:07:27.122613 2023] [wsgi:error] [pid 3943:tid 140641130698496] [remote 87.248.15.11:49782] Traceback (most recent call last):
+[Mon Aug 14 12:07:27.122619 2023] [wsgi:error] [pid 3943:tid 140641130698496] [remote 87.248.15.11:49782]   File "/var/www/html/app.py", line 62, in login
+[Mon Aug 14 12:07:27.122623 2023] [wsgi:error] [pid 3943:tid 140641130698496] [remote 87.248.15.11:49782]     with sql.connect("database.db") as con:
+[Mon Aug 14 12:07:27.122628 2023] [wsgi:error] [pid 3943:tid 140641130698496] [remote 87.248.15.11:49782] sqlite3.OperationalError: unable to open database file
+[Mon Aug 14 12:07:27.122632 2023] [wsgi:error] [pid 3943:tid 140641130698496] [remote 87.248.15.11:49782] 
+[Mon Aug 14 12:07:27.122637 2023] [wsgi:error] [pid 3943:tid 140641130698496] [remote 87.248.15.11:49782] During handling of the above exception, another exception occurred:
+[Mon Aug 14 12:07:27.122641 2023] [wsgi:error] [pid 3943:tid 140641130698496] [remote 87.248.15.11:49782] 
+[Mon Aug 14 12:07:27.122645 2023] [wsgi:error] [pid 3943:tid 140641130698496] [remote 87.248.15.11:49782] Traceback (most recent call last):
+[Mon Aug 14 12:07:27.122649 2023] [wsgi:error] [pid 3943:tid 140641130698496] [remote 87.248.15.11:49782]   File "/var/www/html/app.py", line 76, in login
+[Mon Aug 14 12:07:27.122654 2023] [wsgi:error] [pid 3943:tid 140641130698496] [remote 87.248.15.11:49782]     msg="eror in insert operration" + " " + msg
+[Mon Aug 14 12:07:27.122658 2023] [wsgi:error] [pid 3943:tid 140641130698496] [remote 87.248.15.11:49782] UnboundLocalError: local variable 'msg' referenced before assignment
+[Mon Aug 14 12:07:27.122662 2023] [wsgi:error] [pid 3943:tid 140641130698496] [remote 87.248.15.11:49782] 
+[Mon Aug 14 12:07:27.122666 2023] [wsgi:error] [pid 3943:tid 140641130698496] [remote 87.248.15.11:49782] During handling of the above exception, another exception occurred:
+[Mon Aug 14 12:07:27.122671 2023] [wsgi:error] [pid 3943:tid 140641130698496] [remote 87.248.15.11:49782] 
+[Mon Aug 14 12:07:27.122675 2023] [wsgi:error] [pid 3943:tid 140641130698496] [remote 87.248.15.11:49782] Traceback (most recent call last):
+[Mon Aug 14 12:07:27.122679 2023] [wsgi:error] [pid 3943:tid 140641130698496] [remote 87.248.15.11:49782]   File "/usr/local/lib/python3.9/dist-packages/flask/app.py", line 2190, in wsgi_app
+[Mon Aug 14 12:07:27.122694 2023] [wsgi:error] [pid 3943:tid 140641130698496] [remote 87.248.15.11:49782]     response = self.full_dispatch_request()
+[Mon Aug 14 12:07:27.122698 2023] [wsgi:error] [pid 3943:tid 140641130698496] [remote 87.248.15.11:49782]   File "/usr/local/lib/python3.9/dist-packages/flask/app.py", line 1486, in full_dispatch_request
+[Mon Aug 14 12:07:27.122703 2023] [wsgi:error] [pid 3943:tid 140641130698496] [remote 87.248.15.11:49782]     rv = self.handle_user_exception(e)
+[Mon Aug 14 12:07:27.122707 2023] [wsgi:error] [pid 3943:tid 140641130698496] [remote 87.248.15.11:49782]   File "/usr/local/lib/python3.9/dist-packages/flask/app.py", line 1484, in full_dispatch_request
+[Mon Aug 14 12:07:27.122712 2023] [wsgi:error] [pid 3943:tid 140641130698496] [remote 87.248.15.11:49782]     rv = self.dispatch_request()
+[Mon Aug 14 12:07:27.122716 2023] [wsgi:error] [pid 3943:tid 140641130698496] [remote 87.248.15.11:49782]   File "/usr/local/lib/python3.9/dist-packages/flask/app.py", line 1469, in dispatch_request
+[Mon Aug 14 12:07:27.122720 2023] [wsgi:error] [pid 3943:tid 140641130698496] [remote 87.248.15.11:49782]     return self.ensure_sync(self.view_functions[rule.endpoint])(**view_args)
+[Mon Aug 14 12:07:27.122725 2023] [wsgi:error] [pid 3943:tid 140641130698496] [remote 87.248.15.11:49782]   File "/var/www/html/app.py", line 78, in login
+[Mon Aug 14 12:07:27.122729 2023] [wsgi:error] [pid 3943:tid 140641130698496] [remote 87.248.15.11:49782]     return render_template("result.html", msg=msg)
+[Mon Aug 14 12:07:27.122733 2023] [wsgi:error] [pid 3943:tid 140641130698496] [remote 87.248.15.11:49782] UnboundLocalError: local variable 'msg' referenced before assignment
+[Mon Aug 14 12:07:35.961466 2023] [wsgi:error] [pid 3943:tid 140641139091200] [remote 87.248.15.11:49781] [2023-08-14 12:07:35,961] ERROR in app: Exception on /login [POST]
+[Mon Aug 14 12:07:35.961536 2023] [wsgi:error] [pid 3943:tid 140641139091200] [remote 87.248.15.11:49781] Traceback (most recent call last):
+[Mon Aug 14 12:07:35.961543 2023] [wsgi:error] [pid 3943:tid 140641139091200] [remote 87.248.15.11:49781]   File "/var/www/html/app.py", line 62, in login
+[Mon Aug 14 12:07:35.961549 2023] [wsgi:error] [pid 3943:tid 140641139091200] [remote 87.248.15.11:49781]     with sql.connect("database.db") as con:
+[Mon Aug 14 12:07:35.961554 2023] [wsgi:error] [pid 3943:tid 140641139091200] [remote 87.248.15.11:49781] sqlite3.OperationalError: unable to open database file
+[Mon Aug 14 12:07:35.961559 2023] [wsgi:error] [pid 3943:tid 140641139091200] [remote 87.248.15.11:49781] 
+[Mon Aug 14 12:07:35.961564 2023] [wsgi:error] [pid 3943:tid 140641139091200] [remote 87.248.15.11:49781] During handling of the above exception, another exception occurred:
+[Mon Aug 14 12:07:35.961569 2023] [wsgi:error] [pid 3943:tid 140641139091200] [remote 87.248.15.11:49781] 
+[Mon Aug 14 12:07:35.961573 2023] [wsgi:error] [pid 3943:tid 140641139091200] [remote 87.248.15.11:49781] Traceback (most recent call last):
+[Mon Aug 14 12:07:35.961578 2023] [wsgi:error] [pid 3943:tid 140641139091200] [remote 87.248.15.11:49781]   File "/var/www/html/app.py", line 76, in login
+[Mon Aug 14 12:07:35.961583 2023] [wsgi:error] [pid 3943:tid 140641139091200] [remote 87.248.15.11:49781]     msg="eror in insert operration" + " " + msg
+[Mon Aug 14 12:07:35.961588 2023] [wsgi:error] [pid 3943:tid 140641139091200] [remote 87.248.15.11:49781] UnboundLocalError: local variable 'msg' referenced before assignment
+[Mon Aug 14 12:07:35.961593 2023] [wsgi:error] [pid 3943:tid 140641139091200] [remote 87.248.15.11:49781] 
+[Mon Aug 14 12:07:35.961598 2023] [wsgi:error] [pid 3943:tid 140641139091200] [remote 87.248.15.11:49781] During handling of the above exception, another exception occurred:
+[Mon Aug 14 12:07:35.961603 2023] [wsgi:error] [pid 3943:tid 140641139091200] [remote 87.248.15.11:49781] 
+[Mon Aug 14 12:07:35.961607 2023] [wsgi:error] [pid 3943:tid 140641139091200] [remote 87.248.15.11:49781] Traceback (most recent call last):
+[Mon Aug 14 12:07:35.961628 2023] [wsgi:error] [pid 3943:tid 140641139091200] [remote 87.248.15.11:49781]   File "/usr/local/lib/python3.9/dist-packages/flask/app.py", line 2190, in wsgi_app
+[Mon Aug 14 12:07:35.961633 2023] [wsgi:error] [pid 3943:tid 140641139091200] [remote 87.248.15.11:49781]     response = self.full_dispatch_request()
+[Mon Aug 14 12:07:35.961638 2023] [wsgi:error] [pid 3943:tid 140641139091200] [remote 87.248.15.11:49781]   File "/usr/local/lib/python3.9/dist-packages/flask/app.py", line 1486, in full_dispatch_request
+[Mon Aug 14 12:07:35.961643 2023] [wsgi:error] [pid 3943:tid 140641139091200] [remote 87.248.15.11:49781]     rv = self.handle_user_exception(e)
+[Mon Aug 14 12:07:35.961648 2023] [wsgi:error] [pid 3943:tid 140641139091200] [remote 87.248.15.11:49781]   File "/usr/local/lib/python3.9/dist-packages/flask/app.py", line 1484, in full_dispatch_request
+[Mon Aug 14 12:07:35.961662 2023] [wsgi:error] [pid 3943:tid 140641139091200] [remote 87.248.15.11:49781]     rv = self.dispatch_request()
+[Mon Aug 14 12:07:35.961667 2023] [wsgi:error] [pid 3943:tid 140641139091200] [remote 87.248.15.11:49781]   File "/usr/local/lib/python3.9/dist-packages/flask/app.py", line 1469, in dispatch_request
+[Mon Aug 14 12:07:35.961672 2023] [wsgi:error] [pid 3943:tid 140641139091200] [remote 87.248.15.11:49781]     return self.ensure_sync(self.view_functions[rule.endpoint])(**view_args)
+[Mon Aug 14 12:07:35.961677 2023] [wsgi:error] [pid 3943:tid 140641139091200] [remote 87.248.15.11:49781]   File "/var/www/html/app.py", line 78, in login
+[Mon Aug 14 12:07:35.961682 2023] [wsgi:error] [pid 3943:tid 140641139091200] [remote 87.248.15.11:49781]     return render_template("result.html", msg=msg)
+[Mon Aug 14 12:07:35.961687 2023] [wsgi:error] [pid 3943:tid 140641139091200] [remote 87.248.15.11:49781] UnboundLocalError: local variable 'msg' referenced before assignment
+[Mon Aug 14 12:09:02.702109 2023] [wsgi:error] [pid 4064:tid 140225169602304] [remote 87.248.15.11:49819] [2023-08-14 12:09:02,701] ERROR in app: Exception on /login [POST]
+[Mon Aug 14 12:09:02.702156 2023] [wsgi:error] [pid 4064:tid 140225169602304] [remote 87.248.15.11:49819] Traceback (most recent call last):
+[Mon Aug 14 12:09:02.702162 2023] [wsgi:error] [pid 4064:tid 140225169602304] [remote 87.248.15.11:49819]   File "/var/www/html/app.py", line 62, in login
+[Mon Aug 14 12:09:02.702167 2023] [wsgi:error] [pid 4064:tid 140225169602304] [remote 87.248.15.11:49819]     with sql.connect("database.db") as con:
+[Mon Aug 14 12:09:02.702172 2023] [wsgi:error] [pid 4064:tid 140225169602304] [remote 87.248.15.11:49819] sqlite3.OperationalError: unable to open database file
+[Mon Aug 14 12:09:02.702176 2023] [wsgi:error] [pid 4064:tid 140225169602304] [remote 87.248.15.11:49819] 
+[Mon Aug 14 12:09:02.702180 2023] [wsgi:error] [pid 4064:tid 140225169602304] [remote 87.248.15.11:49819] During handling of the above exception, another exception occurred:
+[Mon Aug 14 12:09:02.702185 2023] [wsgi:error] [pid 4064:tid 140225169602304] [remote 87.248.15.11:49819] 
+[Mon Aug 14 12:09:02.702189 2023] [wsgi:error] [pid 4064:tid 140225169602304] [remote 87.248.15.11:49819] Traceback (most recent call last):
+[Mon Aug 14 12:09:02.702193 2023] [wsgi:error] [pid 4064:tid 140225169602304] [remote 87.248.15.11:49819]   File "/var/www/html/app.py", line 76, in login
+[Mon Aug 14 12:09:02.702197 2023] [wsgi:error] [pid 4064:tid 140225169602304] [remote 87.248.15.11:49819]     msg="eror in insert operration" + " " + msg
+[Mon Aug 14 12:09:02.702201 2023] [wsgi:error] [pid 4064:tid 140225169602304] [remote 87.248.15.11:49819] UnboundLocalError: local variable 'msg' referenced before assignment
+[Mon Aug 14 12:09:02.702205 2023] [wsgi:error] [pid 4064:tid 140225169602304] [remote 87.248.15.11:49819] 
+[Mon Aug 14 12:09:02.702210 2023] [wsgi:error] [pid 4064:tid 140225169602304] [remote 87.248.15.11:49819] During handling of the above exception, another exception occurred:
+[Mon Aug 14 12:09:02.702214 2023] [wsgi:error] [pid 4064:tid 140225169602304] [remote 87.248.15.11:49819] 
+[Mon Aug 14 12:09:02.702218 2023] [wsgi:error] [pid 4064:tid 140225169602304] [remote 87.248.15.11:49819] Traceback (most recent call last):
+[Mon Aug 14 12:09:02.702234 2023] [wsgi:error] [pid 4064:tid 140225169602304] [remote 87.248.15.11:49819]   File "/usr/local/lib/python3.9/dist-packages/flask/app.py", line 2190, in wsgi_app
+[Mon Aug 14 12:09:02.702239 2023] [wsgi:error] [pid 4064:tid 140225169602304] [remote 87.248.15.11:49819]     response = self.full_dispatch_request()
+[Mon Aug 14 12:09:02.702243 2023] [wsgi:error] [pid 4064:tid 140225169602304] [remote 87.248.15.11:49819]   File "/usr/local/lib/python3.9/dist-packages/flask/app.py", line 1486, in full_dispatch_request
+[Mon Aug 14 12:09:02.702247 2023] [wsgi:error] [pid 4064:tid 140225169602304] [remote 87.248.15.11:49819]     rv = self.handle_user_exception(e)
+[Mon Aug 14 12:09:02.702251 2023] [wsgi:error] [pid 4064:tid 140225169602304] [remote 87.248.15.11:49819]   File "/usr/local/lib/python3.9/dist-packages/flask/app.py", line 1484, in full_dispatch_request
+[Mon Aug 14 12:09:02.702256 2023] [wsgi:error] [pid 4064:tid 140225169602304] [remote 87.248.15.11:49819]     rv = self.dispatch_request()
+[Mon Aug 14 12:09:02.702260 2023] [wsgi:error] [pid 4064:tid 140225169602304] [remote 87.248.15.11:49819]   File "/usr/local/lib/python3.9/dist-packages/flask/app.py", line 1469, in dispatch_request
+[Mon Aug 14 12:09:02.702264 2023] [wsgi:error] [pid 4064:tid 140225169602304] [remote 87.248.15.11:49819]     return self.ensure_sync(self.view_functions[rule.endpoint])(**view_args)
+[Mon Aug 14 12:09:02.702268 2023] [wsgi:error] [pid 4064:tid 140225169602304] [remote 87.248.15.11:49819]   File "/var/www/html/app.py", line 78, in login
+[Mon Aug 14 12:09:02.702273 2023] [wsgi:error] [pid 4064:tid 140225169602304] [remote 87.248.15.11:49819]     return render_template("result.html", msg=msg)
+[Mon Aug 14 12:09:02.702277 2023] [wsgi:error] [pid 4064:tid 140225169602304] [remote 87.248.15.11:49819] UnboundLocalError: local variable 'msg' referenced before assignment
+[Mon Aug 14 12:09:41.867658 2023] [wsgi:error] [pid 4064:tid 140225177995008] [remote 87.248.15.11:49828] [2023-08-14 12:09:41,867] ERROR in app: Exception on /login [POST]
+[Mon Aug 14 12:09:41.867705 2023] [wsgi:error] [pid 4064:tid 140225177995008] [remote 87.248.15.11:49828] Traceback (most recent call last):
+[Mon Aug 14 12:09:41.867710 2023] [wsgi:error] [pid 4064:tid 140225177995008] [remote 87.248.15.11:49828]   File "/var/www/html/app.py", line 62, in login
+[Mon Aug 14 12:09:41.867715 2023] [wsgi:error] [pid 4064:tid 140225177995008] [remote 87.248.15.11:49828]     with sql.connect("database.db") as con:
+[Mon Aug 14 12:09:41.867719 2023] [wsgi:error] [pid 4064:tid 140225177995008] [remote 87.248.15.11:49828] sqlite3.OperationalError: unable to open database file
+[Mon Aug 14 12:09:41.867724 2023] [wsgi:error] [pid 4064:tid 140225177995008] [remote 87.248.15.11:49828] 
+[Mon Aug 14 12:09:41.867728 2023] [wsgi:error] [pid 4064:tid 140225177995008] [remote 87.248.15.11:49828] During handling of the above exception, another exception occurred:
+[Mon Aug 14 12:09:41.867732 2023] [wsgi:error] [pid 4064:tid 140225177995008] [remote 87.248.15.11:49828] 
+[Mon Aug 14 12:09:41.867736 2023] [wsgi:error] [pid 4064:tid 140225177995008] [remote 87.248.15.11:49828] Traceback (most recent call last):
+[Mon Aug 14 12:09:41.867741 2023] [wsgi:error] [pid 4064:tid 140225177995008] [remote 87.248.15.11:49828]   File "/var/www/html/app.py", line 76, in login
+[Mon Aug 14 12:09:41.867757 2023] [wsgi:error] [pid 4064:tid 140225177995008] [remote 87.248.15.11:49828]     msg="eror in insert operration" + " " + msg
+[Mon Aug 14 12:09:41.867762 2023] [wsgi:error] [pid 4064:tid 140225177995008] [remote 87.248.15.11:49828] UnboundLocalError: local variable 'msg' referenced before assignment
+[Mon Aug 14 12:09:41.867766 2023] [wsgi:error] [pid 4064:tid 140225177995008] [remote 87.248.15.11:49828] 
+[Mon Aug 14 12:09:41.867770 2023] [wsgi:error] [pid 4064:tid 140225177995008] [remote 87.248.15.11:49828] During handling of the above exception, another exception occurred:
+[Mon Aug 14 12:09:41.867787 2023] [wsgi:error] [pid 4064:tid 140225177995008] [remote 87.248.15.11:49828] 
+[Mon Aug 14 12:09:41.867791 2023] [wsgi:error] [pid 4064:tid 140225177995008] [remote 87.248.15.11:49828] Traceback (most recent call last):
+[Mon Aug 14 12:09:41.867796 2023] [wsgi:error] [pid 4064:tid 140225177995008] [remote 87.248.15.11:49828]   File "/usr/local/lib/python3.9/dist-packages/flask/app.py", line 2190, in wsgi_app
+[Mon Aug 14 12:09:41.867800 2023] [wsgi:error] [pid 4064:tid 140225177995008] [remote 87.248.15.11:49828]     response = self.full_dispatch_request()
+[Mon Aug 14 12:09:41.867804 2023] [wsgi:error] [pid 4064:tid 140225177995008] [remote 87.248.15.11:49828]   File "/usr/local/lib/python3.9/dist-packages/flask/app.py", line 1486, in full_dispatch_request
+[Mon Aug 14 12:09:41.867809 2023] [wsgi:error] [pid 4064:tid 140225177995008] [remote 87.248.15.11:49828]     rv = self.handle_user_exception(e)
+[Mon Aug 14 12:09:41.867813 2023] [wsgi:error] [pid 4064:tid 140225177995008] [remote 87.248.15.11:49828]   File "/usr/local/lib/python3.9/dist-packages/flask/app.py", line 1484, in full_dispatch_request
+[Mon Aug 14 12:09:41.867817 2023] [wsgi:error] [pid 4064:tid 140225177995008] [remote 87.248.15.11:49828]     rv = self.dispatch_request()
+[Mon Aug 14 12:09:41.867821 2023] [wsgi:error] [pid 4064:tid 140225177995008] [remote 87.248.15.11:49828]   File "/usr/local/lib/python3.9/dist-packages/flask/app.py", line 1469, in dispatch_request
+[Mon Aug 14 12:09:41.867825 2023] [wsgi:error] [pid 4064:tid 140225177995008] [remote 87.248.15.11:49828]     return self.ensure_sync(self.view_functions[rule.endpoint])(**view_args)
+[Mon Aug 14 12:09:41.867830 2023] [wsgi:error] [pid 4064:tid 140225177995008] [remote 87.248.15.11:49828]   File "/var/www/html/app.py", line 78, in login
+[Mon Aug 14 12:09:41.867834 2023] [wsgi:error] [pid 4064:tid 140225177995008] [remote 87.248.15.11:49828]     return render_template("result.html", msg=msg)
+[Mon Aug 14 12:09:41.867838 2023] [wsgi:error] [pid 4064:tid 140225177995008] [remote 87.248.15.11:49828] UnboundLocalError: local variable 'msg' referenced before assignment
+[Mon Aug 14 12:12:45.065371 2023] [wsgi:error] [pid 4165:tid 140706778031872] [remote 87.248.15.11:49974] [2023-08-14 12:12:45,064] ERROR in app: Exception on /addrec [POST]
+[Mon Aug 14 12:12:45.065432 2023] [wsgi:error] [pid 4165:tid 140706778031872] [remote 87.248.15.11:49974] Traceback (most recent call last):
+[Mon Aug 14 12:12:45.065438 2023] [wsgi:error] [pid 4165:tid 140706778031872] [remote 87.248.15.11:49974]   File "/var/www/html/app.py", line 29, in addrec
+[Mon Aug 14 12:12:45.065442 2023] [wsgi:error] [pid 4165:tid 140706778031872] [remote 87.248.15.11:49974]     with sql.connect("database.db") as con:
+[Mon Aug 14 12:12:45.065447 2023] [wsgi:error] [pid 4165:tid 140706778031872] [remote 87.248.15.11:49974] sqlite3.OperationalError: unable to open database file
+[Mon Aug 14 12:12:45.065452 2023] [wsgi:error] [pid 4165:tid 140706778031872] [remote 87.248.15.11:49974] 
+[Mon Aug 14 12:12:45.065456 2023] [wsgi:error] [pid 4165:tid 140706778031872] [remote 87.248.15.11:49974] During handling of the above exception, another exception occurred:
+[Mon Aug 14 12:12:45.065460 2023] [wsgi:error] [pid 4165:tid 140706778031872] [remote 87.248.15.11:49974] 
+[Mon Aug 14 12:12:45.065464 2023] [wsgi:error] [pid 4165:tid 140706778031872] [remote 87.248.15.11:49974] Traceback (most recent call last):
+[Mon Aug 14 12:12:45.065469 2023] [wsgi:error] [pid 4165:tid 140706778031872] [remote 87.248.15.11:49974]   File "/var/www/html/app.py", line 35, in addrec
+[Mon Aug 14 12:12:45.065473 2023] [wsgi:error] [pid 4165:tid 140706778031872] [remote 87.248.15.11:49974]     con.rollback()
+[Mon Aug 14 12:12:45.065478 2023] [wsgi:error] [pid 4165:tid 140706778031872] [remote 87.248.15.11:49974] UnboundLocalError: local variable 'con' referenced before assignment
+[Mon Aug 14 12:12:45.065482 2023] [wsgi:error] [pid 4165:tid 140706778031872] [remote 87.248.15.11:49974] 
+[Mon Aug 14 12:12:45.065486 2023] [wsgi:error] [pid 4165:tid 140706778031872] [remote 87.248.15.11:49974] During handling of the above exception, another exception occurred:
+[Mon Aug 14 12:12:45.065501 2023] [wsgi:error] [pid 4165:tid 140706778031872] [remote 87.248.15.11:49974] 
+[Mon Aug 14 12:12:45.065505 2023] [wsgi:error] [pid 4165:tid 140706778031872] [remote 87.248.15.11:49974] Traceback (most recent call last):
+[Mon Aug 14 12:12:45.065510 2023] [wsgi:error] [pid 4165:tid 140706778031872] [remote 87.248.15.11:49974]   File "/usr/local/lib/python3.9/dist-packages/flask/app.py", line 2190, in wsgi_app
+[Mon Aug 14 12:12:45.065514 2023] [wsgi:error] [pid 4165:tid 140706778031872] [remote 87.248.15.11:49974]     response = self.full_dispatch_request()
+[Mon Aug 14 12:12:45.065519 2023] [wsgi:error] [pid 4165:tid 140706778031872] [remote 87.248.15.11:49974]   File "/usr/local/lib/python3.9/dist-packages/flask/app.py", line 1486, in full_dispatch_request
+[Mon Aug 14 12:12:45.065524 2023] [wsgi:error] [pid 4165:tid 140706778031872] [remote 87.248.15.11:49974]     rv = self.handle_user_exception(e)
+[Mon Aug 14 12:12:45.065528 2023] [wsgi:error] [pid 4165:tid 140706778031872] [remote 87.248.15.11:49974]   File "/usr/local/lib/python3.9/dist-packages/flask/app.py", line 1484, in full_dispatch_request
+[Mon Aug 14 12:12:45.065532 2023] [wsgi:error] [pid 4165:tid 140706778031872] [remote 87.248.15.11:49974]     rv = self.dispatch_request()
+[Mon Aug 14 12:12:45.065537 2023] [wsgi:error] [pid 4165:tid 140706778031872] [remote 87.248.15.11:49974]   File "/usr/local/lib/python3.9/dist-packages/flask/app.py", line 1469, in dispatch_request
+[Mon Aug 14 12:12:45.065541 2023] [wsgi:error] [pid 4165:tid 140706778031872] [remote 87.248.15.11:49974]     return self.ensure_sync(self.view_functions[rule.endpoint])(**view_args)
+[Mon Aug 14 12:12:45.065545 2023] [wsgi:error] [pid 4165:tid 140706778031872] [remote 87.248.15.11:49974]   File "/var/www/html/app.py", line 38, in addrec
+[Mon Aug 14 12:12:45.065550 2023] [wsgi:error] [pid 4165:tid 140706778031872] [remote 87.248.15.11:49974]     return render_template("result.html", msg=msg)
+[Mon Aug 14 12:12:45.065554 2023] [wsgi:error] [pid 4165:tid 140706778031872] [remote 87.248.15.11:49974] UnboundLocalError: local variable 'msg' referenced before assignment
+[Mon Aug 14 12:14:06.779130 2023] [wsgi:error] [pid 4165:tid 140706778031872] [remote 87.248.15.11:49999] [2023-08-14 12:14:06,778] ERROR in app: Exception on /addrec [POST]
+[Mon Aug 14 12:14:06.779165 2023] [wsgi:error] [pid 4165:tid 140706778031872] [remote 87.248.15.11:49999] Traceback (most recent call last):
+[Mon Aug 14 12:14:06.779171 2023] [wsgi:error] [pid 4165:tid 140706778031872] [remote 87.248.15.11:49999]   File "/var/www/html/app.py", line 29, in addrec
+[Mon Aug 14 12:14:06.779175 2023] [wsgi:error] [pid 4165:tid 140706778031872] [remote 87.248.15.11:49999]     with sql.connect("/var/www/html/database.db") as con:
+[Mon Aug 14 12:14:06.779180 2023] [wsgi:error] [pid 4165:tid 140706778031872] [remote 87.248.15.11:49999] sqlite3.OperationalError: unable to open database file
+[Mon Aug 14 12:14:06.779184 2023] [wsgi:error] [pid 4165:tid 140706778031872] [remote 87.248.15.11:49999] 
+[Mon Aug 14 12:14:06.779188 2023] [wsgi:error] [pid 4165:tid 140706778031872] [remote 87.248.15.11:49999] During handling of the above exception, another exception occurred:
+[Mon Aug 14 12:14:06.779193 2023] [wsgi:error] [pid 4165:tid 140706778031872] [remote 87.248.15.11:49999] 
+[Mon Aug 14 12:14:06.779206 2023] [wsgi:error] [pid 4165:tid 140706778031872] [remote 87.248.15.11:49999] Traceback (most recent call last):
+[Mon Aug 14 12:14:06.779210 2023] [wsgi:error] [pid 4165:tid 140706778031872] [remote 87.248.15.11:49999]   File "/var/www/html/app.py", line 35, in addrec
+[Mon Aug 14 12:14:06.779214 2023] [wsgi:error] [pid 4165:tid 140706778031872] [remote 87.248.15.11:49999]     con.rollback()
+[Mon Aug 14 12:14:06.779219 2023] [wsgi:error] [pid 4165:tid 140706778031872] [remote 87.248.15.11:49999] UnboundLocalError: local variable 'con' referenced before assignment
+[Mon Aug 14 12:14:06.779223 2023] [wsgi:error] [pid 4165:tid 140706778031872] [remote 87.248.15.11:49999] 
+[Mon Aug 14 12:14:06.779241 2023] [wsgi:error] [pid 4165:tid 140706778031872] [remote 87.248.15.11:49999] During handling of the above exception, another exception occurred:
+[Mon Aug 14 12:14:06.779246 2023] [wsgi:error] [pid 4165:tid 140706778031872] [remote 87.248.15.11:49999] 
+[Mon Aug 14 12:14:06.779250 2023] [wsgi:error] [pid 4165:tid 140706778031872] [remote 87.248.15.11:49999] Traceback (most recent call last):
+[Mon Aug 14 12:14:06.779254 2023] [wsgi:error] [pid 4165:tid 140706778031872] [remote 87.248.15.11:49999]   File "/usr/local/lib/python3.9/dist-packages/flask/app.py", line 2190, in wsgi_app
+[Mon Aug 14 12:14:06.779259 2023] [wsgi:error] [pid 4165:tid 140706778031872] [remote 87.248.15.11:49999]     response = self.full_dispatch_request()
+[Mon Aug 14 12:14:06.779263 2023] [wsgi:error] [pid 4165:tid 140706778031872] [remote 87.248.15.11:49999]   File "/usr/local/lib/python3.9/dist-packages/flask/app.py", line 1486, in full_dispatch_request
+[Mon Aug 14 12:14:06.779268 2023] [wsgi:error] [pid 4165:tid 140706778031872] [remote 87.248.15.11:49999]     rv = self.handle_user_exception(e)
+[Mon Aug 14 12:14:06.779272 2023] [wsgi:error] [pid 4165:tid 140706778031872] [remote 87.248.15.11:49999]   File "/usr/local/lib/python3.9/dist-packages/flask/app.py", line 1484, in full_dispatch_request
+[Mon Aug 14 12:14:06.779277 2023] [wsgi:error] [pid 4165:tid 140706778031872] [remote 87.248.15.11:49999]     rv = self.dispatch_request()
+[Mon Aug 14 12:14:06.779281 2023] [wsgi:error] [pid 4165:tid 140706778031872] [remote 87.248.15.11:49999]   File "/usr/local/lib/python3.9/dist-packages/flask/app.py", line 1469, in dispatch_request
+[Mon Aug 14 12:14:06.779285 2023] [wsgi:error] [pid 4165:tid 140706778031872] [remote 87.248.15.11:49999]     return self.ensure_sync(self.view_functions[rule.endpoint])(**view_args)
+[Mon Aug 14 12:14:06.779290 2023] [wsgi:error] [pid 4165:tid 140706778031872] [remote 87.248.15.11:49999]   File "/var/www/html/app.py", line 38, in addrec
+[Mon Aug 14 12:14:06.779294 2023] [wsgi:error] [pid 4165:tid 140706778031872] [remote 87.248.15.11:49999]     return render_template("result.html", msg=msg)
+[Mon Aug 14 12:14:06.779298 2023] [wsgi:error] [pid 4165:tid 140706778031872] [remote 87.248.15.11:49999] UnboundLocalError: local variable 'msg' referenced before assignment
+[Mon Aug 14 12:14:51.123984 2023] [wsgi:error] [pid 4165:tid 140706778031872] [remote 87.248.15.11:50007] [2023-08-14 12:14:51,123] ERROR in app: Exception on /addrec [POST]
+[Mon Aug 14 12:14:51.124067 2023] [wsgi:error] [pid 4165:tid 140706778031872] [remote 87.248.15.11:50007] Traceback (most recent call last):
+[Mon Aug 14 12:14:51.124083 2023] [wsgi:error] [pid 4165:tid 140706778031872] [remote 87.248.15.11:50007]   File "/var/www/html/app.py", line 29, in addrec
+[Mon Aug 14 12:14:51.124091 2023] [wsgi:error] [pid 4165:tid 140706778031872] [remote 87.248.15.11:50007]     with sql.connect("/var/www/html/database.db") as con:
+[Mon Aug 14 12:14:51.124099 2023] [wsgi:error] [pid 4165:tid 140706778031872] [remote 87.248.15.11:50007] sqlite3.OperationalError: unable to open database file
+[Mon Aug 14 12:14:51.124107 2023] [wsgi:error] [pid 4165:tid 140706778031872] [remote 87.248.15.11:50007] 
+[Mon Aug 14 12:14:51.124113 2023] [wsgi:error] [pid 4165:tid 140706778031872] [remote 87.248.15.11:50007] During handling of the above exception, another exception occurred:
+[Mon Aug 14 12:14:51.124121 2023] [wsgi:error] [pid 4165:tid 140706778031872] [remote 87.248.15.11:50007] 
+[Mon Aug 14 12:14:51.124128 2023] [wsgi:error] [pid 4165:tid 140706778031872] [remote 87.248.15.11:50007] Traceback (most recent call last):
+[Mon Aug 14 12:14:51.124134 2023] [wsgi:error] [pid 4165:tid 140706778031872] [remote 87.248.15.11:50007]   File "/var/www/html/app.py", line 35, in addrec
+[Mon Aug 14 12:14:51.124142 2023] [wsgi:error] [pid 4165:tid 140706778031872] [remote 87.248.15.11:50007]     con.rollback()
+[Mon Aug 14 12:14:51.124149 2023] [wsgi:error] [pid 4165:tid 140706778031872] [remote 87.248.15.11:50007] UnboundLocalError: local variable 'con' referenced before assignment
+[Mon Aug 14 12:14:51.124172 2023] [wsgi:error] [pid 4165:tid 140706778031872] [remote 87.248.15.11:50007] 
+[Mon Aug 14 12:14:51.124180 2023] [wsgi:error] [pid 4165:tid 140706778031872] [remote 87.248.15.11:50007] During handling of the above exception, another exception occurred:
+[Mon Aug 14 12:14:51.124187 2023] [wsgi:error] [pid 4165:tid 140706778031872] [remote 87.248.15.11:50007] 
+[Mon Aug 14 12:14:51.124194 2023] [wsgi:error] [pid 4165:tid 140706778031872] [remote 87.248.15.11:50007] Traceback (most recent call last):
+[Mon Aug 14 12:14:51.124202 2023] [wsgi:error] [pid 4165:tid 140706778031872] [remote 87.248.15.11:50007]   File "/usr/local/lib/python3.9/dist-packages/flask/app.py", line 2190, in wsgi_app
+[Mon Aug 14 12:14:51.124210 2023] [wsgi:error] [pid 4165:tid 140706778031872] [remote 87.248.15.11:50007]     response = self.full_dispatch_request()
+[Mon Aug 14 12:14:51.124217 2023] [wsgi:error] [pid 4165:tid 140706778031872] [remote 87.248.15.11:50007]   File "/usr/local/lib/python3.9/dist-packages/flask/app.py", line 1486, in full_dispatch_request
+[Mon Aug 14 12:14:51.124226 2023] [wsgi:error] [pid 4165:tid 140706778031872] [remote 87.248.15.11:50007]     rv = self.handle_user_exception(e)
+[Mon Aug 14 12:14:51.124233 2023] [wsgi:error] [pid 4165:tid 140706778031872] [remote 87.248.15.11:50007]   File "/usr/local/lib/python3.9/dist-packages/flask/app.py", line 1484, in full_dispatch_request
+[Mon Aug 14 12:14:51.124240 2023] [wsgi:error] [pid 4165:tid 140706778031872] [remote 87.248.15.11:50007]     rv = self.dispatch_request()
+[Mon Aug 14 12:14:51.124248 2023] [wsgi:error] [pid 4165:tid 140706778031872] [remote 87.248.15.11:50007]   File "/usr/local/lib/python3.9/dist-packages/flask/app.py", line 1469, in dispatch_request
+[Mon Aug 14 12:14:51.124256 2023] [wsgi:error] [pid 4165:tid 140706778031872] [remote 87.248.15.11:50007]     return self.ensure_sync(self.view_functions[rule.endpoint])(**view_args)
+[Mon Aug 14 12:14:51.124264 2023] [wsgi:error] [pid 4165:tid 140706778031872] [remote 87.248.15.11:50007]   File "/var/www/html/app.py", line 38, in addrec
+[Mon Aug 14 12:14:51.124271 2023] [wsgi:error] [pid 4165:tid 140706778031872] [remote 87.248.15.11:50007]     return render_template("result.html", msg=msg)
+[Mon Aug 14 12:14:51.124278 2023] [wsgi:error] [pid 4165:tid 140706778031872] [remote 87.248.15.11:50007] UnboundLocalError: local variable 'msg' referenced before assignment
