@@ -49,9 +49,9 @@ def addrec():
                 session['username'] = name
                 msg = "Welcome to Pisscounter " + name + "!"
                 
-        except:
+        except BaseException as e:
             con.rollback()
-            msg="error in insert operation"
+            msg="error in insert operation: " + str(e)
         finally:
             return render_template("result.html", msg=msg)
             con.close()
