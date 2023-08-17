@@ -1,8 +1,10 @@
 from flask import Flask, render_template, url_for, request, session, redirect
 import sqlite3 as sql
+import os
 
 app = Flask(__name__)
 app.secret_key = 'your secret key'  # Replace with your own secret key
+databasePath = os.getcwd() + '/database.db'
 
 @app.route('/')
 def index():
@@ -42,7 +44,7 @@ def addrec():
             name=request.form['name']
             pin=request.form['pin']
 
-            with sql.connect("database.db") as con:
+            with sql.connect(databasePath) as con:
                 cur = con.cursor()
                 cur.execute("INSERT INTO login (name,pin) VALUES (?,?)",(name,pin))
                 con.commit()
@@ -58,7 +60,7 @@ def addrec():
 
 @app.route('/list')
 def list():
-    con = sql.connect("database.db")
+    con = sql.connect(databasePath)
     con.row_factory = sql.Row
     cur = con.cursor()
     cur.execute("select * from login")
@@ -71,7 +73,7 @@ def login():
         try:
             name=request.form['name']
             pin=request.form['pin']
-            with sql.connect("database.db") as con:
+            with sql.connect(databasePath) as con:
                 cur = con.cursor()
                 try:
                     sqlite_insert_query = """SELECT * from login where
