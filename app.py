@@ -122,7 +122,7 @@ def save_marker():
     lat = data['lat']
     lon = data['lon']
     popup = data['popup']
-
+ 
     conn = get_db()
     cursor = conn.cursor()
 
