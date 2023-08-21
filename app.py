@@ -1,8 +1,16 @@
-from flask import Flask, render_template, url_for, request, session, redirect
+from flask import Flask, render_template, url_for, request, session, redirect, g, jsonify
 import sqlite3 as sql
+import sqlite3
 import os
 
 app = Flask(__name__)
+
+def get_db():
+    if 'db' not in g:
+        g.db = sqlite3.connect('markers.db')
+        g.db.row_factory = sqlite3.Row
+    return g.db
+
 app.secret_key = 'your secret key'  # Replace with your own secret key
 databasePath = os.getcwd() + '/database.db'
 
@@ -92,6 +100,54 @@ def login():
         finally:
             return render_template("result.html", msg=msg)
             con.close()
+
+
+@app.route('/map')
+def root():
+
+    conn = get_db()
+    cursor = conn.cursor()
+
+    cursor.execute('SELECT lat, lon, popup FROM markers')
+    markers = [{'lat': row['lat'], 'lon': row['lon'], 'popup': row['popup']} for row in cursor.fetchall()]
+    
+    if 'username' in session:
+        return render_template('map.html',markers=markers )
+    else:
+        return render_template('index2.html')
+
+@app.route('/save_marker', methods=['POST'])
+def save_marker():
+    data = request.json
+    lat = data['lat']
+    lon = data['lon']
+    popup = data['popup']
+
+    conn = get_db()
+    cursor = conn.cursor()
+
+    cursor.execute('INSERT INTO markers (lat, lon, popup) VALUES (?, ?, ?)', (lat, lon, popup))
+    conn.commit()
+
+    return jsonify({'message': 'Marker saved successfully'})
+
+
+
+@app.route('/remove_marker', methods=['POST'])
+def remove_marker():
+    data = request.json
+    lat = data['lat']
+    lon = data['lon']
+
+    conn = get_db()
+    cursor = conn.cursor()
+
+    cursor.execute('DELETE FROM markers WHERE lat = ? AND lon = ?', (lat, lon))
+    conn.commit()
+
+    return jsonify({'message': 'Marker removed successfully'})
+
+
 
 if __name__ == "__main__":
     app.run(debug=True)
