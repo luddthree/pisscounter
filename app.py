@@ -10,7 +10,7 @@ def get_db():
         g.db = sqlite3.connect('/var/www/html/markers.db')
         g.db.row_factory = sqlite3.Row
     return g.db
-
+ 
 app.secret_key = 'your secret key'  # Replace with your own secret key
 databasePath = os.getcwd() + '/database.db'
 
