@@ -7,13 +7,13 @@ app = Flask(__name__)
 
 def get_db():
     if 'db' not in g:
-        g.db = sqlite3.connect('markers.db')
+        g.db = sqlite3.connect(markbasePath)
         g.db.row_factory = sqlite3.Row
     return g.db
  
 app.secret_key = 'your secret key'  # Replace with your own secret key
 databasePath = os.getcwd() + '/database.db'
-
+markbasePath = os.getcwd() + '/marker.db'
 @app.route('/')
 def index():
     if 'username' in session:
