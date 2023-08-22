@@ -4,7 +4,7 @@ import sqlite3
 import os
 
 app = Flask(__name__)
-
+ 
 def get_db():
     if 'db' not in g:
         g.db = sqlite3.connect('/var/www/html/markers.db')
