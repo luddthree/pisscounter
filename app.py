@@ -7,7 +7,8 @@ app = Flask(__name__)
  
 def get_db():
     if 'db' not in g:
-        g.db = sqlite3.connect('/var/www/html/markers.db')
+        g.db = sqlite3.connect('markers.db')
+#        g.db = sqlite3.connect('/var/www/html/markers.db')
         g.db.row_factory = sqlite3.Row
     return g.db
  
@@ -114,7 +115,7 @@ def root():
     if 'username' in session:
         return render_template('map.html',markers=markers )
     else:
-        return render_template('index2.html')
+        return render_template('map2.html')
 
 @app.route('/save_marker', methods=['POST'])
 def save_marker():
