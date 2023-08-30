@@ -42,26 +42,12 @@ def about():
         return render_template('about.html')
 
 
-# @app.route('/app')
-# def logon():
-#     if request.headers.get('User-Agent') == 'WebView':
-#         return render_template('index_app.html')
-#     else:
-#         return redirect(url_for('index.html'))  # Redirect to login page if not accessed from web view
-
-# @app.route('/abapp')
-# def about():
-#     if request.headers.get('User-Agent') == 'WebView':
-#         return render_template('about_app.html')
-#     else:
-#         return redirect(url_for('index.html'))  # Redirect to login page if not accessed from web view
-
 @app.route('/app')
-def logon():
+def ap():
     return render_template('index_app.html')
 
 @app.route('/abapp')
-def logon():
+def aboutapp():
     return render_template('about_app.html')
 
     
