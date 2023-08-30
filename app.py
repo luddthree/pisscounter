@@ -4,16 +4,19 @@ import sqlite3
 import os
 
 app = Flask(__name__)
- 
+databasePath = os.getcwd() + '/database.db'
+markersPath = os.getcwd() + '/markers.db'
+
+
 def get_db():
     if 'db' not in g:
-        g.db = sqlite3.connect('markers.db')
+        g.db = sqlite3.connect(markersPath)
 #        g.db = sqlite3.connect('/var/www/html/markers.db')
         g.db.row_factory = sqlite3.Row
     return g.db
  
 app.secret_key = 'your secret key'  # Replace with your own secret key
-databasePath = os.getcwd() + '/database.db'
+
 
 @app.route('/')
 def index():
