@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <link rel="stylesheet" href="/static/output.css">
+    <title>Flask Leaflet Website</title>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link rel="stylesheet" href="{{ url_for('static', filename='css/universal.css') }}" />
+    <link rel="stylesheet" href="https://unpkg.com/leaflet@1.7.1/dist/leaflet.css"
+    integrity="sha512-xodZBNTC5n17Xt2atTPuE1HxjVMSvLVW9ocqUKLsCC5CXdbqCmblAshOMAS6/keqq/sMZMZ19scR4PsZChSR7A=="
+    crossorigin=""/>
+    <script src="https://unpkg.com/leaflet@1.7.1/dist/leaflet.js"
+    integrity="sha512-XQoYMqMTK8LvdxXYG3nZ448hOEQiglfqkJs1NOQV44cWnUrBc8PkAOcXy20w0vlaXaVUearIOBhiXZ5V3ynxwA=="
+    crossorigin=""></script>
+  </head>
+  <body class="bg-gray-300">
+
+<body>
+<br><br>
+<div class="text-center">
+<h1 class="text-4xl font-bold">Pissmap</h1>
+<p>Show us some placed you have pissed!</p>
+<br>
+</div>
+  <div id="map"></div>
+  <script src="{{ url_for('static', filename='js/universal.js') }}" /></script>
+  <script>
+
+    {% for marker in markers %}
+      L.marker([{{ marker['lat'] }}, {{ marker['lon'] }}]).addTo(map)
+      .bindPopup("{{ marker['popup'] }}")
+      .openPopup();
+    {% endfor %}
+
+</script>
+
+
+</body>
+</html>

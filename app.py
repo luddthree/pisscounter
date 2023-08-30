@@ -50,7 +50,9 @@ def ap():
 def aboutapp():
     return render_template('about_app.html')
 
-    
+@app.route('/mapapp')
+def mapapp():
+    return render_template('map_app.html')
 
 @app.route('/enternew')
 def new_student():
