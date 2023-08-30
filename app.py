@@ -5,12 +5,11 @@ import os
 
 app = Flask(__name__)
 databasePath = os.getcwd() + '/database.db'
-markersPath = os.getcwd() + '/markers.db'
 
 
 def get_db():
     if 'db' not in g:
-        g.db = sqlite3.connect(markersPath)
+        g.db = sqlite3.connect(databasePath)
 #        g.db = sqlite3.connect('/var/www/html/markers.db')
         g.db.row_factory = sqlite3.Row
     return g.db
