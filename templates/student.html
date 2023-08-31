@@ -91,23 +91,55 @@
         
         <br>
         <div class="flex justify-center">
-            <input class="form__input rounded py-2 px-3" id="name" type="text" name="name" placeholder="Username"><br>
-        </div>
-        <br>
-        <div class="flex justify-center">
-            <input class="form__input rounded py-2 px-3" id="name" type="password" name="pin" id="" placeholder="Password"><br>
-        </div>
-        <br>
-        <div class="flex justify-center">
-            <input class="form__input rounded py-2 px-3" id="name" type="password" placeholder="Repeat password">
-        </div>
-
+          <input class="form__input rounded py-2 px-3" id="name" type="text" name="name" placeholder="Username"><br>
+      </div>
+      <br>
+      <div class="flex justify-center">
+          <input class="form__input rounded py-2 px-3" id="name1" type="password" name="pin" id="" placeholder="Password"><br>
+      </div>
+      <br>
+      <div class="flex justify-center">
+          <input class="form__input rounded py-2 px-3" id="name2" type="password" placeholder="Repeat password" onkeyup="checkPasswordMatch()">
+      </div>
+      <br>
+      <div class="flex justify-center">
+          <p id="passwordMatchMessage"></p>
+      </div>
+  
+      <br>
+      <div class="flex justify-center">
+          <button class="daddy bg-purple-500 hover:bg-purple-800 text-white font-bold py-2 px-4 rounded" id="signupButton" disabled><span class="text">Sign up</span></button>
+      </div>
+  
+      <script>
+          function checkPasswordMatch() {
+              var password = document.getElementById("name1").value;
+              var repeatPassword = document.getElementById("name2").value;
+              var passwordMatchMessage = document.getElementById("passwordMatchMessage");
+              var signupButton = document.getElementById("signupButton");
+  
+              if (password === repeatPassword) {
+                  passwordMatchMessage.textContent = " ";
+                  // passwordMatchMessage.style.color = "green";
+                  signupButton.disabled = false;
+              } else {
+                  passwordMatchMessage.textContent = "Passwords do not match.";
+                  passwordMatchMessage.style.color = "red";
+                  signupButton.disabled = true;
+              }
+          }
+      </script>
 <br>
 <div class="flex justify-center">
+  <p class="text-gray-700 text-sm">Already a user?</p>
+  </div><br>
 
-<button class="daddy bg-purple-500 hover:bg-purple-800 text-white font-bold py-2 px-4 rounded" class="daddy" type="submit" value="submit"><span class="text">Sign up</span></button>
-    </div>
+</form>
 
+<div class="flex justify-center">    
+
+<button class="daddy bg-purple-500 hover:bg-purple-800 text-white font-bold py-2 px-4 rounded"><a href="/logon" class="button-64"><span class="text">Log in</span></a></button>
+</div>
     </form>
     <script async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-8921164054573762"
      crossorigin="anonymous"></script>

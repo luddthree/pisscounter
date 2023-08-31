@@ -1,0 +1,180 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <link rel="icon" href="logo.jpg">
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    
+    <title>Lotus</title>
+    <link rel="stylesheet" href="/static/output.css">
+    <style>
+
+
+hr {
+			border-color: rgb(179, 179, 179);
+		}
+
+
+footer {
+  height: 50px;
+  bottom: 0;
+  width: 100%;
+}
+
+    </style>
+</head>
+<body class="bg-gray-300">
+  <header>
+    <!-- Navigation bar -->
+    <nav
+      class="relative flex w-full items-center justify-between bg-white py-2 text-neutral-600 shadow-lg hover:text-neutral-700 focus:text-neutral-700 dark:bg-neutral-600 dark:text-neutral-200 md:flex-wrap md:justify-start"
+      data-te-navbar-ref>
+      <div class="flex w-full flex-wrap items-center justify-between px-3">
+        <div class="flex items-center">
+          <!-- Hamburger menu button -->
+          <button onclick="location.href = '/';"
+            class="border-0 text-xl "
+            type="button"
+            data-te-collapse-init
+            data-te-target="#navbarSupportedContentY"
+            aria-controls="navbarSupportedContentY"
+            aria-expanded="false"
+            aria-label="Toggle navigation">
+            <!-- Hamburger menu icon -->
+            
+             
+              <img src="/static/logo.jpg" width="40" height="40">
+            </span>
+          </button>
+        </div>
+        <button type="button" onclick="location.href = '/logout';" class="bg-red-500 hover:bg-red-800 text-white font-bold py-2 px-4 rounded right-2 absolute">Log out</button>
+
+<p class="right-28 absolute">|</p>
+        <div class="mb-4 lg:mb-0 lg:pr-2 font-bold" data-te-nav-item-ref>
+            <a
+              class="block transition duration-150 ease-in-out right-32 top-4 absolute hover:text-neutral-700 focus:text-neutral-700 disabled:text-black/30 dark:hover:text-white dark:focus:text-white lg:p-2 [&.active]:text-black/90"
+              href="/about"
+              data-te-nav-link-ref
+              data-te-ripple-init
+              data-te-ripple-color="light"
+              >About</a
+            >
+        </div>
+        <p class="right-48 absolute">|</p>
+        <div class="mb-4 lg:mb-0 lg:pr-2 font-bold" data-te-nav-item-ref>
+            <a
+              class="block transition duration-150 ease-in-out right-52 top-4 absolute hover:text-neutral-700 focus:text-neutral-700 disabled:text-black/30 dark:hover:text-white dark:focus:text-white lg:p-2 [&.active]:text-black/90"
+              href="/map"
+              data-te-nav-link-ref
+              data-te-ripple-init
+              data-te-ripple-color="light"
+              >PissMap</a
+            >
+        </div>
+      </div>
+    </nav>
+          
+    
+  </header>
+    <br>
+
+    <div class="flex justify-center text-center">
+        <div class="bg-gray-300 rounded-xl ">    
+            <h1 class="text-7xl font-bold">Pisscounter - Admin</h1>
+            <hr>
+            <br>
+        </div> 
+    </div> 
+<br><br><br>
+<h1 class="text-center text-lg font-bold">User administration</h1>
+<br>
+
+
+
+<div class="flex justify-center text-center">
+    <table style="width:25%" class="border-collapse border-black border">
+      <thead>
+          <td><p class="font-bold">Username</p></td>
+          <td><p class="font-bold">Password</p></td>
+          <td><p class="font-bold">Slett</p></td>
+      </thead>
+
+      {% for row in rows1 %}
+
+      <tr>
+                <td>{{ row['name'] }}</td>
+                <td>{{ row['pin'] }}</td>
+          <td>
+            <form action="{{ url_for('delete_record', record_id=row['name']) }}" method="post" style="display: inline;">
+                <input type="submit" value="Delete" class="bg-red-700 hover:bg-red-900 text-white font-bold py-1 px-1 rounded right-2">
+            </form>
+          </td>
+      </tr>
+      {% endfor %}
+
+  </table></div>
+
+
+
+<br><br>
+
+
+
+<br><br>
+<div class="flex justify-center text-center">
+  
+  <div>
+    <form method="POST" action="{{ url_for('add_data') }}">
+        <label for="genser">Username:</label>
+        <input type="text" class="rounded py-2 px-3" id="name" name="name" required>
+        <br><br>
+        <label for="Bukse">Password:</label>
+        <input type="text" class="rounded py-2 px-3" id="pin" name="pin" required>
+        <br><br>
+        <button type="submit" class="bg-green-600 hover:bg-green-800 text-white font-bold py-2 px-4 rounded right-2">Add Record</button>
+    </form>
+  </div>
+</div>
+
+<br><br>
+<hr><br>
+<h1 class="text-center text-lg font-bold">Marker administartion</h1>
+<br>
+
+<div class="flex justify-center text-center">
+  <table style="width:25%" class="border-collapse border-black border">
+    <thead>
+        <td><p class="font-bold">Latitude</p></td>
+        <td><p class="font-bold">Longtitude</p></td>
+    </thead>
+
+    {% for row in rows2 %}
+
+    <tr>
+              <td>{{ row['lat'] }}</td>
+              <td>{{ row['lon'] }}</td>
+        <td>
+          <form action="{{ url_for('delete1_record', record_id=row['lat']) }}" method="post" style="display: inline;">
+              <input type="submit" value="Delete" class="bg-red-700 hover:bg-red-900 text-white font-bold py-1 px-1 rounded right-2">
+          </form>
+        </td>
+    </tr>
+    {% endfor %}
+
+</table></div>
+
+<br><br>
+
+
+
+</body>
+
+<br><br>
+<footer class="mb-auto  fixed bottom-0 w-full">
+    <div class="text-center">
+    <p>&copy; 2023 Lotus. All rights reserved.</p>
+</div>
+  </footer>
+
+</html>
