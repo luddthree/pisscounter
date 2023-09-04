@@ -1,58 +1,52 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
   <link rel="icon" href="/favicon.ico" type="image/x-icon">
   <link rel="shortcut icon" href="/favicon.ico" type="image/x-icon">
-  
+
   <script async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-8921164054573762"
-     crossorigin="anonymous"></script>
-    <style>
+    crossorigin="anonymous"></script>
+  <style>
+    hr {
+      border-color: rgb(179, 179, 179);
+    }
 
 
-        hr {
-                    border-color: rgb(179, 179, 179);
-                }
-        
-        
-        footer {
-          height: 50px;
-          bottom: 0;
-          width: 100%;
-        }
-        
-            </style>
-    <link rel="stylesheet" href="/static/output.css">
-    <meta charset="UTF-8">
-    <meta http-equiv="X-UA-Compatible" content="IE=edge">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Signup PissCounter</title>
-    
+    footer {
+      height: 50px;
+      bottom: 0;
+      width: 100%;
+    }
+  </style>
+  <link rel="stylesheet" href="/static/output.css">
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Signup PissCounter</title>
+
 </head>
+
 <body class="bg-gray-300">
-    <header>
-        <!-- Navigation bar -->
-        <nav
-          class="relative flex w-full items-center justify-between bg-white py-2 text-neutral-600 shadow-lg hover:text-neutral-700 focus:text-neutral-700 dark:bg-neutral-600 dark:text-neutral-200 md:flex-wrap md:justify-start"
-          data-te-navbar-ref>
-          <div class="flex w-full flex-wrap items-center justify-between px-3">
-            <div class="flex items-center">
-              <!-- Hamburger menu button -->
-              <button onclick="location.href = '/';"
-                class="border-0 text-xl "
-                type="button"
-                data-te-collapse-init
-                data-te-target="#navbarSupportedContentY"
-                aria-controls="navbarSupportedContentY"
-                aria-expanded="false"
-                aria-label="Toggle navigation">
-                <!-- Hamburger menu icon -->
-                
-                 
-                  <img src="/static/logo.jpg" width="40" height="40">
-                </span>
-              </button>
-            </div>
-            <!-- <button type="button" onclick="location.href = '/enternew';" class="bg-purple-500 hover:bg-purple-800 text-white font-bold py-2 px-4 rounded right-2 absolute">Sign up</button>
+  <header>
+    <!-- Navigation bar -->
+    <nav
+      class="relative flex w-full items-center justify-between bg-white py-2 text-neutral-600 shadow-lg hover:text-neutral-700 focus:text-neutral-700 dark:bg-neutral-600 dark:text-neutral-200 md:flex-wrap md:justify-start"
+      data-te-navbar-ref>
+      <div class="flex w-full flex-wrap items-center justify-between px-3">
+        <div class="flex items-center">
+          <!-- Hamburger menu button -->
+          <button onclick="location.href = '/';" class="border-0 text-xl " type="button" data-te-collapse-init
+            data-te-target="#navbarSupportedContentY" aria-controls="navbarSupportedContentY" aria-expanded="false"
+            aria-label="Toggle navigation">
+            <!-- Hamburger menu icon -->
+
+
+            <img src="/static/logo.jpg" width="40" height="40">
+            </span>
+          </button>
+        </div>
+        <!-- <button type="button" onclick="location.href = '/enternew';" class="bg-purple-500 hover:bg-purple-800 text-white font-bold py-2 px-4 rounded right-2 absolute">Sign up</button>
             <div class="mb-4 lg:mb-0 lg:pr-2" data-te-nav-item-ref>
                 <a
                   class="block transition duration-150 ease-in-out right-28 top-4 absolute font-bold hover:text-neutral-700 focus:text-neutral-700 disabled:text-black/30 dark:hover:text-white dark:focus:text-white lg:p-2 [&.active]:text-black/90"
@@ -76,90 +70,112 @@
             </div>
 
           </div> -->
-        </nav>
-              
-        
-      </header>
+    </nav>
 
 
+  </header>
 
-
-    <form action="{{url_for('addrec')}}" method="POST">
-        <br>
-        <div>
+  <br><br>
+  <div class="flex">
+    <div class="m-2 mx-auto">
+      <div class="bg-gray-200 rounded-2xl px-8 py-2">
+        <form action="{{url_for('addrec')}}" method="POST">
+          <br>
+          <div>
             <h1 class="text-2xl text-center font-bold">Sign up</h1>
-        </div>
-         
-        
-        <br>
-        <div class="flex justify-center">
-          <input class="form__input rounded py-2 px-3" id="name" type="text" name="name" placeholder="Username"><br>
+          </div>
+
+          <br>
+          <div class="flex justify-center">
+            <input class="form__input rounded py-2 px-3" id="name" type="text" name="name" placeholder="Username"><br>
+          </div>
+          <br>
+          <div class="flex justify-center">
+            <input class="form__input rounded py-2 px-3" id="email" type="email" name="email" placeholder="Email"><br>
+          </div>
+          <br>
+          <div class="flex justify-center">
+            <input class="form__input rounded py-2 px-3" id="name1" type="password" name="pin" id=""
+              placeholder="Password"><br>
+          </div>
+          <br>
+          <div class="flex justify-center">
+            <input class="form__input rounded py-2 px-3" id="name2" type="password" placeholder="Repeat password"
+              onkeyup="checkPasswordMatch()">
+          </div>
+          <br>
+          <div class="flex justify-center text-sm">
+            <p id="passwordMatchMessage"></p>
+          </div>
+
+          <br>
+          <div class="flex justify-center text-sm text-gray-700">
+            <label for="agreeTerms" class="text-sm">
+              <input type="checkbox" id="agreeTerms" name="agreeTerms" required> I agree to the terms of service</label>
+          </div>
+
+          <br>
+          <div class="flex justify-center">
+            <button class="daddy bg-purple-500 hover:bg-purple-800 text-white font-bold py-2 px-4 rounded"
+              id="signupButton" disabled><span class="text">Sign up</span></button>
+              <br>
+          </div>
+        </form>
+        <br> 
       </div>
-      <br>
-      <div class="flex justify-center">
-          <input class="form__input rounded py-2 px-3" id="name1" type="password" name="pin" id="" placeholder="Password"><br>
-      </div>
-      <br>
-      <div class="flex justify-center">
-          <input class="form__input rounded py-2 px-3" id="name2" type="password" placeholder="Repeat password" onkeyup="checkPasswordMatch()">
-      </div>
-      <br>
-      <div class="flex justify-center">
-          <p id="passwordMatchMessage"></p>
-      </div>
-  
-      <br>
-      <div class="flex justify-center">
-          <button class="daddy bg-purple-500 hover:bg-purple-800 text-white font-bold py-2 px-4 rounded" id="signupButton" disabled><span class="text">Sign up</span></button>
-      </div>
-  
-      <script>
-          function checkPasswordMatch() {
-              var password = document.getElementById("name1").value;
-              var repeatPassword = document.getElementById("name2").value;
-              var passwordMatchMessage = document.getElementById("passwordMatchMessage");
-              var signupButton = document.getElementById("signupButton");
-  
-              if (password === repeatPassword) {
-                  passwordMatchMessage.textContent = " ";
-                  // passwordMatchMessage.style.color = "green";
-                  signupButton.disabled = false;
-              } else {
-                  passwordMatchMessage.textContent = "Passwords do not match.";
-                  passwordMatchMessage.style.color = "red";
-                  signupButton.disabled = true;
-              }
-          }
-      </script>
-<br>
-<div class="flex justify-center">
-  <p class="text-gray-700 text-sm">Already a user?</p>
+    </div>
+  </div>
+
+  <div class="flex justify-center">
+    <p><a href="/logon" class="text-gray-700 text-sm hover:text-gray-900">I am already a user. </a></p>
   </div><br>
+  <script>
+    function checkPasswordMatch() {
+      var password = document.getElementById("name1").value;
+      var repeatPassword = document.getElementById("name2").value;
+      var passwordMatchMessage = document.getElementById("passwordMatchMessage");
+      var signupButton = document.getElementById("signupButton");
 
-</form>
+      if (password === repeatPassword) {
+        passwordMatchMessage.textContent = " ";
+        // passwordMatchMessage.style.color = "green";
+        signupButton.disabled = false;
+      } else {
+        passwordMatchMessage.textContent = "Passwords do not match.";
+        passwordMatchMessage.style.color = "red";
+        signupButton.disabled = true;
+      }
+    }
+  </script>
 
-<div class="flex justify-center">    
 
-<button class="daddy bg-purple-500 hover:bg-purple-800 text-white font-bold py-2 px-4 rounded"><a href="/logon" class="button-64"><span class="text">Log in</span></a></button>
-</div>
-    </form>
-    <script async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-8921164054573762"
-     crossorigin="anonymous"></script>
-<!-- rekalme -->
-<ins class="adsbygoogle"
-     style="display:block"
-     data-ad-client="ca-pub-8921164054573762"
-     data-ad-slot="6241551357"
-     data-ad-format="auto"
-     data-full-width-responsive="true"></ins>
-<script>
-     (adsbygoogle = window.adsbygoogle || []).push({});
-</script>
-    <br><br><br>
+  <!-- <b><a href="/logon" class="text-blue-700 hover:text-blue-900">Sign in </a> to access this page!</b> -->
+
+
+
+  <!-- <div class="flex justify-center">
+
+    <button class="daddy bg-purple-500 hover:bg-purple-800 text-white font-bold py-2 px-4 rounded"><a href="/logon"
+        class="button-64"><span class="text">Log in</span></a></button>
+  </div> -->
+
+
+  </form>
+  <script async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-8921164054573762"
+    crossorigin="anonymous"></script>
+
+  <!-- rekalme -->
+  <ins class="adsbygoogle" style="display:block" data-ad-client="ca-pub-8921164054573762" data-ad-slot="6241551357"
+    data-ad-format="auto" data-full-width-responsive="true"></ins>
+  <script>
+    (adsbygoogle = window.adsbygoogle || []).push({});
+  </script>
+  <br><br><br>
 </body>
 <footer class="mb-auto relative">
-    <div class="text-center">
+  <div class="text-center">
     <p>&copy; 2023 PissCounter. All rights reserved.</p>
   </div>
-  </footer>
+</footer>
+
 </html>

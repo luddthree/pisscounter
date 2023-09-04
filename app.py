@@ -66,13 +66,14 @@ def addrec():
         try:
             name=request.form['name']
             pin=request.form['pin']
+            email=request.form['email']
 
             if check_duplicates(name):
                 msg = "Username already taken"
             else:
                 with sql.connect(databasePath) as con:
                     cur = con.cursor()
-                    cur.execute("INSERT INTO login (name,pin) VALUES (?,?)",(name,pin))
+                    cur.execute("INSERT INTO login (name,pin,email) VALUES (?,?,?)",(name,pin,email))
                     con.commit()
                     session['username'] = name
                     msg = "Welcome to Pisscounter " + name + "!"

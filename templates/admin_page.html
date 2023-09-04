@@ -9,7 +9,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
 
     
-    <title>Lotus</title>
+    <title>Pisscounter Admin</title>
     <link rel="stylesheet" href="/static/output.css">
     <style>
 
@@ -100,6 +100,7 @@ footer {
       <thead>
           <td><p class="font-bold">Username</p></td>
           <td><p class="font-bold">Password</p></td>
+          <td><p class="font-bold">Email</p></td>
           <td><p class="font-bold">Slett</p></td>
       </thead>
 
@@ -108,6 +109,7 @@ footer {
       <tr>
                 <td>{{ row['name'] }}</td>
                 <td>{{ row['pin'] }}</td>
+                <td>{{ row['email'] }}</td>
           <td>
             <form action="{{ url_for('delete_record', record_id=row['name']) }}" method="post" style="display: inline;">
                 <input type="submit" value="Delete" class="bg-red-700 hover:bg-red-900 text-white font-bold py-1 px-1 rounded right-2">
@@ -176,7 +178,7 @@ footer {
 <br><br>
 <footer class="mb-auto  fixed bottom-0 w-full">
     <div class="text-center">
-    <p>&copy; 2023 Lotus. All rights reserved.</p>
+    <p>&copy; 2023 Pisscounter. All rights reserved.</p>
 </div>
   </footer>
 
