@@ -43,6 +43,10 @@ def about():
     else:
         return render_template('about.html')
 
+@app.route('/tos')
+def tos():
+    return render_template('tos.html')
+
 
 @app.route('/app')
 def ap():

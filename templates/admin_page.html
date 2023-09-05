@@ -152,6 +152,7 @@ footer {
     <thead>
         <td><p class="font-bold">Latitude</p></td>
         <td><p class="font-bold">Longtitude</p></td>
+        <td><p class="font-bold">Username pissed</p></td>
     </thead>
 
     {% for row in rows2 %}
@@ -159,6 +160,7 @@ footer {
     <tr>
               <td>{{ row['lat'] }}</td>
               <td>{{ row['lon'] }}</td>
+              <td>{{ row['popup'] }}</td>
         <td>
           <form action="{{ url_for('delete1_record', record_id=row['lat']) }}" method="post" style="display: inline;">
               <input type="submit" value="Delete" class="bg-red-700 hover:bg-red-900 text-white font-bold py-1 px-1 rounded right-2">

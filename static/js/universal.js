@@ -10,11 +10,13 @@ map.on('click', function(e) {
   var lat = e.latlng.lat;
   var lon = e.latlng.lng;
 
-  var popupContent = "Someone pissed here";
+  // Use the 'username' variable instead of a static string
+  var popupContent = username + " pissed here";
 
   var marker = L.marker([lat, lon]).addTo(map)
     .bindPopup(popupContent)
     .openPopup();
+
 
   marker.on('click', function() {
     map.removeLayer(marker);
@@ -47,14 +49,21 @@ map.on('click', function(e) {
 });
 
 navigator.geolocation.getCurrentPosition(function(position) {
-    var lat = position.coords.latitude;
-    var lon = position.coords.longitude;
+  var lat = position.coords.latitude;
+  var lon = position.coords.longitude;
 
-    // Add a marker at the user's location
-    L.marker([lat, lon]).addTo(map)
-      .bindPopup('Your Location')
-      .openPopup();
-    
-    // Center the map on the user's location
-    map.setView([lat, lon], 13);
+  // Define a custom icon for the "Your Location" marker
+  var locationIcon = L.icon({
+      iconUrl: 'static/homemarker.png', // Replace with the path to your custom marker icon
+      iconSize: [22, 32], // Set the icon size as needed
+      iconAnchor: [16, 32], // Adjust the icon anchor if needed
   });
+
+  // Add a marker at the user's location with the custom icon
+  L.marker([lat, lon], { icon: locationIcon }).addTo(map)
+    .bindPopup('Your Location')
+    .openPopup();
+
+  // Center the map on the user's location
+  map.setView([lat, lon], 13);
+});
